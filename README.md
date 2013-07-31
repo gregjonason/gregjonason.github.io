@@ -1,4 +1,4 @@
 gregjonason.github.io
 =====================
 
-CV SIte for Gregory Jonason
+CV Site for Gregory Jonason
