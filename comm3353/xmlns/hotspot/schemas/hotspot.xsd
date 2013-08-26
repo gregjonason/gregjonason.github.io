@@ -1,0 +1,493 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dret.net/xmlns/hotspot/1" xmlns:hotspot="http://dret.net/xmlns/hotspot/1" xmlns:kilauea="http://xmlns.sharpeleven.net/kilauea" xmlns:sch="http://www.ascc.net/xml/schematron" xmlns:xml="http://www.w3.org/XML/1998/namespace" elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:include schemaLocation="configuration.xsd"/>
+	
+ 	<xs:annotation>
+ 		<xs:appinfo>$Id: hotspot.xsd 135 2009-02-02 21:37:37Z felix $</xs:appinfo>
+ 	</xs:annotation>
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- THE GLOBAL, TOP-LEVEL HOTSPOT ELEMENT                -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:element name="hotspot">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="configuration" type="hotspot:global-configuration"/>
+					<xs:group ref="hotspot:shortcuts"/>
+					<xs:group ref="hotspot:globals"/>
+				</xs:choice>
+				<xs:element name="presentation" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="configuration" type="hotspot:local-configuration"/>
+								<xs:group ref="hotspot:shortcuts"/>
+								<xs:group ref="hotspot:locals"/>
+							</xs:choice>
+							<xs:group ref="hotspot:parts-and-slides" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute ref="xml:lang"/>
+						<xs:attribute name="id" type="xs:token"/>
+						<xs:attribute name="name" type="xs:token">
+							<xs:annotation>
+								<xs:documentation>The name of the presentation, which will be used for the file name of the generated slidy html presentation. If there is no name, the @id will be used. If there also i no @id, a file name will be generated.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="cover" type="xs:token">
+							<xs:annotation>
+								<xs:documentation>If this attribute is set, it must point to an existing cover slide (as found in a layout/slide[@cover] element), which is then used as the cover slide for this presentation.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="external" type="xs:anyURI">
+							<xs:annotation>
+								<xs:documentation>Specifies the URI where the contents of an external presentation can be found. If this attribute is present, the @name and @cover attributes must be absent.</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="version" default="0.5">
+				<xs:annotation>
+					<xs:documentation>This indicates the version of Hotspot that has been used when preparing the document. Documenting the version makes it easier to detect problems caused by versioning issues.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="\d+\.\d+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+		<xs:unique name="partIDunique">
+			<xs:selector xpath="presentation | part | slide"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		<!-- this does not work, does it? -->
+		<xs:keyref name="linkRef" refer="hotspot:partIDunique">
+			<xs:selector xpath="link"/>
+			<xs:field xpath="@href"/>
+		</xs:keyref>
+	</xs:element>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- SLIDES                                               -->
+	<xs:element name="slide">
+		<xs:complexType>
+			<xs:complexContent mixed="true">
+				<xs:extension base="hotspot:any-mixed-content">
+					<xs:attribute name="id" type="xs:token"/>
+					<xs:attribute name="class" type="xs:NMTOKENS">
+						<xs:annotation>
+							<xs:documentation>If a slide should have a class other than the default class, this has to be specified in the class attribute. The attribute contains a list of values, for each value there must be a corresponding class (as a hotspot class element and/or in the css code).</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- PARTS AND SLIDES                                     -->
+	<xs:group name="parts-and-slides">
+		<xs:choice>
+			<xs:element name="part">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="hotspot:shortcuts" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:group ref="hotspot:parts-and-slides" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute name="id" type="xs:token"/>
+					<xs:attribute name="outline" default="yes">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="yes"/>
+								<xs:enumeration value="no"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="hotspot:slide"/>
+		</xs:choice>
+	</xs:group>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- GLOBAL ELEMENT GROUPS ELEMENTS                       -->
+	<xs:group name="locals">
+		<xs:choice>
+			<xs:element ref="hotspot:toc"/>
+			<xs:element ref="hotspot:style"/>
+			<xs:element ref="hotspot:script"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="globals">
+		<xs:choice>
+			<xs:element name="toc">
+				<xs:complexType>
+					<xs:complexContent mixed="true">
+						<xs:extension base="hotspot:any-mixed-content">
+							<xs:attribute name="name" type="xs:anyURI">
+								<xs:annotation>
+									<xs:documentation>The name of the toc file to be generated. This must be present for hotspot/toc, and must not be present for presentation/toc.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="id" type="xs:token"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="hotspot:style"/>
+			<xs:element ref="hotspot:script"/>
+			<xs:element name="categories">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="category" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent mixed="true">
+									<xs:extension base="hotspot:any-mixed-content">
+										<xs:attribute name="element" type="xs:NCName" use="required"/>
+										<xs:attribute name="class" type="xs:NMTOKENS"/>
+										<xs:attribute name="name" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>A human-readable name for the category.</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+				<xs:unique name="unique-elements">
+					<xs:annotation>
+						<xs:documentation>Categories must be mapped to unique element names.</xs:documentation>
+					</xs:annotation>
+					<xs:selector xpath="hotspot:category"/>
+					<xs:field xpath="@element"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="index">
+				<xs:complexType>
+					<xs:complexContent mixed="true">
+						<xs:extension base="hotspot:any-mixed-content">
+							<xs:attribute name="name" type="xs:anyURI" use="required">
+								<xs:annotation>
+									<xs:documentation>The name of the index file to be generated.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:element name="style">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="src">
+						<xs:annotation>
+							<xs:documentation>This allows to use style in the same way as script for referencing external stylsheets. if a src attribute is present, the style element will be mapped to a &lt;link rel="stylesheet" .../&gt; element.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="type" type="xs:string" fixed="text/css"/>
+					<xs:attribute name="media" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:element name="script">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="type" type="xs:string" use="required"/>
+					<xs:attribute name="src" type="xs:anyURI"/>
+					<xs:attribute name="charset" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- SHORTCUTS                                            -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:group name="shortcuts">
+		<xs:choice>
+			<xs:element name="title" type="hotspot:shortcut"/>
+			<xs:element name="author">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="hotspot:shortcut">
+							<xs:attribute name="affiliation" type="xs:string"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="affiliation" type="hotspot:shortcut"/>
+			<xs:element name="date">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="hotspot:shortcut">
+							<xs:attribute name="language">
+								<xs:annotation>
+									<xs:documentation>This is a date formatting attribute accepting the same values as the language attribute of XSLT 2.0's format-date() function.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="calendar">
+								<xs:annotation>
+									<xs:documentation>This is a date formatting attribute accepting the same values as the calendar attribute of XSLT 2.0's format-date() function.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="country">
+								<xs:annotation>
+									<xs:documentation>This is a date formatting attribute accepting the same values as the country attribute of XSLT 2.0's format-date() function.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="copyright" type="hotspot:shortcut"/>
+			<xs:element name="location" type="hotspot:shortcut"/>
+			<xs:element name="occasion" type="hotspot:shortcut"/>
+			<xs:element name="license">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="hotspot:shortcut">
+							<xs:attribute name="uri" type="xs:anyURI"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="hotspot:shortcuts-extender"/>
+		</xs:choice>
+	</xs:group>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:element name="shortcuts-extender" type="hotspot:shortcut" abstract="true">
+		<xs:annotation>
+			<xs:documentation>This is an abstract element that can be used as a substitution group head by custom shortcut elements. Custom shortcuts element can easily be defined in an ad-hoc manner within hotspot XML documents. This is done through a processing instruction, e.g., "&lt;?hotspot additional-shortcuts="custom1, custom2, ..." ?&gt;".</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:complexType name="shortcut" mixed="true">
+		<xs:complexContent mixed="true">
+			<xs:extension base="hotspot:any-mixed-content">
+				<xs:attribute name="short" type="xs:string"/>
+				<xs:attribute name="level">
+					<xs:annotation>
+						<xs:documentation>The default value for this attribute depends on where the element occurs in the context of a hotspot presentation. Within layout elements, the default is "presentation" and anything other than "hotspot" will be mapped to "presentation". Elsewehere, the default is "slide" and all values are accepted.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="hotspot"/>
+							<xs:enumeration value="presentation"/>
+							<xs:enumeration value="part"/>
+							<xs:enumeration value="slide"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="form" default="full">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="full"/>
+							<xs:enumeration value="text"/>
+							<xs:enumeration value="short"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- LAYOUT DOCUMENTS                                     -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:element name="layout">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="css">
+					<xs:complexType>
+						<xs:sequence/>
+						<xs:attribute name="document" type="xs:anyURI" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="import">
+					<xs:complexType>
+						<xs:sequence/>
+						<xs:attribute name="layout" type="hotspot:layout-name"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="class">
+					<xs:complexType>
+						<xs:complexContent mixed="true">
+							<xs:extension base="hotspot:any-mixed-content">
+								<xs:attribute name="id" type="xs:NMTOKEN"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cover"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:simpleType name="layout-name">
+		<xs:restriction base="xs:NCName">
+		</xs:restriction>
+	</xs:simpleType>
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- TOC STUFF                                            -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:element name="toc">
+		<xs:complexType>
+			<xs:complexContent mixed="true">
+				<xs:extension base="hotspot:any-mixed-content">
+					<xs:attribute name="class" type="hotspot:toc-class"/>
+					<xs:attribute name="id" type="xs:token"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:simpleType name="toc-class">
+		<xs:restriction base="xs:token">
+		</xs:restriction>
+	</xs:simpleType>
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- GLOBAL TYPE DEFINITIONS                              -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:complexType name="any-mixed-content" mixed="true">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:any namespace="##any" processContents="lax"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:simpleType name="mode-name">
+		<xs:restriction base="xs:NCName"/>
+	</xs:simpleType>
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	
+	
+	
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<!-- THINGS THAT NEED SOME FURTHER WORK...                -->
+	<!-- . . . . . . . . . . . . . . . . . . . . . . . . . . .-->
+	<!--. . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:any namespace="##any" processContents="lax"/>
+			</xs:sequence>
+			<xs:attribute name="type" default="ul">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="ul"/>
+						<xs:enumeration value="ol"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="listing">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="hotspot:link"/>
+				<xs:element name="a"/>
+			</xs:choice>
+			<xs:attribute name="src" type="xs:anyURI" use="required"/>
+			<xs:attribute name="class">
+				<xs:simpleType>
+					<xs:list itemType="xs:token"/>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="href">
+				<xs:annotation>
+					<xs:documentation>Specifies the target of the location the listing should link to. If set to the empty string, the listing will link to nothing (not even the source of the listing).</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:union memberTypes="xs:anyURI">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value=""/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:union>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="line">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="\d+\-\d+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="encoding" type="xs:token" default="UTF-8"/>
+			<xs:attribute name="title"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="link">
+		<xs:complexType>
+			<xs:sequence/>
+			<xs:attribute name="href" type="xs:anyURI"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="for-each-presentation">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:any namespace="##any" processContents="lax"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="presentation-link">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:any namespace="##any" processContents="lax"/>
+			</xs:sequence>
+			<xs:attribute name="element" default="a">
+				<xs:simpleType>
+					<xs:union memberTypes="xs:Name">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value=""/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:union>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="attribute" type="xs:Name" default="href"/>
+			<xs:attribute name="prefix" type="xs:string"/>
+			<xs:attribute name="title" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
