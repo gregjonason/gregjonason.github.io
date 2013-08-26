@@ -2,7 +2,7 @@
 if (typeof window.Kilauea == 'undefined') {
 
 /**
- * Copyright © 2007 Felix Michel
+ * Copyright ï¿½ 2007 Felix Michel
  * 
  * 
  * This file is part of Kilauea.
@@ -3717,11 +3717,11 @@ Kilauea.Instance.prototype = {
 				license.setAttribute('rel', 'license');
 				license.setAttribute('href', l[i].getAttribute("href"));
 				license.setAttribute('title', l[i].getAttribute("title"));
-				license.appendChild(document.createTextNode(this.getMeta('copyright', l[i].getAttribute("title"))));
+//				license.appendChild(document.createTextNode(this.getMeta('copyright', l[i].getAttribute("title"))));
 				break;
 			}
 		}
-		this.fields.copyright = Kilauea.getField(this.container, 'kilaueaCopyright', license ? license : this.getMeta('copyright'));
+//		this.fields.copyright = Kilauea.getField(this.container, 'kilaueaCopyright', license ? license : this.getMeta('copyright'));
 		// presentation title
 		this.fields.title = Kilauea.getField(this.container, 'kilaueaTitle', this.title);
 		
