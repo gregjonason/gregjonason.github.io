@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- $Id: web-spring11.xml 1346 2011-01-17 19:32:01Z dilan.mahendran $ -->
+<!-- Original course and code: Erik Wilde and Dilan Mahendran, UC Berkeley School of Information -->
+<!-- Original course name: Web Architecture and Information Management - INFO 153 (CCN 42509), SP 2011 -->
+<!-- New course and code remix: Gregory Jonason -->
+<!-- New course name: Information and Communication Technologies I - COMM 3353 (SEC 20668), FA 2013 -->
+<!-- $Id: 201303fa_comm3353.xml 1346 2013-08-26 19:55:01Z gregory.jonason $ -->
 <?hotspot layout-path="hotspot/hotspot/layout" ?>
 <?hotspot kilauea-path="hotspot/kilauea" ?>
 <?hotspot layout="ischool" ?>
-<hotspot xmlns="http://dret.net/xmlns/hotspot/1" xmlns:hotspot="http://dret.net/xmlns/hotspot/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://dret.net/xmlns/hotspot/1  hotspot/hotspot/schemas/hotspot.xsd">
+<hotspot xmlns="http://gregjonason.com/xmlns/hotspot" xmlns:hotspot="http://gregjonason.com/xmlns/hotspot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gregjonason.com/xmlns/hotspot  xmlns/hotspot/schemas/hotspot.xsd">
   <configuration>
-    <link subsections="yes" bookmarks="yes" versions="201303fa_comm3353.xml" home="./" help="quick" contents="./" glossary="http://dret.net/glossary/" author="http://dret.net/netdret/"/>
+    <link subsections="yes" bookmarks="yes" versions="201303fa_comm3353.xml" home="./" help="quick" contents="./" glossary="http://dret.net/glossary/" author="http://gregjonason.com/"/>
     <paths img="img" listing="src"/>
     <outline count-text=" [*]" count-depth="all"/>
     <hyperlink extra=""/>
@@ -14,15 +18,15 @@
   </configuration>
   <license uri="http://creativecommons.org/licenses/by/3.0/" short="CC 3.0">
     <div class="license">
-      <p><a rel="license" title="view full text of license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="hotspot/hotspot/layout/ischool/ischool/somerights20.png" border="0" height="31" width="88"/></a></p>
+      <p><a rel="license" title="view full text of license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" src="img/somerights20.png" border="0" height="31" width="88"/></a></p>
       <p><a class="outlink" rel="license" title="view full text of license" href="http://creativecommons.org/licenses/by/3.0/">This work is licensed under a CC<br/>Attribution 3.0 Unported License</a></p>
     </div>
   </license>
-  <title short="Web Architecture and Information Management"><a href="./" title="Course Homepage">Communication Web Technologies I</a><br/>Fall 2013; COMM 3353 (Section #####)</title>
+  <title short="Web Architecture and Information Management"><a href="./" title="Course Homepage">Communication Web Technologies I</a><br/>Fall 2013; COMM 3353 (Section 20668)</title>
   <author affiliation="UH Houston JJVSOC"><a href="http://www.uh.edu/class/communication/" title="">Gregory Jonason</a></author>
-  <affiliation short="UH Houston JJVSOC"><a href="http://www.berkeley.edu/" title="University of Houston">University of Houston</a> <a href="http://www.uh.edu/class/communication/" title="JJVSOC">Jack J. Valenti School of Communication</a></affiliation>
-  <date short="Spring 2011">Spring Semester 2011</date>
-  <copyright>2011 Erik Wilde and Dilan Mahendran</copyright>
+  <affiliation short="UH Houston JJVSOC"><a href="http://www.uh.edu/class/communication/" title="University of Houston">University of Houston</a> <a href="http://www.uh.edu/class/communication/" title="JJVSOC">Jack J. Valenti School of Communication</a></affiliation>
+  <date short="Fall 2013">Fall Semester 2013</date>
+  <copyright>2013 Gregory Jonason</copyright>
   <categories>
     <category element="xml" class="xml" name="XML"/>
     <category element="elem" class="xml elem" name="XML Element"/>
@@ -74,10 +78,13 @@
       </tbody>
     </table>
   </toc>
+
+<!-- BEGIN 01 Overview and Introduction -->
+
   <presentation id="intro">
     <title short="Introduction">Overview and Introduction</title>
-    <date>2011-01-19</date>
-    <toc class="resources"><a href="https://bspace.berkeley.edu/portal/site/2676fd30-179a-46b4-be96-cea7e9694390?panel=Main">bSpace</a></toc>
+    <date>[INSERT DATE HERE]</date>
+    <toc class="resources"><a href="http://gregjonason.com/intro/index.html">Introduction</a></toc>
     <toc class="abstract">This introductory lecture gives the motivation for the course, some information about the people involved and the organization of the course, a high-level overview of the course's topics, and an overview of the assignments which are an important part of the course program.</toc>
     <slide>
       <title>Abstract</title>
@@ -139,7 +146,7 @@
           <li>Foundations of Web page design (HTML &amp; CSS)</li>
           <li>Web browsers</li>
           <li>Communications (Internet &amp; HTTP)</li>
-          <li>Web applications and databases</li>        
+          <li>Web applications and databases</li>      
           <li>Client-side scripting (JavaScript &amp; Ajax)</li>
           <li>Multimedia content (pictures &amp; audio/video)</li>
         </ul>
@@ -162,53 +169,51 @@
       <slide>
         <title>About this Course</title>
         <ul>
-          <li>Course Web page:<br/><code><a href="http://courses.ischool.berkeley.edu/i153/s11/">http://courses.ischool.berkeley.edu/i153/s11/</a></code></li>
-          <li><a href="https://bspace.berkeley.edu/portal/site/2676fd30-179a-46b4-be96-cea7e9694390">bSpace course Web page</a> for assignments</li>
-          <li>Course mailing list: <code><a href="mailto:waim-sp11@bspace.berkeley.edu">waim-sp11@bspace.berkeley.edu</a></code></li>
+          <li>Course Web page:<br/><code><a href="https://elearning.uh.edu/">https://elearning.uh.edu/</a></code></li>
+          <li><a href="https://elearning.uh.edu/">COMM 3353 course Web page</a> for assignments</li>
+          <li>Instructor email: <code><a href="mailto:greg@uh.edu">greg@uh.edu</a></code></li>
+<!--          <ul>
+            <li>archived in the <a href="http://gregjonason.com/d1c04397-1a77-495a-ae6a-0d7a028d0a52/page/a170ccc2-c742-4dd3-b5e3-ff5b187a0f08">bSpace email archive</a></li>
+          </ul> -->
+          <li>Letter grade based on participation, attendance, paper and exams</li>
           <ul>
-            <li>archived in the <a href="https://bspace.berkeley.edu/portal/site/d1c04397-1a77-495a-ae6a-0d7a028d0a52/page/a170ccc2-c742-4dd3-b5e3-ff5b187a0f08">bSpace email archive</a></li>
-          </ul>
-          <li>Letter grade based on participation, assignments, and exams</li>
-          <ul>
-            <li>participation: 10%</li>
-            <li>assignments: 40%</li>
-            <li>mid-term exam: 20%</li>
-            <li>final exam: 30%</li>
+            <li>participation: 20%</li>
+            <li>attendance: 20%</li>
+            <li>paper: 30%</li>
+            <li>mid-term exam: 30%</li>
           </ul>
         </ul>
       </slide>
       <slide>
-        <title>About Dilan</title>
+        <title>About Greg</title>
         <ul>
-          <li>FleetBoston Internet Strategy, Boston, Massachusetts (1998-2001)</li>
-          <li>Microsoft Linux User Research (2001) </li>
-          <li>MIMS at the School of Information (2002)</li>
-          <li>Sun Microsystems Open Source Researcher (2003-2004)</li>
-          <li>Currently a Ph.D. candidate at the School of Information</li>
-          <li>Office hours (2 South Hall): Monday &amp; Wednesday 4-5pm</li>
-          <ul>
-            <li>other appointments by email only: <a href="mailto:dilanm@ischool.berkeley.edu">dilanm@ischool.berkeley.edu</a></li>
-          </ul>
+          <li>University of Texas, AUstin, Texas - B.S. Communication, Radio-Television-Film (RTF) (1991-1995)</li>
+          <li>WorldLink Data Communications, Manager of Operations (1996-1998) </li>
+          <li>University of Houston, ManPower (Contractor) (1998-1999)</li>
+          <li>University of Houston, Houston, Texas -  (2000-2004)</li>
+          <li>University of Houston Houston, Texas (1999-date)</li>
+          <li>Currently in my last semester of coursework for my doctoral degree at the College of Education</li>
+          <li>Office hours: Email me to make an appointment (<a href="mailto:greg@uh.edu">greg@uh.edu</a>)</li>
         </ul>
       </slide>
-      <slide>
+<!--      <slide>
         <title>Assignments</title>
         <ul>
-          <li>Weekly assignments (available on the <a href="https://bspace.berkeley.edu/portal/site/d1c04397-1a77-495a-ae6a-0d7a028d0a52/page/47515a16-c888-4b09-b8ad-62961de34694">bSpace assignments page</a>)</li>
+          <li>Weekly assignments (available on the <a href="http://gregjonason.com/d1c04397-1a77-495a-ae6a-0d7a028d0a52/page/47515a16-c888-4b09-b8ad-62961de34694">bSpace assignments page</a>)</li>
           <ul>
             <li>assigned Wednesday, due following Wednesday</li>
             <li><link href="lab-times"/> on Friday for assignment support</li>
           </ul>
-          <li>Support provided by <a href="http://people.ischool.berkeley.edu/~prateekk/">Prateek</a> <a href="mailto:prateekk@ischool.berkeley.edu">(prateekk@ischool.berkeley.edu)</a> </li>
+          <li>Support provided by <a href="[URL GOES HERE]">[TA NAME]</a> <a href="mailto:[TA'S EMAIL ADDRESS]">([TA'S EMAIL ADDRESS])</a> </li>
           <li>Closely following the course topics</li>
         </ul>
       </slide>
       <slide id="lab-times">
         <title>Lab Times</title>
         <ul>
-          <li>Lab time on Friday in South Hall</li>
+          <li>Lab time on [DAY] in/at [LOCATION]</li>
           <ul>
-            <li>2-3pm: 202 South Hall</li>
+            <li>[TIME]-[TIME] am/pm: [LOCATION]</li>
           </ul>
           <li>Your best opportunity to get immediate support</li>
           <li>Bring your laptops, we provide no computer access</li>
@@ -216,7 +221,7 @@
           <ul>
           </ul>
         </ul>
-      </slide>
+      </slide> -->
       <slide>
         <title>Course Reading</title>
         <ul>
@@ -340,9 +345,15 @@
       </slide>
     </part>
   </presentation>
+
+<!-- END 01 Overview and Introduction -->
+
+
+<!-- BEGIN 02 Web History -->
+
   <presentation id="history">
     <title short="History">Web History</title>
-    <date>2011-01-24</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading">
       <a href="http://www.nytimes.com/2008/06/17/science/17mund.html">The Web Time Forgot</a>&#160;· <a title="Note: you can skip the appendices" href="http://www.w3c.rl.ac.uk/primers/history/origins.pdf">History of the Web</a>&#160;· <a href="http://www.w3.org/History/1989/proposal.html">A Proposal</a>
     </toc>
@@ -657,10 +668,17 @@
         <p>Like earlier attempts at building a "global information space", the Web was designed in response to the information management needs of large-scale, institutional science. Tim Berners-Lee was able to build upon previous technologies and incorporate ideas from previous systems to meet these needs. His emphasis on decentralization, use of existing infrastructure, and decision to make WWW technology freely available enabled it to spread and grow quickly. The 1993 decision to allow commercial uses of the Internet, and suitability of Web technology for e-commerce, resulted in explosive economically-fueled growth. In the process of its remarkable growth, however, some of the properties of the early web were de-emphasized (e.g. symmetry between reading and writing).</p>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 02 Web History -->
+
+
+
+<!-- BEGIN 03 Standards and Standards Bodies -->
+
   <presentation id="standards">
     <title short="Standards">Standards and Standards Bodies</title>
-    <date>2011-01-26</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading">
       <a href="http://books.google.com/books?id=IXkX8WKG24gC&amp;pg=PA1">Intro to Dynamics of Standards</a>&#160;· <a href="http://www.webstandards.org/learn/faq/">Web Standards FAQ</a>&#160;· <a href="http://wiki.whatwg.org/wiki/FAQ">WHATWG FAQ (Parts 1 &amp; 2)</a>
     </toc>
@@ -829,10 +847,17 @@
       <title>Next week: Filesystems &amp; HTML</title>
       <p>Next week we will begin looking at Web standards in detail, starting with HTML (the HyperText Markup Language). Before that, however, we need to cover the basics of filesystems and web servers.</p>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 03 Standards and Standards Bodies -->
+
+
+
+<!-- BEGIN 04 Filesystems and Web Servers -->
+
   <presentation id="filesystems">
     <title short="Filesystems">Filesystems and Web Servers</title>
-    <date>2011-01-31</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading">
       <a href="http://en.wikipedia.org/wiki/Computer_file">Files</a>&#160;· <a href="http://hubpages.com/hub/understanding-your-file-system">Filesystems</a>&#160;· <a href="http://www.geo.hunter.cuny.edu/~tbw/spars/dept.faqs/file_dir_structure.htm">Directory structure</a>&#160;· <a href="http://en.wikipedia.org/wiki/Path_(computing)">Paths</a>&#160;· <a href="http://www.netstrider.com/tutorials/HTML/structure/">Website structure</a>&#160;· <a href="http://www.howstuffworks.com/web-server.htm/printable">Web servers</a>
     </toc>
@@ -968,7 +993,7 @@
           <li>A web URL has two main parts: the <em>domain</em> and the <em>path</em>
           <pre>http://[domain]/[path]</pre></li>
           <li>For example:
-		  <pre>http://courses.ischool.berkeley.edu/i153/s11/</pre></li>
+		  <pre>https://elearning.uh.edu/</pre></li>
           <ul>
             <li>The domain is "courses.ischool.berkeley.edu"</li>
             <li>The path is "/i153/s11/index.shtml"</li>
@@ -991,10 +1016,17 @@
         </ul>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 04 Filesystems and Web Servers -->
+
+
+
+<!-- BEGIN 05 HyperText Markup Language (HTML) -->
+
   <presentation id="html">
     <title short="HTML">HyperText Markup Language (HTML)</title>
-    <date>2011-02-02</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://www.w3.org/MarkUp/Guide/">Getting started with HTML</a>&#160;· <a href="http://proquest.safaribooksonline.com/059610197X/1">Getting to know HTML</a></toc>
     <toc class="resources"><a href="http://www.w3schools.com/html">HTML&#160;Tutorial</a>&#160;· <a href="https://developer.mozilla.org/en/HTML/Element">HTML&#160;Reference</a>&#160;· <a href="http://validator.w3.org/">HTML&#160;Validator</a></toc>
     <toc class="abstract">The <em>Hypertext Markup Language (HTML)</em> is the most important content type on the Web. This lecture covers a basic overview of how to use HTML markup in general. In particular, we look at page titles, meta tags, inserting text and images, using lists, and creating simple tables. Attributes can be used for more layout control in the HTML tags, but most layout issues are deferred until the CSS lecture.</toc>
@@ -1282,10 +1314,17 @@
         </ul>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 05 HyperText Markup Language (HTML) -->
+
+
+
+<!-- BEGIN 06 Cascading Style Sheets (CSS) -->
+
   <presentation id="css">
     <title short="CSS">Cascading Style Sheets (CSS)</title>
-    <date>2011-02-07</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://www.w3.org/MarkUp/Guide/Style">Adding a Touch of Style</a>&#160;· <a href="http://proquest.safaribooksonline.com/059610197X/285">Getting started with CSS</a></toc>
     <toc class="resources"><a href="http://www.w3.org/TR/CSS21/" title="W3C CSS 2.1 Specification">CSS Spec</a>&#160;· <a href="http://www.w3.org/TR/CSS21/propidx.html" title="W3C CSS 2.1: Property Index">Properties</a>&#160;· <a href="http://www.w3schools.com/css">CSS&#160;Tutorial</a>&#160;· <a href="http://jigsaw.w3.org/css-validator/">CSS&#160;Validator</a></toc>
     <toc class="abstract"><em>Cascading Stylesheets (CSS)</em> have been designed as a language for better separating presentation-specific issues from the structuring of documents as provided by HTML. CSS uses a simple model of <em>selectors</em> and <em>declarations</em>. Selectors specify to which elements of a document a set of declarations (each being a value assigned to a property) apply; in addition there is a model of how property values are inherited and cascaded. The biggest limitation of CSS is that it cannot change the structure of the displayed document.</toc>
@@ -1689,10 +1728,17 @@
         </ul>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 06 Cascading Style Sheets (CSS) -->
+
+
+
+<!-- BEGIN 07 Web Browsers -->
+
   <presentation id="browsers">
     <title short="Browsers">Web Browsers</title>
-    <date>2011-02-09</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://en.wikipedia.org/wiki/Web_Browser" title="Wikipedia: Web Browser">Wikipedia</a>&#160;· <a href="http://en.wikipedia.org/wiki/History_of_the_web_browser" title="Wikipedia: History of the Web Browser">History</a></toc>
     <toc class="resources"><a href="http://www.mozilla.com/firefox/">Firefox</a>&#160;· <a href="http://www.apple.com/safari/">Safari</a>&#160;· <a href="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx">IE</a>&#160;· <a href="http://www.google.com/chrome">Chrome</a>&#160;· <a href="http://www.opera.com/">Opera</a></toc>
     <toc class="abstract">This lecture looks at <em>Web browsers</em> and how they work. It introduces the basic functionalities of a browser; retrieval and rendering of Web pages. Any modern browser needs to support more than just HTTP and HTML; it must support CSS for stylesheets, JavaScript for scripted Web pages, various image formats, and popular applications such as Flash. In addition, browsers can support additional functionality such as off-line operation, or in general more application-oriented features such as <em>AIR</em> or <em>Silverlight</em>.</toc>
@@ -2126,10 +2172,17 @@
         <li>Information providers should be aware of browser issues</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 07 Web Browsers -->
+
+
+
+<!-- BEGIN 08 Internet Architecture -->
+
   <presentation id="internet">
     <title short="Internet">Internet Architecture</title>
-    <date>2011-02-14</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://xrds.acm.org/article.cfm?aid=197182" title="ACM Crossroads: An Overview of the TCP/IP Protocol Suite">TCP/IP</a></toc>
     <toc class="resources"><a href="http://en.wikipedia.org/wiki/Category:Internet_architecture" title="Wikipedia: Internet Architecture">Internet Architecture</a>&#160;· <a href="http://www.garykessler.net/library/tcpip.html" title="An Overview of TCP/IP Protocols and the Internet">TCP/IP Overview</a>&#160;· <a href="http://www.zakon.org/robert/internet/timeline/" title="Hobbes' Internet Timeline">Timeline</a></toc>
     <toc class="abstract">The Internet is the technical infrastructure on top of which the Web is built. Some of the services provided by the Internet are essential for the Web, most importantly the naming service and the data transfer service. The <em>Domain Name System (DNS)</em> provides the human-readable names for computers, which can then be used in the addresses of Web servers and ultimately Web pages. The <em>Transmission Control Protocol (TCP)</em> provides the reliable data transfer service between Web Servers and Web Browsers, building on the very robust <em>Internet Protocol (IP)</em>.</toc>
@@ -2416,10 +2469,17 @@
         <li>DNS provides human-readable names for Internet hosts</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 08 Internet Architecture -->
+
+
+
+<!-- BEGIN 09 Web Foundations (URIs &amp; HTTP) -->
+
   <presentation id="uri-http">
     <title short="URIs &amp; HTTP">Web Foundations (URIs &amp; HTTP)</title>
-    <date>2011-02-16</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://en.wikipedia.org/wiki/Http" title="Wikipedia: HTTP">HTTP</a>&#160;· <a href="http://www.w3.org/Provider/Style/URI" title="Cool URIs don't change">Cool URIs</a></toc>
     <toc class="resources"><a href="https://addons.mozilla.org/en-US/firefox/addon/3829" title="Firefox Add-on: Live HTTP Headers">Live HTTP Headers</a>&#160;· <a href="http://www.garshol.priv.no/download/text/http-tut.html" title="How the Web works: HTTP and CGI explained">HTTP and CGI</a>&#160;· <a href="http://tools.ietf.org/html/rfc3986" title="IETF RFC 3986: Uniform Resource Identifier (URI)">URI Spec</a>&#160;· <a href="http://tools.ietf.org/html/rfc2616" title="IETF RFC 2616: Hypertext Transfer Protocol (HTTP)">HTTP Spec</a></toc>
     <toc class="abstract">The Web's architecture has very simple principles revolving around the ideas of placing a heavy emphasis on a consistent and global identification mechanism for resources, a standardized way of how resource representations can be retrieved, and a standardized way of how resource representations should be usable by using standardized media types. Based on the Internet, the Web's transport protocol transmits representations of resources identified by a <em>Uniform Resource Identifier (URI)</em> between Web servers and clients. The most important protocols for data transfer on the Web is the <em>Hypertext Transfer Protocol (HTTP)</em>.</toc>
@@ -2769,10 +2829,17 @@
         </ul>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 09 Web Foundations (URIs &amp; HTTP) -->
+
+
+
+<!-- BEGIN 10 Anatomy of a Basic Web Application -->
+
   <presentation id="webapps-basic">
     <title short="Basic Web Apps">Anatomy of a Basic Web Application</title>
-    <date>2011-02-23</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://www.killersites.com/articles/articles_databaseDrivenSites.htm">Database-Driven Website</a>&#160;· <a href="http://en.wikipedia.org/wiki/Form_(web)">Forms</a>&#160;· <a href="http://proquest.safaribooksonline.com/9780596157739/1">It's Alive!</a>&#160;· <a href="http://docforge.com/wiki/Web_application_framework">Web Application Frameworks</a></toc>
     <toc class="resources"><a href="http://htmlhelp.com/faq/html/forms.html">HTML Forms FAQ</a>&#160;· <a href="http://www.w3.org/TR/html401/interact/forms.html">HTML Forms Spec</a></toc>
     <toc class="abstract">The vast majority of web sites today are no longer static HTML pages but <em>database-driven web applications</em>. Today we'll look at a simple database-driven web application in detail, to see how its various components--HTML forms, application server, and database--work together.</toc>
@@ -3037,10 +3104,17 @@
         <li>These three technologies constitute the <em>database-driven web application</em></li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 10 Anatomy of a Basic Web Application -->
+
+
+
+<!-- BEGIN 11 Media Types (MIME) -->
+
   <presentation id="media-types">
     <title short="Media Types">Media Types (MIME)</title>
-    <date>2011-02-28</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="https://developer.mozilla.org/En/How_Mozilla_determines_MIME_Types" title="Firefox Media Type Handling">Firefox Handling</a></toc>
     <toc class="resources"><a href="http://www.iana.org/assignments/media-types/" title="IANA Media Type Registry">Registry</a>&#160;· <a href="http://en.wikipedia.org/wiki/MIME_type" title="Wikipedia: Internet Media Type">Wikipedia</a></toc>
     <toc class="abstract">One of the most important aspect of computer-based communications is the concept of <em>media types</em>, the question what type of information some digital artifact represents, and how it is encoded. The most common standard for this information is the scheme introduced by <em>Multipurpose Internet Mail Extensions (MIME)</em>. Media types can be negotiated by peers communicating through HTTP. Some media types allow fragment identifiers, which allow references to a resource to identify a fragment of the complete resource.</toc>
@@ -3404,9 +3478,16 @@
       </ul>
     </slide>
   </presentation>
+
+<!-- END 11 Media Types (MIME) -->
+
+
+
+<!-- BEGIN 12 Multimedia -->
+
   <presentation id="multimedia">
     <title short="Multimedia">Multimedia</title>
-    <date>2011-03-02</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://www.webstyleguide.com/wsg3/11-graphics/" title="Web Style Guide: Graphics">Style Guide</a>&#160;· <a href="http://www.youtube.com/watch?v=siOHh0uzcuY#t=6m06s">Graphics in HTML5</a>&#160;· <a href="http://www.youtube.com/watch?v=siOHh0uzcuY#t=20m53s">Video in HTML5</a></toc>
     <toc class="resources"><a href="http://en.wikipedia.org/wiki/Graphics_file_format" title="Wikipedia: Graphics File Formats">Graphics File Formats</a>&#160;· <a href="http://www.w3schools.com/svg/svg_intro.asp">Intro to SVG</a>&#160;· <a href="https://developer.mozilla.org/En/Using_audio_and_video_in_Firefox">Audio and Video in Firefox</a></toc>
     <toc class="abstract">Multimedia is a broad term for pictures, audio and video. Pictures include both images and graphics. Until HTML5, images were the only multimedia content on the Web widely supported by standardized formats. With the arrival of HTML5, audio and video are now supported directly by Web browsers, and there is wider support for graphics as well.</toc>
@@ -3639,10 +3720,17 @@
         <li>With HTML5, there is finally native support for audio and video in the Web</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 12 Multimedia -->
+
+
+
+<!-- BEGIN 13 State Management (Cookies) -->
+
   <presentation id="cookies">
     <title short="Cookies">State Management (Cookies)</title>
-    <date>2011-03-07</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://computer.howstuffworks.com/cookie.htm/printable" title="How Stuff Works: Cookies">HowStuffWorks</a>&#160;· <a href="http://www.youtube.com/watch?v=siOHh0uzcuY#t=33m10s">Databases in HTML5</a></toc>
     <toc class="resources"><a href="http://tools.ietf.org/html/rfc2965" title="IETF RFC 2965: HTTP State Management Mechanism">Cookie Spec</a>&#160;· <a href="http://en.wikipedia.org/wiki/HTTP_cookie" title="Wikipedia: HTTP Cookie">Wikipedia</a>&#160;· <a href="http://www.httpviewer.net/" title="Interactive HTTP Viewer Tool">HTTP Viewer</a>&#160;· <a href="http://dev.w3.org/html5/webstorage/">HTML5 Web Storage</a></toc>
     <toc class="abstract">HTTP is a stateless protocol, where each request/response interaction is a separate interaction and there is no protocol support for longer sessions (such as a user logging in and working on a Web site as an identified user). State management refers to mechanisms which provide support for this kind of scenario, the most popular choice for state management are <em>cookies</em>. Another possibility is URI-based state management. The newest option for storing state is HTML5 Web Storage. This lecture is also a glimpse into the world of <em>Representational State Transfer (REST)</em>, the Web's fundamental model of handling interaction with resources.</toc>
@@ -3907,10 +3995,17 @@
         <li>Alternative methods are URI rewriting and hidden form fields</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 13 State Management (Cookies) -->
+
+
+
+<!-- BEGIN 14 Client-side Scripting -->
+
   <presentation id="scripting">
     <title short="Scripting">Client-side Scripting</title>
-    <date>2011-03-09</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://proquest.safaribooksonline.com/9780596527747/chapter_1_the_interactive_web">The Interactive Web</a></toc>
     <toc class="resources"><a href="http://domscripting.com/book/sample/" title='Sample Chapter from "DOM Scripting": Best Practices'>Best Practices</a>&#160;· <a href="http://www.webteacher.com/javascript/" title="JavaScript Tutorial">Tutorial</a>&#160;· <a href="http://en.wikipedia.org/wiki/Dynamic_HTML" title="Wikipedia: Dynamic HTML (DHTML)">Wikipedia</a></toc>
     <toc class="abstract">Scripting is used on the majority of today's modern Web sites. Scripting can be used to improve the usability and accessibility of a Web site (for example for <em>validating form data on the client side</em>), it can vastly improve the user experience with new interface design (the <em>smooth scrolling of Google Maps</em> vs. older <q>click to scroll</q> map services), or it can be used to implement behavior that would be impossible without scripting (for example the <em>online applications of Google Docs</em>). This introductory lecture looks into scripting fundamentals such as JavaScript itself, the <em>Document Object Model (DOM)</em> for accessing the browser window's content, and <code>XMLHttpRequest</code> for script-server communications.</toc>
@@ -4264,10 +4359,17 @@
         <li>Graceful degradation becomes more important on the mobile Web</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 14 Client-side Scripting -->
+
+
+
+<!-- BEGIN 15 Anatomy of an Advanced Web Application -->
+
   <presentation id="webapps-advanced">
     <title short="Advanced Web Apps">Anatomy of an Advanced Web Application</title>
-    <date>2011-03-14</date>
+    <date>[INSERT DATE HERE]</date>
      <toc class="reading"> <a href="http://www.adaptivepath.com/ideas/e000385"> AJAX </a>&#160;· <a href="http://code.google.com/edu/ajax/tutorials/ajax-tutorial.html">AJAX Tutorial </a>&#160;· <a href="http://en.wikipedia.org/wiki/XMLHttpRequest"> XMLHttpRequest </a>&#160;· <a href="http://en.wikipedia.org/wiki/JQuery">jQuery</a> </toc>
     <toc class="resources"><a href="http://en.wikipedia.org/wiki/JSON">JSON</a>&#160;· <a href="http://en.wikipedia.org/wiki/Web_service">Web service</a></toc>
     <toc class="abstract">The widespread adoption of client-side scripting and AJAX techniques has resulted in web applications becoming easier use but harder to understand. No longer is it the case that HTML is used simply to present a document to be read. Now HTML, Javascript and CSS are used together to build dynamic applications that run in the browser. These applications often depend on APIs, resources intended for use by programs rather than people.</toc>
@@ -4290,8 +4392,8 @@
         <li>JQuery (JS library) connects to php script through form input string</li>
         <li>PHP (serverside) connects to database </li>
         <li>Mysql(serverside) process data request and returns values from db</li>
-        <pre>Demo <a href="http://courses.ischool.berkeley.edu/i153/s11/ajax/index.htm"> auto-complete </a> on Fedora Core 14 (Laughlin) running Apache 2, PHP 5.3.6, Mysql 5</pre>
-        <li>AJAX <a href="http://courses.ischool.berkeley.edu/i153/s11/ajax/index.htm"> Countries </a> auto complete (Courtesy of <a href="http://www.nodstrum.com/2007/09/19/autocompleter/"> Nodstrum </a>) </li>
+        <pre>Demo <a href="https://elearning.uh.edu/ajax/index.htm"> auto-complete </a> on Fedora Core 14 (Laughlin) running Apache 2, PHP 5.3.6, Mysql 5</pre>
+        <li>AJAX <a href="https://elearning.uh.edu/ajax/index.htm"> Countries </a> auto complete (Courtesy of <a href="http://www.nodstrum.com/2007/09/19/autocompleter/"> Nodstrum </a>) </li>
         </ul>
       </slide>
       <slide id="api">
@@ -4386,14 +4488,28 @@
         </ul>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 15 Anatomy of an Advanced Web Application -->
+
+
+
+<!-- BEGIN 16 Mid-term Exam -->
+
   <presentation id="midterm" external="">
     <title short="Midterm">Mid-term Exam</title>
-    <date>2011-03-16</date>
-  </presentation>	   
+    <date>[INSERT DATE HERE]</date>
+  </presentation>
+
+<!-- END 16 Mid-term Exam -->
+
+
+
+<!-- BEGIN 17 Web Search -->
+
   <presentation id="search">
     <title short="Search">Web Search</title>
-    <date>2011-03-28</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=70897">Google Basics</a>&#160;· <a href="http://proquest.safaribooksonline.com/9780596809133/search_engine_basics">Search Engine Basics</a>&#160;· <a href="http://epl.scu.edu/~stsvalues/readings/ShapingTheWeb.pdf">Politics of Search Engines</a></toc>
     <toc class="resources"><a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf">PageRank</a>&#160;· <a href="http://en.wikipedia.org/wiki/Robots_exclusion_standard">robots.txt</a>&#160;· <a href="http://en.wikipedia.org/wiki/Site_map">Site Map</a>&#160;· <a href="http://en.wikipedia.org/wiki/Nofollow">nofollow</a>&#160;· <a href="http://www.google.com/insights/search/#">Google Insights</a></toc>
     <toc class="abstract">In his early vision of the Web, Tim Berners-Lee expected that most people would discover information by following hyperlinks, rather than by using keyword searches. Thus there is no search functionality built into the Web. Web search engines came later and had a profound effect on how we use and experience the Web. Now it is hard to imagine using the Web without search, a fact that has both technological and political implications.</toc>
@@ -4690,10 +4806,17 @@
         </ul>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 17 Web Search -->
+
+
+
+<!-- BEGIN 18 Web Intermediaries -->
+
   <presentation id="intermediaries">
     <title short="Intermediaries">Web Intermediaries</title>
-    <date>2011-03-30</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://www.almaden.ibm.com/cs/wbi/papers/www7/Intermediaries.pdf">Web Intermediaries</a>&#160;· <a href="http://www.theatlantic.com/magazine/archive/2008/03/-ldquo-the-connection-has-been-reset-rdquo/6650/">The Great Firewall</a></toc>
     <toc class="resources"><a href="http://en.wikipedia.org/wiki/Proxy_auto-config">Proxy auto-config</a>&#160;· <a href="http://en.wikipedia.org/wiki/Content-control_software">Content-control software</a>&#160;· <a href="http://en.wikipedia.org/wiki/Web_cache">Web cache</a>&#160;· <a href="http://en.wikipedia.org/wiki/Anonymizer">Anonymizer</a>&#160;· <a href="http://en.wikipedia.org/wiki/Content_delivery_network">CDN</a></toc>
     <toc class="abstract">Until now we have discussed the Web in terms of interactions between Web servers (where content is published) and Web browsers (where content is displayed). In actuality, things are a bit more complicated than that. There are many different kinds of <em>Web intermediaries</em> that may occupy the path between where content originates and where it is consumed. These intermediaries can provide a number of services, from improving performance to filtering content to protecting privacy.</toc>
@@ -4861,10 +4984,17 @@
         </ul>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 18 Web Intermediaries -->
+
+
+
+<!-- BEGIN 19 Content Syndication (Atom &amp; RSS) -->
+
   <presentation id="syndication">
     <title short="Syndication">Content Syndication (Atom &amp; RSS)</title>
-    <date>2011-04-04</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://en.wikipedia.org/wiki/History_of_web_syndication_technology" title="Wikipedia: History of Web Syndication Technology">History</a></toc>
     <toc class="resources"><a href="http://en.wikipedia.org/wiki/Web_syndication" title="Wikipedia: Web Syndication">Wikipedia (Syndication)</a>&#160;· <a href="http://en.wikipedia.org/wiki/Web_feed" title="Wikipedia: Web Feeds">Wikipedia (Feeds)</a>&#160;· <a href="http://www.apple.com/itunes/whatson/podcasts/specs.html" title="Apple's Podcast Specification">Podcast Spec</a></toc>
     <toc class="abstract">For many information sources on the Web, it is useful to have some standardized way of subscribing to information updates. Syndication formats such as RSS and Atom can be used by these information sources to publish a feed of updated information items. Feeds can be read directly in a browser, but in most cases they are read by specialized software; either a <em>feed reader</em> that allows users to subscribe to more than one feed and manage the information received through all these feeds, or some software module that reads feeds and embeds them for example in a Web page. This latter example is the classical usage of feeds; news feeds published by news agencies, and then embedded as news tickers into Web pages as a constantly updated source of information.</toc>
@@ -5135,10 +5265,17 @@
         <li>For more semantics, Atom is only the foundation</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 19 Content Syndication (Atom &amp; RSS) -->
+
+
+
+<!-- BEGIN 20 Third-party Content -->
+
   <presentation id="third-party">
     <title short="Third-Party">Third-party Content</title>
-    <date>2011-04-06</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://blogs.zdnet.com/Hinchcliffe/?p=80">Widgets, badges, and gadgets</a></toc>
     <toc class="resources"><a href="http://en.wikipedia.org/wiki/Transclusion">Transclusion</a>&#160;· <a href="http://www.w3.org/TR/widgets-land/">Widget landscape</a>&#160;· <a href="http://www.startup-review.com/blog/youtube-case-study-widget-marketing-comes-of-age.php">Widget Marketing</a></toc>
     <toc class="abstract">HTML pages served by one web server can "host" content from a 3rd-party web server. That functionality is basic to the Web, but it has only really been exploited in recent years. In this lecture we'll look at methods for including 3rd-party content in web page, and some common patterns of application that use these methods.</toc>
@@ -5325,10 +5462,17 @@
         <li>This raises some interesting questions about responsibility, copyright, preservation …</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 20 Third-party Content -->
+
+
+
+<!-- BEGIN 21 Semantic Web, Linked Data &amp; Microformats -->
+
   <presentation id="semantics">
     <title short="Semantics">Semantic Web, Linked Data &amp; Microformats</title>
-    <date>2011-04-11</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://en.wikipedia.org/wiki/Semantic_Web" title="Wikipedia: Semantic Web">Wikipedia</a></toc>
     <toc class="resources"><a href="http://www.w3.org/2001/sw/SW-FAQ" title="W3C Semantic Web FAQ">FAQ</a>&#160;· <a href="http://proquest.safaribooksonline.com/9780596802141/3">Why Semantics?</a>&#160;· <a href="http://microformats.org/about">Microformats</a>&#160;· <a href="http://linkeddata.org/">Linked Data</a>&#160;· <a href="http://www.ted.com/talks/tim_berners_lee_on_the_next_web.html">The Next Web?</a></toc>
     <toc class="abstract">HTML pages are for human users and describe a resource in structural terms (headings, lists, tables, …). For machine-based interaction, it is often useful to have more information about the meanings of application concepts. The <em>Semantic Web</em> is a research program and set of standards for trying to specify these meanings. One goal is to enable data published on the Web to be easily interlinked.</toc>
@@ -5356,7 +5500,7 @@
 					<li><q>The sum of the angles of a triangle is equal to the color red</q></li>
 					<li>While grammatically correct this makes no sense</li>
 				</ul>
-			</ul>  
+			</ul>
 	    </slide>
       <slide>
         <title>Adding Meaning to HTML</title>
@@ -5562,10 +5706,17 @@
         <li>Nevertheless this is an important area to watch</li>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 21 Semantic Web, Linked Data &amp; Microformats -->
+
+
+
+<!-- BEGIN 22 Mobile Web -->
+
   <presentation id="mobile">
     <title short="Mobile">Mobile Web</title>
-    <date>2011-04-13</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://en.wikipedia.org/wiki/Mobile_Web">Mobile Web</a>&#160;· <a href="http://proquest.safaribooksonline.com/9780596806231/45">Context</a></toc>
     <toc class="resources"><a href="http://www.quantcast.com/docs/display/info/Mobile+Report">Mobile Web Trends</a>&#160;· <a href="http://www.w3.org/Mobile/">W3C Mobile Web</a>&#160;· <a href="http://www.mozilla.com/en-US/firefox/geolocation/">Geolocation in Firefox</a>&#160;· <a href="http://escholarship.org/uc/item/0rp834wf">Geolocation Privacy Issues</a></toc>
     <toc class="abstract">A mobile device is a computer you carry around with you. Today, any mobile device has some capability to access the Web, and a quickly growing percentage of all Web usage is done on mobile devices. Clearly, web content needs to be adadpted for the wide variety of sizes, shapes, and functionality of mobile devices. More importantly, however, mobile devices open new possibilities for adapting content based on a user's <em>context</em>. </toc>
@@ -5789,10 +5940,17 @@
         </center>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 22 Mobile Web -->
+
+
+
+<!-- BEGIN 23 Real-time Web -->
+
   <presentation id="realtime">
     <title short="Real-time">Real-time Web</title>
-    <date>2011-04-18</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://en.wikipedia.org/wiki/Real-time_web">Real-time Web</a></toc>
     <toc class="resources"><a href="http://www.readwriteweb.com/archives/introduction_to_the_real_time_web.php">Intro to the Real-Time Web</a>&#160;· <a href="http://www.businessweek.com/magazine/content/09_33/b4143046834887.htm">Betting on the Real-Time Web</a>&#160;· <a href="http://www.roughtype.com/archives/2009/02/the_free_arts_a.php">The Realtime Chronicles</a></toc>
    <toc class="abstract">Real Time Web is a collection of technlogies that allow immediate and direct web publishing. Real time is perhaps the newest evolution in web technology but in manys ways is more hype than reality. Real time Web has attracted the attention of marketers and those interested in finding new ways to target ads and more actionable user behavior.  </toc>
@@ -5803,7 +5961,7 @@
                 <part id="realtime">
                  <title>Real Time Web</title>
 
- <title>Real Time Web</title>   
+ <title>Real Time Web</title> 
 
 <ul>
 <li>Realtime publishing is not like Feeds (RSS)</li>
@@ -5812,10 +5970,10 @@
          <li>RSS feeds rely on a time interval for polling set by site operator (server side) or by user (client)</li>
          <li>RSS is timely but not immediate, that is 1s response</li>
          <li>RSS + Instant is a goal  <a href="http://blog.notifixio.us/post/73594997/how-can-we-do-a-realtime-web"> RSS + Realtime</a> </li>
- 	</ul>                                                           
+ 	</ul>                                                         
  </ul>
 </part>
-<slide>          
+<slide>        
 <title>Real Time Web</title>
 
 
@@ -5828,7 +5986,7 @@
                                  <li>Lacks some reliability present with request/reponse </li>
                                           <li>Extensible Messaging and Presence Protocol (XMPP) </li>
                                           <li>XMPP is based upon Jabber IM technology</li>
-                                                  </ul>                                                                  
+                                                  </ul>                                                                
                                                    </ul>
 </slide>
 <slide>
@@ -5860,17 +6018,20 @@
                             <li>Very timely information, e.g. Haiti Earthquake</li>
                                           <li>Content is immediately relevant to your social network, rather than PAGE Rank</li>
                                                       <li>Not mediated content (think of Charlie Sheen fiasco) </li>
-                                     
+                                   
                                      <li>Ones social network may potentially close off new info (echo chamber effect)</li>
                                                                      </ul>
 
                                                                      </ul>
 </slide>
-</presentation>	   
+</presentation>	 
+
+
+<!-- BEGIN  -->
 
   <presentation id="security">
     <title short="Security">Security &amp; Privacy</title>
-    <date>2011-04-20</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading"><a href="http://en.wikipedia.org/wiki/Internet_security" title="Wikipedia: Internet Security">Security</a>&#160;· <a href="http://en.wikipedia.org/wiki/Internet_privacy" title="Wikipedia: Internet Privacy">Privacy</a>&#160;· <a href="http://cacm.acm.org/magazines/2009/8/34494-browser-security/fulltext" title="Browser Security: Lessons from Google Chrome, Charles Reis, Adam Barth, Carlos Pizano, Communications of the ACM, Vol. 52 No. 8, Pages 45-49, August 2009">Browser Security</a></toc>
     <toc class="resources"><a href="http://support.mozilla.com/en-US/kb/Options+window" title="Firefox Options for Security and Privacy">Browser Options</a>&#160;· <a href="http://en.wikipedia.org/wiki/Https" title="Wikipedia: HTTPS">HTTPS</a>&#160;· <a href="http://tools.ietf.org/html/rfc2818" title="IETF RFC 2818: HTTP over TLS (HTTPS)">HTTPS Spec</a></toc>
     <toc class="abstract">TCP and thus HTTP are clear-text protocols, which make no attempt to hide the data being transmitted. For secure data transfers, it thus is necessary to use additional technologies for providing secure data transfers. For the Web, the most interesting security feature are secure HTTP interactions, which are provided by <em>HTTP over SSL (HTTPS)</em>, a protocol that layers an encryption layer (SSL or TLS) between TCP and HTTP. For any task involving personalization and/or trust, it is not only necessary to have a concept for providing privacy, but also to have concepts for identity and how to prove identity, which needs authentication.</toc>
@@ -6054,11 +6215,18 @@
         </ul>
       </slide>
     </part>
-  </presentation>	   
+  </presentation>
+
+<!-- END 23 Real-time Web -->
+
+
+
+<!-- BEGIN 24 Openness &amp; Transparency -->
+
   <presentation id="openness">
     <toc class="author"><a href="http://www.ischool.berkeley.edu/people/students/ashwinmathew">Ashwin Jacob Mathew</a></toc>
     <title short="Openness">Openness &amp; Transparency</title>
-    <date>2011-04-25</date>
+    <date>[INSERT DATE HERE]</date>
     <toc class="reading">
       <a href="http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/1367/1286">Openness in Communication</a>&#160;· <a href="http://googleblog.blogspot.com/2009/12/meaning-of-open.html">Meaning of Open</a>&#160;· <a href="http://www.tnr.com/article/books-and-arts/against-transparency">Against Transparency</a>
     </toc>
@@ -6162,9 +6330,20 @@
         </ul>
       </ul>
     </slide>
-  </presentation>	   
+  </presentation>
+
+<!-- END 24 Openness &amp; Transparency -->
+
+
+
+<!-- BEGIN 25 Course Recap -->
+
   <presentation id="recap" external="">
     <title short="Recap">Course Recap</title>
-    <date>2011-04-27</date>
-  </presentation>	   
+    <date>[INSERT DATE HERE]</date>
+  </presentation>
+
+<!-- END 25 Course Recap -->
+
+	 
 </hotspot>
