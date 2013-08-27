@@ -55,7 +55,8 @@ body {
 
 .kilaueaToolbar {
 	position: fixed;
-	right: 0;
+//	right: 0 <-- Removed this setting to allow ../copyright/index.html appear;
+	right: 1;
 	left: 0;
 	bottom: 1.4em;
 	visibility: hidden;

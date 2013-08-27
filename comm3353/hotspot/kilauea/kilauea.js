@@ -3710,6 +3710,7 @@ Kilauea.Instance.prototype = {
 		this.fields.slideCount = Kilauea.getField(this.container, 'kilaueaSlideCount');
 		// copyright and license
 		var license = null;
+		var copyright = null;
 		var l = document.getElementsByTagName("link");
 		for (var i = 0; i < l.length; i++) {
 			if (l[i].getAttribute("rel") == 'DCTERMS.license') {
@@ -3718,11 +3719,23 @@ Kilauea.Instance.prototype = {
 				license.setAttribute('href', l[i].getAttribute("href"));
 				license.setAttribute('title', l[i].getAttribute("title"));
 //				license.appendChild(document.createTextNode(this.getMeta('copyright', l[i].getAttribute("title"))));
+//				break;
+			} else if  (l[i].getAttribute("rel") == 'copyright.info') {
+				copyright = document.createElement('a');
+				copyright.setAttribute('rel', 'copyright');
+				copyright.setAttribute('href', l[i].getAttribute("href"));
+				copyright.setAttribute('title', l[i].getAttribute("title"));
+				copyright.appendChild(document.createTextNode(this.getMeta('copyright', l[i].getAttribute("title"))));
+//				console.log(copyright);
+			}
+			if (license && copyright) {
 				break;
 			}
 		}
-//		this.fields.copyright = Kilauea.getField(this.container, 'kilaueaCopyright', license ? license : this.getMeta('copyright'));
+//		console.log (this.fields.copyright);
+		this.fields.copyright = Kilauea.getField(this.container, 'kilaueaCopyright', copyright ? copyright : this.getMeta('copyright'));
 		// presentation title
+//		console.log (this.fields.copyright);
 		this.fields.title = Kilauea.getField(this.container, 'kilaueaTitle', this.title);
 		
 		return Kilauea.getField(this.container, 'kilaueaFooter', this.fields.slideCount, this.fields.copyright, this.fields.title);

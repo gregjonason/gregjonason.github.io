@@ -20,6 +20,7 @@ a { border-bottom : 1px dotted ; }
 
 a:hover, a:active {
 	background-color :  #E0E0E0;
+/*	background-color :  #E0E0E0; */
 	color : black;
 	text-decoration : none;
 }
@@ -34,10 +35,12 @@ a.img:hover { background-color : transparent ; }
 .kilaueaFooter {
 	color: #000000;
 	background-color: #CAE188;
+/*	background-color: #CAE188; */
 }
 
 .kilaueaToolbar {
 	color: #5173B6;
+/*	color: #5173B6; */
 }
 
 /* BACKGROUND */
@@ -54,10 +57,12 @@ a.img:hover { background-color : transparent ; }
 .slide h1 {
 	font-size: 160%;
 	background-color:  #8AA148;
+/*	background-color:  #8AA148; */
 	border-bottom:  5px #5173B6 solid;
+/*	border-bottom:  5px #5173B6 solid; */
 	padding:  0.8em;
 	margin: 0 0 1em 0;
-    color:  #ffffff;
+	color:  #ffffff;
 }
 
 /* BULLET LISTS */
@@ -94,8 +99,10 @@ a.img:hover { background-color : transparent ; }
 /* BLOCKQUOTE, ABSTRACT, QUOTE NOTES, CREDITS */
 
 blockquote { margin : 3% ; padding : 3% ; border : 5px #5173B6 double ; }
+/* blockquote { margin : 3% ; padding : 3% ; border : 5px #5173B6 double ; } */
 
 .abstract { margin : 5% ; padding : 5% ; border : 6px groove ; text-align : justify ; background-color : #F6F6F6 ; }
+/* .abstract { margin : 5% ; padding : 5% ; border : 6px groove ; text-align : justify ; background-color : #F6F6F6 ; } */
 
 .quotenote { text-align : right ; margin-right : 3% ; }
 
@@ -104,7 +111,8 @@ blockquote { margin : 3% ; padding : 3% ; border : 5px #5173B6 double ; }
 /* COVER PAGE STYLES */
 
 .slide.cover {
-	background-image:  url("ischool/south-hall.jpg");
+	background-image:  url("ischool/cougar.jpg");
+/*	background-image:  url("ischool/south-hall.jpg"); */
 	background-repeat:  no-repeat;
 	background-position:  bottom right;
 	background-color:  #ffffff;
@@ -114,7 +122,9 @@ blockquote { margin : 3% ; padding : 3% ; border : 5px #5173B6 double ; }
 .slide.cover h1 {
 	font-size: 180%;
 	background-color:  #BAD178;
+/*	background-color:  #BAD178; */
 	border-bottom:  5px #81A3E6 solid;
+/*	border-bottom:  5px #81A3E6 solid; */
 	padding:  1.5em 1em 1.5em 15%;
 	margin: 0;
 	color:  #000000;
@@ -138,6 +148,7 @@ blockquote { margin : 3% ; padding : 3% ; border : 5px #5173B6 double ; }
 
 .note {
 	background-color: #CAE188;
+/*	background-color: #CAE188; */
 	color: #000;
 	padding: 0.5ex 1ex;
 	font-size: 90%;
@@ -215,6 +226,7 @@ pre:hover + .ref-container, .ref-container:hover {
 	font-size: 60%;
 	background-color: #fff;
 	border: #95ABD0 solid 1px;
+/*	border: #95ABD0 solid 1px; */
 	border-bottom: solid 4px #fff;
 	padding: 0.34em 1ex;
 }
