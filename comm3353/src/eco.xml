@@ -1,0 +1,68 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+	<channel>
+		<title>ECO</title>
+		<link>http://www.eco.sf.tv</link>
+		<language>ch-de</language>
+		<copyright> &amp; &#xA9; 2007 SRG SSR idee suisse</copyright>
+		<itunes:subtitle>Das Wirtschaftsmagazin</itunes:subtitle>
+		<itunes:author>Schweizer Fernsehen</itunes:author>
+		<itunes:summary>ECO zeigt auf, was die Wirtschaftswelt bewegt. Zusammenh&#xE4;nge und Hintergr&#xFC;nde f&#xFC;r einmal nicht nur faktentreu erz&#xE4;hlt, sondern Wirtschaftswissen
+            mit Mehrwert f&#xFC;r jedermann. Aktuell und kritisch. Jeden Montag um 22.20 auf SF1
+        </itunes:summary>
+		<description>ECO zeigt auf, was die Wirtschaftswelt bewegt. Zusammenh&#xE4;nge und Hintergr&#xFC;nde f&#xFC;r einmal nicht nur faktentreu erz&#xE4;hlt, sondern Wirtschaftswissen
+            mit Mehrwert f&#xFC;r jedermann. Aktuell und kritisch. Jeden Montag um 22.20 auf SF1.
+        </description>
+		<itunes:owner>
+			<itunes:name>Schweizer Fernsehen</itunes:name>
+			<itunes:email>eco@sf.tv</itunes:email>
+		</itunes:owner>
+		<itunes:image href="http://www.sf.tv/podcasts/data/eco_logo.jpg"/>
+		<itunes:category text="Business">
+			<itunes:category text="Business News"/>
+		</itunes:category>
+		<itunes:category text="TV &amp; Film"/>
+		<itunes:explicit>no</itunes:explicit>
+		<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+			<title>ECO vom 06.04.2009</title>
+			<itunes:author>Schweizer Fernsehen</itunes:author>
+			<itunes:subtitle>Die Themen der Sendung: - Machtkampf in Winterthur - Krise im Milchmarkt - Unternehmer mit Charakter</itunes:subtitle>
+			<itunes:summary>&lt;p&gt;Die Themen der Sendung:&lt;/p&gt;&lt;p&gt;- Machtkampf in Winterthur&lt;/p&gt;&lt;p&gt;- Krise im Milchmarkt&lt;/p&gt;&lt;p&gt;- Unternehmer mit Charakter&lt;/p&gt;</itunes:summary>
+			<enclosure url="http://podcastsource.sf.tv/media/sf/podcast/eco/2009/04/eco_20090406_222652_526k.m4v" length="116021491" type="video/x-m4v"/>
+			<guid>http://podcastsource.sf.tv/media/sf/podcast/eco/2009/04/eco_20090406_222652_526k.m4v</guid>
+			<itunes:duration>00:30:41</itunes:duration>
+			<pubDate>Mon, 06 Apr 2009 21:05:03 GMT</pubDate>
+			<itunes:keywords>Wirtschaft, Schweiz, B&#xF6;rse, Finanzen, &#xD6;konomie</itunes:keywords>
+		</item>
+		<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+			<title>ECO vom 30.03.2009</title>
+			<itunes:author>Schweizer Fernsehen</itunes:author>
+			<itunes:subtitle>Die Themen der Sendung: - Nach uns die Zukunft - Studiogespr&#xE4;ch  - Gesch&#xE4;ft mit der Nase - Vallejo: Konkurs als Ausweg</itunes:subtitle>
+			<itunes:summary>&lt;p&gt;Die Themen der Sendung:&lt;/p&gt;&lt;p&gt;- Nach uns die Zukunft&lt;/p&gt;&lt;p&gt;- Studiogespr&#xE4;ch &lt;/p&gt;&lt;p&gt;- Gesch&#xE4;ft mit der Nase&lt;/p&gt;&lt;p&gt;- Vallejo: Konkurs als Ausweg&lt;/p&gt;</itunes:summary>
+			<enclosure url="http://podcastsource.sf.tv/media/sf/podcast/eco/2009/03/eco_20090330_222732_526k.m4v" length="97350584" type="video/x-m4v"/>
+			<guid>http://podcastsource.sf.tv/media/sf/podcast/eco/2009/03/eco_20090330_222732_526k.m4v</guid>
+			<itunes:duration>00:25:39</itunes:duration>
+			<pubDate>Mon, 30 Mar 2009 21:00:05 GMT</pubDate>
+		</item>
+		<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+			<title>ECO vom 23.03.2009</title>
+			<itunes:author>Schweizer Fernsehen</itunes:author>
+			<itunes:subtitle>Die Themen der Sendung: - 2. S&#xE4;ule: Goldesel der Versicherer - Die Putzakademie - Longines und Tissot im Umbruch</itunes:subtitle>
+			<itunes:summary>&lt;p&gt;Die Themen der Sendung:&lt;/p&gt;&lt;p&gt;- 2. S&#xE4;ule: Goldesel der Versicherer&lt;/p&gt;&lt;p&gt;- Die Putzakademie&lt;/p&gt;&lt;p&gt;- Longines und Tissot im Umbruch&lt;/p&gt;</itunes:summary>
+			<enclosure url="http://podcastsource.sf.tv/media/sf/podcast/eco/2009/03/eco_20090323_222729_526k.m4v" length="104522277" type="video/x-m4v"/>
+			<guid>http://podcastsource.sf.tv/media/sf/podcast/eco/2009/03/eco_20090323_222729_526k.m4v</guid>
+			<itunes:duration>00:27:41</itunes:duration>
+			<pubDate>Mon, 23 Mar 2009 22:00:05 GMT</pubDate>
+		</item>
+		<item xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+			<title>ECO vom 16.03.2009</title>
+			<itunes:author>Schweizer Fernsehen</itunes:author>
+			<itunes:subtitle>Die Themen der Sendung: - Lidl: Tor zum EU-Markt - S&#xE4;gereien in der Krise - Die gr&#xF6;sste Immobilienmesse der Welt</itunes:subtitle>
+			<itunes:summary>&lt;p&gt;Die Themen der Sendung:&lt;/p&gt;&lt;p&gt;- Lidl: Tor zum EU-Markt&lt;/p&gt;&lt;p&gt;- S&#xE4;gereien in der Krise&lt;/p&gt;&lt;p&gt;- Die gr&#xF6;sste Immobilienmesse der Welt&lt;/p&gt;</itunes:summary>
+			<enclosure url="http://podcastsource.sf.tv/media/sf/podcast/eco/2009/03/eco_20090316_222906_526k.m4v" length="111521926" type="video/x-m4v"/>
+			<guid>http://podcastsource.sf.tv/media/sf/podcast/eco/2009/03/eco_20090316_222906_526k.m4v</guid>
+			<itunes:duration>00:29:45</itunes:duration>
+			<pubDate>Mon, 16 Mar 2009 22:05:04 GMT</pubDate>
+		</item>
+		<lastBuildDate>Mon, 06 Apr 2009 21:05:03 GMT</lastBuildDate>
+	</channel>
+</rss>

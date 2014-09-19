@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Original course and code: Erik Wilde and Dilan Mahendran, UC Berkeley School of Information -->
+<!-- Original course name: Web Architecture and Information Management - INFO 153 (CCN 42509), SP 2011 -->
+<!-- New course and code remix: Gregory Jonason -->
+<!-- New course name: Information and Communication Technologies I - COMM 3353 (SEC 20668), FA 2013 -->
+<!-- $Id: 201303fa_comm3353.xml 1234 2013-05-28 15:03:01Z gregory.jonason $ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+		<title>Web Technologies I (Fall 2013 – COMM 3353 – Section 20668)</title>
+	<head>
+		<link rel="home" href="index.html" title="Course List"/>
+		<link rel="glossary" href="http://dret.net/glossary/" />
+		<link rel="author" href="http://gregjonason.com/" title="Gregory Jonason"/>
+		<link rel="stylesheet" type="text/css" href="site.css"/>
+		<link rel="stylesheet" type="text/css" href="course.css"/>
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="text/javascript">
+<!--
+// copied from http://www.michaelhanscom.com/eclecticism/2004/01/javascript_togg.html
+function toggle(targetId) {
+ if (document.getElementById) {
+  target = document.getElementById(targetId);
+  if (target.style.display == "block") {
+   target.style.display = "none";
+  } else {
+   target.style.display = "block";
+  }
+ }
+}
+// copied from http://www.webmasterworld.com/forum91/1729.htm
+var allPageTags = new Array(); 
+var allPageTags=document.getElementsByTagName("*");
+function displayAll(theClass,value) {
+ for (i=0; i<allPageTags.length; i++) {
+  if (allPageTags[i].className==theClass) {
+   allPageTags[i].style.display=value;
+  }
+ }
+}
+-->
+</script>
+	</head>
+	<body onload='displayAll("toggle","none") ; return false ;'>
+		<div class="header">
+			<h1>Web Technologies I</h1>
+			<h2>COMM 3353 (Section 20668) – Fall 2013<br /><a href="http://www.uh.edu/class/communication/" title="Jack J. Valenti School of Communication" target="_blank">Jack J. Valenti School of Communication</a><br /><a href="http://www.uh.edu/" title="University of Houston" target="_blank">University of Houston</a></h2>
+			<h2>Instructor: <a href="mailto:greg@uh.edu" title="Email Gregory Jonason">Gregory Jonason</a></h2>
+			<h2>Lecture: Tuesday</b> 5:30 pm - 7:00 pm<br /><a href="http://www.uh.edu/maps/buildings/?short_name=COM" title="JJVSOC Communication Technology Center Computer Lab" target="_blank">JJVSOC Communication Technology Center<br />Computer Lab</a><br />Room 232</h2>
+		</div>
+		<div style="margin : 5mm">
+
+<font color="red"><b><u>NOTICE</u>: This syllabus is subject to change.</b></font>
+<br />
+<br />
+
+<b><u>Course Description</u></b>
+<br />
+
+<p>This courses focuses on understanding the Web as an information system, and how to use it for information management for personal and shared information. The Web is an open and constantly evolving system which can make it hard to understand how the different parts of the landscape fit together. This course provides students with an overview of the Web as a whole, and how the individual parts it together. We briefly look at topics such as Web design and Web programming, but this course is not exclusively designed to teach HTML or JavaScript. Instead, we look at the bigger picture and how and when to use these and other technologies. The Web already is and will remain a central part in many information-related activities for a long time to come, and this course provides students with the understanding and skills to better navigate and use the landscape of Web information, Web technologies, Web tools, and common Web patterns.</p>
+
+<b><u>The textbook</u></b>
+<br />
+<ol>
+<li>Read the book on your own time (Thursday nights or whenever).</li>
+<li>If you want audio for personal use, I will show you how to do this outside of class.</li>
+<li>There will be an exam based on the book readings.</li>
+<li>We will have a review for the midterm.</li>
+<li>The midterm will be ten (10) essay questions over the main topic of each chapter. If the book is not read carefully, the concepts will not be understood by the reader, therefore the essay will be weak. Weak essays produce low grades.</li>
+</ol>
+
+<b><u>Group Work</u></b>
+<br />
+<ol>
+<li>There will be two (2) group assignments at the beginning of the semester.
+<li>Work in groups of four (4).</li>
+<li>Those who do the work in the group, simply MAINTAIN a grade status quo. Those who do not contribute to the group project (and it is reported to me) will <b><u>lose</u></b> ten percent (10%) of their overall grade.</li>
+<li>No one's role is more important than the other. To make this apparent to the group, prove it.</li>
+<li>Everyone is talented. Working with people that are opposite you will surpirse you. The most talented share what they know with others to help everyone move UP AND TO THE RIGHT (i.e. grow and move forward). Life is too short to bog yourself down with competing with someone else. At the Bill and Melinda Gates Foundation there is an African proverb that is refered to often which says: “If you want to go fast, go alone. If you want to go far, go together."</li>
+<li>Suggestions for a successful group project experience would be:</li>
+	<ol type="a">
+		<li><u>Leader</u> - Choose someone who will lead. No leader is perfect, but a good leader can help everything run smoothly.</li>
+		<li><u>Recorder</u> - Choose someone who is quick on the computer and organized. This person knows social media and they also are able comfortable using collaborative learning tools like Google Docs.</li>
+		<li><u>Researcher</u> - Choose someone who has computer skill, but will specifically feel comfortable using <b><a href="https://scholar.google.com">Google Scholar</a></b> and the <b><a href="http://info.lib.uh.edu">UH Online Library</a></b>.</li>
+		<li><u>Host</u> - Choose someone who will organize when and where to meet. This person will assist the leader break down tasks and get things accomplished. Who knows, this person may have a sweet house to meet at and provide food for everyone…</li>
+	</ol>
+</ol>
+
+<b><u>Class</u></b>
+<br />
+<ol>
+<li>We will draw to see who leads the discussion for each week.
+<li>We will have mini discussions about the topics each week based on the selections on the syllabus or ones that are more current that you bring (approved by me).
+<li>Go over the articles on the syllabus or bring interesting topics yourself based on the topic for that class day.
+</ol>
+
+<b><u>10-page paper</u></b>
+<br />
+<ol>
+<li>The sources I have on my syllabus will be considered extra sources OUTSIDE the twenty required.</li>
+<li>Your sources must be journal articles from Google Scholar (<b><a href="http://scholar.google.com">http://scholar.google.com</a></b>) or the UH Online Library (<b><a href="http://info.lib.uh.edu">http://info.lib.uh.edu</a></b>). YouTube or other websites are considered sources OUTSIDE the twenty required.</li>
+</ol>
+
+
+<b><u>Grading & Assignments</u></b>
+<br />
+<br />
+<table border="1">
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 1</font></td>
+	<td><font face="Courier New,Courier,Monaco"><b>&#40;Maintain 010&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">Group Project: Lego Standards Plan</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 2</font></td>
+	<td><font face="Courier New,Courier,Monaco"><b>&#40;Maintain 010&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">Group Project: Github Open Website</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 3</font></td>
+	<td><font face="Courier New,Courier,Monaco"><b>&#40;Maintain 005&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">20 References & 10 Quotes &#40;APA 6&#41;</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 4</font></td>
+	<td><font face="Courier New,Courier,Monaco"><b>&#40;Maintain 005&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">Introduction</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 5</font></td>
+	<td><font face="Courier New,Courier,Monaco"><b>&#40;Maintain 005&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">Body &#40;Rough Draft&#41;</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 6</font></td>
+	<td><font face="Courier New,Courier,Monaco"><b>&#40;Maintain 005&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">Body &#40;Revision 1&#41;</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 7</font></td>
+	<td><font face="Courier New,Courier,Monaco"><b>&#40;Maintain 005&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">Conclusion</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Assignment 8</font></td>
+	<td><font face="Courier New,Courier,Monaco" color="green"><b>&#40;Increase 030&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">10 Page Paper &#40;2,500 Words&#41;</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Midterm Exam</font></td>
+	<td><font face="Courier New,Courier,Monaco" color="green"><b>&#40;Increase 030&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">10 Chapter Comprehensive (10 Essays)</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Attendance</font></td>
+	<td><font face="Courier New,Courier,Monaco" color="green"><b>&#40;Increase 020&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">More than 4 absences = 'F'</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">Participation</font></td>
+	<td><font face="Courier New,Courier,Monaco" color="green"><b>&#40;Increase 020&#37;&#41;</b></font></td>
+	<td><font face="Courier New,Courier,Monaco">Lead a discussion & share at every class meeting</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco"></font></td>
+	<td><font face="Courier New,Courier,Monaco">&#40;Total GP 100&#37;&#41;</td>
+	<td><font face="Courier New,Courier,Monaco"></font></td>
+</tr>
+</table>
+
+<br />
+<br />
+
+<b><u>Grading Scale</u></b>
+<br />
+<br />
+<table border="1">
+<tr>
+	<td><font face="Courier New,Courier,Monaco">A+</font></td>
+	<td><font face="Courier New,Courier,Monaco">097.0-100.0</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">A</font></td>
+	<td><font face="Courier New,Courier,Monaco">094.0-096.9</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">A-</font></td>
+	<td><font face="Courier New,Courier,Monaco">090.0-093.9</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">B+</font></td>
+	<td><font face="Courier New,Courier,Monaco">087.0-089.9</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">B</font></td>
+	<td><font face="Courier New,Courier,Monaco">084.0-086.9</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">B-</font></td>
+	<td><font face="Courier New,Courier,Monaco">080.0-083.9</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">C+</font></td>
+	<td><font face="Courier New,Courier,Monaco">077.0-079.9</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">C</font></td>
+	<td><font face="Courier New,Courier,Monaco">074.0-076.9</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">C-</font></td>
+	<td><font face="Courier New,Courier,Monaco">070.0-073.9 &#40;No Course Credit&#41;</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">D</font></td>
+	<td><font face="Courier New,Courier,Monaco">060.0-069.9 &#40;No Course Credit&#41;</font></td>
+</tr>
+
+<tr>
+	<td><font face="Courier New,Courier,Monaco">F</font></td>
+	<td><font face="Courier New,Courier,Monaco">000.0-059.9 &#40;No Course Credit&#41;</font></td>
+</tr>
+</table>
+<br />
+<br />
+
+	<table rules="all" cellspacing="0" cellpadding="5" width="100%">
+	<!-- xmlns="" makes sure the document can be included into a web page setting xmlns to the HTML namespace. -->
+
+	<thead>
+		<tr>
+			<th valign="bottom">Date</th>
+			<th valign="bottom">Week</th>
+			<th valign="bottom">Subject</th>
+			<th valign="bottom">Slides</th>
+			<th valign="bottom">Required Reading</th>
+			<th valign="bottom">Additional Resources</th>
+		</tr>
+	</thead>
+
+		<tbody>
+
+		<!-- BEGIN ROW #01 -->
+		<tr>
+			<td align="right" valign="top">2013-08-27<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">01</td>
+
+			<td valign="center">
+				<center><b>Overview and Introduction<br />&amp;<br />Web History</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">This introductory lecture gives the motivation for the course, some information about the people involved and the organization of the course, a high-level overview of the course's topics, and an overview of the assignments which are an important part of the course program.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">The Web is, in the words of its creator Tim Berners-Lee, a "global information space." The Web is relatively new, but the vision of a global information space is at least a century old. Looking back at these early visions can give us a sense of the recurring problems in human communication and information management to which the Web was intended to be a solution. Yet we must be careful to avoid seeing an unbroken line of technological progress where there was none: many of the pioneers of information management were forgotten, and later generations constructed their own pragmatic historical narratives.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="intro/index.html" title="Lecture Slides">Introduction</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="history/index.html" title="Lecture Slides">History</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.nytimes.com/2008/06/17/science/17mund.html" title="http://www.nytimes.com/2008/06/17/science/17mund.html">The Web Time Forgot</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.nytimes.com/2008/06/17/science/17mund.html]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3c.it/education/2012/upra/documents/origins.pdf" title="Note: you can skip the appendices">History of the Web</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3c.it/education/2012/upra/documents/origins.pdf]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/History/1989/proposal.html" title="http://www.w3.org/History/1989/proposal.html">A Proposal</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/History/1989/proposal.html]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://people.ischool.berkeley.edu/~buckland/otlet.html" title="http://people.ischool.berkeley.edu/~buckland/otlet.html">Paul Otlet</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://people.ischool.berkeley.edu/~buckland/otlet.html]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://people.ischool.berkeley.edu/~buckland/goldberg.html" title="http://people.ischool.berkeley.edu/~buckland/goldberg.html">Emanuel Goldberg</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://people.ischool.berkeley.edu/~buckland/goldberg.html]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://sherlock.ischool.berkeley.edu/wells/world_brain.html" title="https://sherlock.ischool.berkeley.edu/wells/world_brain.html">World Brain</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://sherlock.ischool.berkeley.edu/wells/world_brain.html]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.ibiblio.org/pioneers/" title="http://www.ibiblio.org/pioneers/">Internet Pioneers</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.ibiblio.org/pioneers/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.dougengelbart.org/pubs/augment-3906.html" title="http://www.dougengelbart.org/pubs/augment-3906.html">Augmenting Human Intellect</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.dougengelbart.org/pubs/augment-3906.html]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://portal.acm.org/citation.cfm?id=43953" title="http://portal.acm.org/citation.cfm?id=43953">Hypertext '87</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://portal.acm.org/citation.cfm?id=43953]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/History.html" title="http://www.w3.org/History.html">W3C Web Chronology</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/History.html]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/2004/Talks/w3c10-HowItAllStarted/?toc=true" title="http://www.w3.org/2004/Talks/w3c10-HowItAllStarted/?toc=true">How It All Started</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/2004/Talks/w3c10-HowItAllStarted/?toc=true]</span>
+					&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.isoc.org/internet/history/" title="http://www.isoc.org/internet/history/">Histories of the Internet</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.isoc.org/internet/history/]</span>
+			</td>
+		</tr>
+		<!-- END ROW #01 -->
+
+
+		<!-- BEGIN ROW #02 -->
+		<tr>
+			<td align="right" valign="top" width="100">2013-08-29<br />Online - Thu</td>
+			<td align="right" valign="top">01</td>
+
+			<td align="left">
+				<b><u>The Network Society</u><br />Chapter 1 [Introduction]</b><br /><b>Chapter 2 [Networks: The Nervous System of Society]</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="left"><u>The Network Society</u><br />Ch. 1 (pp. 1-21)<br />Ch. 2 (pp. 22-48)</td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #02 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+		<!-- BEGIN ROW #03 -->
+		<tr>
+			<td align="right" valign="top">2013-09-03<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">02</td>
+
+			<td valign="center">
+				<center><b>Standards and Standards Bodies<br />&amp;<br />Filesystems and Web Servers</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">The Web is composed of standards: rules and practices to which technologies must adhere if they are to be considered part of the Web. Most of these standards are developed by <em xmlns="http://www.w3.org/1999/xhtml">standards bodies</em>, organizations that publish documents defining Web technologies. But sometimes standards develop more organically, from technologies that become popular and are widely implemented without a formal process. However they arise, Web standards are critical for the existence of the Web, and they can have enormous economic and societal impact.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">It can be hard to understand web technologies without a basic understanding of filesystems, directory structure, and file paths. This lecture provides an overview of these topics and shows how web servers build upon these fundamentals.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="standards/index.html" title="Lecture Slides">Standards</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="filesystems/index.html" title="Lecture Slides">Filesystems</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://books.google.com/books?id=IXkX8WKG24gC&pg=PA1" title="http://books.google.com/books?id=IXkX8WKG24gC&amp;pg=PA1">Intro to Dynamics of Standards</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://books.google.com/books?id=IXkX8WKG24gC&amp;pg=PA1]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.webstandards.org/learn/faq/" title="http://www.webstandards.org/learn/faq/">Web Standards FAQ</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.webstandards.org/learn/faq/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://wiki.whatwg.org/wiki/FAQ" title="http://wiki.whatwg.org/wiki/FAQ">WHATWG FAQ (Parts 1 &amp; 2)</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://wiki.whatwg.org/wiki/FAQ]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.brickinstructions.com/" title="http://www.brickinstructions.com/">Brick Instructions</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.brickinstructions.com/]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Computer_file" title="http://en.wikipedia.org/wiki/Computer_file">Files</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Computer_file]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://hubpages.com/hub/understanding-your-file-system" title="http://hubpages.com/hub/understanding-your-file-system">Filesystems</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://hubpages.com/hub/understanding-your-file-system]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://archive.is/30As0" title="http://archive.is/30As0">Directory structure</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://archive.is/30As0]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Path_(computing)" title="http://en.wikipedia.org/wiki/Path_(computing)">Paths</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Path_(computing)]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.netstrider.com/tutorials/HTML/structure/" title="http://www.netstrider.com/tutorials/HTML/structure/">Website structure</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.netstrider.com/tutorials/HTML/structure/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.howstuffworks.com/web-server.htm/printable" title="http://www.howstuffworks.com/web-server.htm/printable">Web servers</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.howstuffworks.com/web-server.htm/printable]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://computer.howstuffworks.com/2722-web-servers-video.htm" title="http://computer.howstuffworks.com/2722-web-servers-video.htm">Web servers - Video</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://computer.howstuffworks.com/2722-web-servers-video.htm]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.nytimes.com/2009/04/07/opinion/07crocker.html" title="http://www.nytimes.com/2009/04/07/opinion/07crocker.html">How the Internet Got Its Rules</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.nytimes.com/2009/04/07/opinion/07crocker.html]</span>
+				&#160;&#183;<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.ietf.org/" title="http://www.ietf.org/">IETF</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.ietf.org/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/" title="http://www.w3.org/">W3C</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.whatwg.org/" title="http://www.whatwg.org/">WHATWG</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.whatwg.org/]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.pathname.com/fhs/pub/fhs-2.3.html" title="http://www.pathname.com/fhs/pub/fhs-2.3.html">Filesystem Hierarchy Standard</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.pathname.com/fhs/pub/fhs-2.3.html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://httpd.apache.org/docs/2.2/urlmapping.html" title="http://httpd.apache.org/docs/2.2/urlmapping.html">Apache URL Mapping</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://httpd.apache.org/docs/2.2/urlmapping.html]</span>
+			</td>
+		</tr>
+		<!-- END ROW #03 -->
+
+
+		<!-- BEGIN ROW #04 -->
+		<tr>
+			<td align="right" valign="top">2013-09-05<br />Online - Thu</td>
+			<td align="right" valign="top">02</td>
+
+			<td align="left">
+				<b><u>The Network Society</u><br />Chapter 3 [Technology]</b><br /><b>Chapter 4 [Economy]</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="left"><u>The Network Society</u><br />Ch. 3 (pp. 49-59)<br />Ch. 4 (pp. 60-97)</td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #04 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #05 -->
+		<tr>
+			<td align="right" valign="top">2013-09-10<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">03</td>
+
+			<td valign="center">
+				<center><b>HyperText Markup Language (HTML)<br />&amp;<br />Cascading Style Sheets (CSS)<br />&amp;<br />Web Browsers</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">The <em xmlns="http://www.w3.org/1999/xhtml">Hypertext Markup Language (HTML)</em> is the most important content type on the Web. This lecture covers a basic overview of how to use HTML markup in general. In particular, we look at page titles, meta tags, inserting text and images, using lists, and creating simple tables. Attributes can be used for more layout control in the HTML tags, but most layout issues are deferred until the CSS lecture.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract"><em xmlns="http://www.w3.org/1999/xhtml">Cascading Stylesheets (CSS)</em> have been designed as a language for better separating presentation-specific issues from the structuring of documents as provided by HTML. CSS uses a simple model of <em xmlns="http://www.w3.org/1999/xhtml">selectors</em> and <em xmlns="http://www.w3.org/1999/xhtml">declarations</em>. Selectors specify to which elements of a document a set of declarations (each being a value assigned to a property) apply; in addition there is a model of how property values are inherited and cascaded. The biggest limitation of CSS is that it cannot change the structure of the displayed document.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">This lecture looks at <em xmlns="http://www.w3.org/1999/xhtml">Web browsers</em> and how they work. It introduces the basic functionalities of a browser; retrieval and rendering of Web pages. Any modern browser needs to support more than just HTTP and HTML; it must support CSS for stylesheets, JavaScript for scripted Web pages, various image formats, and popular applications such as Flash. In addition, browsers can support additional functionality such as off-line operation, or in general more application-oriented features such as <em xmlns="http://www.w3.org/1999/xhtml">AIR</em> or <em xmlns="http://www.w3.org/1999/xhtml">Silverlight</em>.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="html/index.html" title="Lecture Slides">HTML</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="css/index.html" title="Lecture Slides">CSS</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="browsers/index.html" title="Lecture Slides">Browsers</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/MarkUp/Guide/" title="http://www.w3.org/MarkUp/Guide/">Getting started with HTML</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/MarkUp/Guide/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://proquest.safaribooksonline.com/9781449324469/ch01_html" title="http://proquest.safaribooksonline.com/9781449324469/ch01_html">Getting to know HTML <b>(UH Network)</b></a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://proquest.safaribooksonline.com/9781449324469/ch01_html]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/MarkUp/Guide/Style" title="http://www.w3.org/MarkUp/Guide/Style">Adding a Touch of Style</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/MarkUp/Guide/Style]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://proquest.safaribooksonline.com/9781449324469/ch07_html" title="http://proquest.safaribooksonline.com/9781449324469/ch07_html">Getting started with CSS <b>(UH Network)</b></a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://proquest.safaribooksonline.com/9781449324469/ch07_html]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Web_Browser" title="Wikipedia: Web Browser">Wikipedia</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Web_Browser]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/History_of_the_web_browser" title="Wikipedia: History of the Web Browser">History</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/History_of_the_web_browser]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3schools.com/html" title="http://www.w3schools.com/html">HTML&#160;Tutorial</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3schools.com/html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://developer.mozilla.org/en/HTML/Element" title="https://developer.mozilla.org/en/HTML/Element">HTML&#160;Reference</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://developer.mozilla.org/en/HTML/Element]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://validator.w3.org/" title="http://validator.w3.org/">HTML&#160;Validator</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://validator.w3.org/]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/TR/CSS21/" title="W3C CSS 2.1 Specification">CSS Spec</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/TR/CSS21/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/TR/CSS21/propidx.html" title="W3C CSS 2.1: Property Index">Properties</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/TR/CSS21/propidx.html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3schools.com/css" title="http://www.w3schools.com/css">CSS&#160;Tutorial</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3schools.com/css]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://jigsaw.w3.org/css-validator/" title="http://jigsaw.w3.org/css-validator/">CSS&#160;Validator</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://jigsaw.w3.org/css-validator/]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.mozilla.com/firefox/" title="http://www.mozilla.com/firefox/">Firefox</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.mozilla.com/firefox/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.apple.com/safari/" title="http://www.apple.com/safari/">Safari</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.apple.com/safari/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-10" title="http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-10">IE</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-10]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.google.com/chrome" title="http://www.google.com/chrome">Chrome</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.google.com/chrome]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.opera.com/" title="http://www.opera.com/">Opera</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.opera.com/]</span>
+			</td>
+		</tr>
+		<!-- END ROW #05 -->
+
+
+		<!-- BEGIN ROW #06 -->
+		<tr>
+			<td align="right" valign="top">2013-09-12<br />Online - Thu</td>
+			<td align="right" valign="top">03</td>
+
+			<td align="left">
+				<b><u>The Network Society</u><br />Chapter 5 [Politics and Power]</b><br /><b>Chapter 6 [Law]</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="left"><u>The Network Society</u><br />Ch. 5 (pp. 98-136)<br />Ch. 6 (pp. 137-170)</td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #06 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #07 -->
+		<tr>
+			<td align="right" valign="top">2013-09-17<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">04</td>
+
+			<td valign="center">
+				<center><b>Internet Architecture<br />&<br />Web Foundations (URIs &amp; HTTP)</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">The Internet is the technical infrastructure on top of which the Web is built. Some of the services provided by the Internet are essential for the Web, most importantly the naming service and the data transfer service. The <em xmlns="http://www.w3.org/1999/xhtml">Domain Name System (DNS)</em> provides the human-readable names for computers, which can then be used in the addresses of Web servers and ultimately Web pages. The <em xmlns="http://www.w3.org/1999/xhtml">Transmission Control Protocol (TCP)</em> provides the reliable data transfer service between Web Servers and Web Browsers, building on the very robust <em xmlns="http://www.w3.org/1999/xhtml">Internet Protocol (IP)</em>.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">The Web's architecture has very simple principles revolving around the ideas of placing a heavy emphasis on a consistent and global identification mechanism for resources, a standardized way of how resource representations can be retrieved, and a standardized way of how resource representations should be usable by using standardized media types. Based on the Internet, the Web's transport protocol transmits representations of resources identified by a <em xmlns="http://www.w3.org/1999/xhtml">Uniform Resource Identifier (URI)</em> between Web servers and clients. The most important protocols for data transfer on the Web is the <em xmlns="http://www.w3.org/1999/xhtml">Hypertext Transfer Protocol (HTTP)</em>.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="internet/index.html" title="Lecture Slides">Internet</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://xrds.acm.org/article.cfm?aid=197182" title="ACM Crossroads: An Overview of the TCP/IP Protocol Suite">TCP/IP</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://xrds.acm.org/article.cfm?aid=197182]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Http" title="Wikipedia: HTTP">HTTP</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Http]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/Provider/Style/URI" title="Cool URIs don't change">Cool URIs</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/Provider/Style/URI]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Category:Internet_architecture" title="Wikipedia: Internet Architecture">Internet Architecture</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Category:Internet_architecture]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.garykessler.net/library/tcpip.html" title="An Overview of TCP/IP Protocols and the Internet">TCP/IP Overview</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.garykessler.net/library/tcpip.html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.zakon.org/robert/internet/timeline/" title="Hobbes' Internet Timeline">Timeline</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.zakon.org/robert/internet/timeline/]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://addons.mozilla.org/en-US/firefox/addon/3829" title="Firefox Add-on: Live HTTP Headers">Live HTTP Headers</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://addons.mozilla.org/en-US/firefox/addon/3829]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.garshol.priv.no/download/text/http-tut.html" title="How the Web works: HTTP and CGI explained">HTTP and CGI</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.garshol.priv.no/download/text/http-tut.html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://tools.ietf.org/html/rfc3986" title="IETF RFC 3986: Uniform Resource Identifier (URI)">URI Spec</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://tools.ietf.org/html/rfc3986]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://tools.ietf.org/html/rfc2616" title="IETF RFC 2616: Hypertext Transfer Protocol (HTTP)">HTTP Spec</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://tools.ietf.org/html/rfc2616]</span>
+			</td>
+		</tr>
+		<!-- END ROW #07 -->
+
+
+		<!-- BEGIN ROW #08 -->
+		<tr>
+			<td align="right" valign="top">2013-09-19<br />Online - Thu</td>
+			<td align="right" valign="top">04</td>
+
+			<td align="left">
+				<font color="red"><b><u>Assignment 1 Due<br />by 11:00 pm</u></font><br />Group Project:<br />Lego Standards Plan</b>
+				<br />
+				<br />
+				<b><u>The Network Society</u><br />Chapter 7 [Social Structure]</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="left"><u>The Network Society</u><br />Ch. 7 (pp. 171-209)</td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #08 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #09 -->
+		<tr>
+			<td align="right" valign="top">2013-09-24<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">05</td>
+
+			<td valign="top"><font color="red"><b><u>Group Presentations</u></font><br />Lego Standards Plan</b></td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #09 -->
+
+
+		<!-- BEGIN ROW #10 -->
+		<tr>
+			<td align="right" valign="top">2013-09-26<br />Online - Thu</td>
+			<td align="right" valign="top">05</td>
+
+			<td align="left">
+				<b><u>The Network Society</u><br />Chapter 8 [Culture]</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="left"><u>The Network Society</u><br />Ch. 8 (pp. 210-233)</td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #10 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #11 -->
+		<tr>
+			<td align="right" valign="top">2013-10-01<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">06</td>
+
+			<td valign="center">
+				<center><b>Anatomy of a Basic Web Application<br />&amp;<br />Media Types (MIME)</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">The vast majority of web sites today are no longer static HTML pages but <em xmlns="http://www.w3.org/1999/xhtml">database-driven web applications</em>. Today we'll look at a simple database-driven web application in detail, to see how its various components--HTML forms, application server, and database--work together.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">One of the most important aspect of computer-based communications is the concept of <em xmlns="http://www.w3.org/1999/xhtml">media types</em>, the question what type of information some digital artifact represents, and how it is encoded. The most common standard for this information is the scheme introduced by <em xmlns="http://www.w3.org/1999/xhtml">Multipurpose Internet Mail Extensions (MIME)</em>. Media types can be negotiated by peers communicating through HTTP. Some media types allow fragment identifiers, which allow references to a resource to identify a fragment of the complete resource.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="webapps-basic/index.html" title="Lecture Slides">Basic Web Apps</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="media-types/index.html" title="Lecture Slides">Media Types</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.killersites.com/articles/articles_databaseDrivenSites.htm" title="http://www.killersites.com/articles/articles_databaseDrivenSites.htm">Database-Driven Website</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.killersites.com/articles/articles_databaseDrivenSites.htm]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Form_(web)" title="http://en.wikipedia.org/wiki/Form_(web)">Forms</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Form_(web)]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://wd2.bymario.com/page15/php.pdf" title="http://wd2.bymario.com/page15/php.pdf">It's Alive!</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://wd2.bymario.com/page15/php.pdf]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://docforge.com/wiki/Web_application_framework" title="http://docforge.com/wiki/Web_application_framework">Web Application Frameworks</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://docforge.com/wiki/Web_application_framework]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://developer.mozilla.org/En/How_Mozilla_determines_MIME_Types" title="Firefox Media Type Handling">Firefox Handling</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://developer.mozilla.org/En/How_Mozilla_determines_MIME_Types]</span>
+			</td>
+
+			<td align="center">
+<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://htmlhelp.com/faq/html/forms.html" title="http://htmlhelp.com/faq/html/forms.html">HTML Forms FAQ</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://htmlhelp.com/faq/html/forms.html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/TR/html401/interact/forms.html" title="http://www.w3.org/TR/html401/interact/forms.html">HTML Forms Spec</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/TR/html401/interact/forms.html]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.iana.org/assignments/media-types/" title="IANA Media Type Registry">Registry</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.iana.org/assignments/media-types/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/MIME_type" title="Wikipedia: Internet Media Type">Wikipedia</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/MIME_type]</span>
+			</td>
+		</tr>
+		<!-- END ROW #11 -->
+
+
+		<!-- BEGIN ROW #12 -->
+		<tr>
+			<td align="right" valign="top">2013-10-03<br />Online - Thu</td>
+			<td align="right" valign="top">06</td>
+
+			<td align="left">
+				<font color="red"><b><u>Assignment 2 Due<br />by 11:00 pm</u></font><br />Group Project:<br />Github Open Website</b>
+				<br />
+				<br />
+				<b><u>The Network Society</u><br />Chapter 9 [Psychology]</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="left">
+			<u>The Network Society</u><br />Ch. 9 (pp. 234-270)</td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #12 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #13 -->
+		<tr>
+			<td align="right" valign="top">2013-10-08<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">07</td>
+
+			<td valign="top"><font color="red"><b><u>Group Presentations</u></font><br />Github Open Website</b></td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #13 -->
+
+
+		<!-- BEGIN ROW #14 -->
+		<tr>
+			<td align="right" valign="top">2013-10-10<br />Online - Thu</td>
+			<td align="right" valign="top">07</td>
+
+			<td align="left">
+				<b><u>The Network Society</u><br />Chapter 10 [Conclusions and Policy Perspectives]</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="left"><u>The Network Society</u><br />Ch. 10 (pp. 271-302)</td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #14 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #15 -->
+		<tr>
+			<td align="right" valign="top">2013-10-15<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">08</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Midterm</u></font><br />Exam (Review)</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #15 -->
+
+
+		<!-- BEGIN ROW #16 -->
+		<tr>
+			<td align="right" valign="top">2013-10-17<br />Online - Thu</td>
+			<td align="right" valign="top">08</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Midterm</u></font><br />Exam (Comprehensive)<br />Chapters 1-10 (pp. 1-302)</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #16 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #17 -->
+		<tr>
+			<td align="right" valign="top">2013-10-22<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">09</td>
+
+			<td valign="center">
+				<center><b>Multimedia<br />&amp;<br />State Management (Cookies)</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">Multimedia is a broad term for pictures, audio and video. Pictures include both images and graphics. Until HTML5, images were the only multimedia content on the Web widely supported by standardized formats. With the arrival of HTML5, audio and video are now supported directly by Web browsers, and there is wider support for graphics as well.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">HTTP is a stateless protocol, where each request/response interaction is a separate interaction and there is no protocol support for longer sessions (such as a user logging in and working on a Web site as an identified user). State management refers to mechanisms which provide support for this kind of scenario, the most popular choice for state management are <em xmlns="http://www.w3.org/1999/xhtml">cookies</em>. Another possibility is URI-based state management. The newest option for storing state is HTML5 Web Storage. This lecture is also a glimpse into the world of <em xmlns="http://www.w3.org/1999/xhtml">Representational State Transfer (REST)</em>, the Web's fundamental model of handling interaction with resources.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="multimedia/index.html" title="Lecture Slides">Multimedia</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="cookies/index.html" title="Lecture Slides">Cookies</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.webstyleguide.com/wsg3/11-graphics/" title="Web Style Guide: Graphics">Style Guide</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.webstyleguide.com/wsg3/11-graphics/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.youtube.com/watch?v=siOHh0uzcuY#t=6m06s" title="http://www.youtube.com/watch?v=siOHh0uzcuY#t=6m06s">Graphics in HTML5</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.youtube.com/watch?v=siOHh0uzcuY#t=6m06s]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.youtube.com/watch?v=siOHh0uzcuY#t=20m53s" title="http://www.youtube.com/watch?v=siOHh0uzcuY#t=20m53s">Video in HTML5</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.youtube.com/watch?v=siOHh0uzcuY#t=20m53s]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://computer.howstuffworks.com/cookie.htm/printable" title="How Stuff Works: Cookies">HowStuffWorks</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://computer.howstuffworks.com/cookie.htm/printable]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.youtube.com/watch?v=siOHh0uzcuY#t=33m10s" title="http://www.youtube.com/watch?v=siOHh0uzcuY#t=33m10s">Databases in HTML5</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.youtube.com/watch?v=siOHh0uzcuY#t=33m10s]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Graphics_file_format" title="Wikipedia: Graphics File Formats">Graphics File Formats</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Graphics_file_format]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3schools.com/svg/svg_intro.asp" title="http://www.w3schools.com/svg/svg_intro.asp">Intro to SVG</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3schools.com/svg/svg_intro.asp]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://developer.mozilla.org/En/Using_audio_and_video_in_Firefox" title="https://developer.mozilla.org/En/Using_audio_and_video_in_Firefox">Audio and Video in Firefox</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://developer.mozilla.org/En/Using_audio_and_video_in_Firefox]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://tools.ietf.org/html/rfc2965" title="IETF RFC 2965: HTTP State Management Mechanism">Cookie Spec</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://tools.ietf.org/html/rfc2965]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/HTTP_cookie" title="Wikipedia: HTTP Cookie">Wikipedia</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/HTTP_cookie]</span>
+<!--				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.httpviewer.net/" title="Interactive HTTP Viewer Tool">HTTP Viewer</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.httpviewer.net/]</span> -->
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://dev.w3.org/html5/webstorage/" title="http://dev.w3.org/html5/webstorage/">HTML5 Web Storage</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://dev.w3.org/html5/webstorage/]</span>
+			</td>
+		</tr>
+		<!-- END ROW #17 -->
+
+
+		<!-- BEGIN ROW #18 -->
+		<tr>
+			<td align="right" valign="top">2013-10-24<br />Online - Thu</td>
+			<td align="right" valign="top">09</td>
+
+			<td valign="top">
+				<font color="red"><b><u>Assignment 3 Due<br />by 11:00 pm</u></font><br />1) 20 References<br />2) 10 Quotes(APA 6)</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #18 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #19 -->
+		<tr>
+			<td align="right" valign="top">2013-10-29<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">10</td>
+
+			<td valign="center">
+				<center><b>Client-side Scripting<br />&amp;<br />Anatomy of an Advanced Web Application</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="toggle"><span class="abstract">Scripting is used on the majority of today's modern Web sites. Scripting can be used to improve the usability and accessibility of a Web site (for example for <em xmlns="http://www.w3.org/1999/xhtml">validating form data on the client side</em>), it can vastly improve the user experience with new interface design (the <em xmlns="http://www.w3.org/1999/xhtml">smooth scrolling of Google Maps</em> vs. older <q xmlns="http://www.w3.org/1999/xhtml">click to scroll</q> map services), or it can be used to implement behavior that would be impossible without scripting (for example the <em xmlns="http://www.w3.org/1999/xhtml">online applications of Google Docs</em>). This introductory lecture looks into scripting fundamentals such as JavaScript itself, the <em xmlns="http://www.w3.org/1999/xhtml">Document Object Model (DOM)</em> for accessing the browser window's content, and <code xmlns="http://www.w3.org/1999/xhtml">XMLHttpRequest</code> for script-server communications.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="toggle"><span class="abstract">The widespread adoption of client-side scripting and AJAX techniques has resulted in web applications becoming easier use but harder to understand. No longer is it the case that HTML is used simply to present a document to be read. Now HTML, Javascript and CSS are used together to build dynamic applications that run in the browser. These applications often depend on APIs, resources intended for use by programs rather than people.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="scripting/index.html" title="Lecture Slides">Scripting</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="webapps-advanced/index.html" title="Lecture Slides">Advanced Web Apps</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://proquest.safaribooksonline.com/book/programming/javascript/40000javascript/1dot-introduction/ch01_html" title="http://proquest.safaribooksonline.com/book/programming/javascript/40000javascript/1dot-introduction/ch01_html">The Interactive Web</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://proquest.safaribooksonline.com/book/programming/javascript/40000javascript/1dot-introduction/ch01_html]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.adaptivepath.com/ideas/e000385" title="http://www.adaptivepath.com/ideas/e000385"> AJAX </a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.adaptivepath.com/ideas/e000385]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://code.google.com/edu/ajax/tutorials/ajax-tutorial.html" title="http://code.google.com/edu/ajax/tutorials/ajax-tutorial.html">AJAX Tutorial </a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://code.google.com/edu/ajax/tutorials/ajax-tutorial.html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/XMLHttpRequest" title="http://en.wikipedia.org/wiki/XMLHttpRequest"> XMLHttpRequest </a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/XMLHttpRequest]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/JQuery" title="http://en.wikipedia.org/wiki/JQuery">jQuery</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/JQuery]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://domscripting.com/book/sample/" title="Sample Chapter from &#34;DOM Scripting&#34;: Best Practices">Best Practices</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://domscripting.com/book/sample/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.webteacher.com/javascript/" title="JavaScript Tutorial">Tutorial</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.webteacher.com/javascript/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Dynamic_HTML" title="Wikipedia: Dynamic HTML (DHTML)">Wikipedia</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Dynamic_HTML]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/JSON" title="http://en.wikipedia.org/wiki/JSON">JSON</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/JSON]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Web_service" title="http://en.wikipedia.org/wiki/Web_service">Web service</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Web_service]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.ifttt.com" title="http://www.ifttt.com">IFTTT</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.ifttt.com]</span>
+			</td>
+		</tr>
+		<!-- END ROW #19 -->
+
+
+		<!-- BEGIN ROW #20 -->
+		<tr>
+			<td align="right" valign="top">2013-10-31<br />Online - Thu</td>
+			<td align="right" valign="top">10</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Assignment 4 Due<br />by 11:00 pm</u></font><br />Introduction</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #20 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #21 -->
+		<tr>
+			<td align="right" valign="top">2013-11-05<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">11</td>
+
+			<td valign="center">
+				<center><b>Web Search<br />&amp;<br />Web Intermediaries</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">In his early vision of the Web, Tim Berners-Lee expected that most people would discover information by following hyperlinks, rather than by using keyword searches. Thus there is no search functionality built into the Web. Web search engines came later and had a profound effect on how we use and experience the Web. Now it is hard to imagine using the Web without search, a fact that has both technological and political implications.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">Until now we have discussed the Web in terms of interactions between Web servers (where content is published) and Web browsers (where content is displayed). In actuality, things are a bit more complicated than that. There are many different kinds of <em xmlns="http://www.w3.org/1999/xhtml">Web intermediaries</em> that may occupy the path between where content originates and where it is consumed. These intermediaries can provide a number of services, from improving performance to filtering content to protecting privacy.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="search/index.html" title="Lecture Slides">Search</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="intermediaries/index.html" title="Lecture Slides">Intermediaries</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=70897" title="http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=70897">Google Basics</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=70897]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://proquest.safaribooksonline.com/9780596809133/search_engine_basics" title="http://proquest.safaribooksonline.com/9780596809133/search_engine_basics">Search Engine Basics</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://proquest.safaribooksonline.com/9780596809133/search_engine_basics]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://epl.scu.edu/~stsvalues/readings/ShapingTheWeb.pdf" title="http://epl.scu.edu/~stsvalues/readings/ShapingTheWeb.pdf">Politics of Search Engines</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://epl.scu.edu/~stsvalues/readings/ShapingTheWeb.pdf]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.almaden.ibm.com/cs/wbi/papers/www7/Intermediaries.pdf" title="http://www.almaden.ibm.com/cs/wbi/papers/www7/Intermediaries.pdf">Web Intermediaries</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.almaden.ibm.com/cs/wbi/papers/www7/Intermediaries.pdf]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.theatlantic.com/magazine/archive/2008/03/-ldquo-the-connection-has-been-reset-rdquo/6650/" title="http://www.theatlantic.com/magazine/archive/2008/03/-ldquo-the-connection-has-been-reset-rdquo/6650/">The Great Firewall</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.theatlantic.com/magazine/archive/2008/03/-ldquo-the-connection-has-been-reset-rdquo/6650/]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://ilpubs.stanford.edu/422/1/1999-66.pdf" title="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf">PageRank</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Robots_exclusion_standard" title="http://en.wikipedia.org/wiki/Robots_exclusion_standard">robots.txt</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Robots_exclusion_standard]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Site_map" title="http://en.wikipedia.org/wiki/Site_map">Site Map</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Site_map]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Nofollow" title="http://en.wikipedia.org/wiki/Nofollow">nofollow</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Nofollow]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.google.com/insights/search/#" title="http://www.google.com/insights/search/#">Google Insights</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.google.com/insights/search/#]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Proxy_auto-config" title="http://en.wikipedia.org/wiki/Proxy_auto-config">Proxy auto-config</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Proxy_auto-config]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Content-control_software" title="http://en.wikipedia.org/wiki/Content-control_software">Content-control software</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Content-control_software]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Web_cache" title="http://en.wikipedia.org/wiki/Web_cache">Web cache</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Web_cache]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Anonymizer" title="http://en.wikipedia.org/wiki/Anonymizer">Anonymizer</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Anonymizer]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Content_delivery_network" title="http://en.wikipedia.org/wiki/Content_delivery_network">CDN</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Content_delivery_network]</span>
+			</td>
+		</tr>
+		<!-- END ROW #21 -->
+
+
+		<!-- BEGIN ROW #22 -->
+		<tr>
+			<td align="right" valign="top">2013-11-07<br />Online - Thu</td>
+			<td align="right" valign="top">11</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Assignment 5 Due<br />by 11:00 pm</u></font><br />Body (Rough Draft)</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #22 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #23 -->
+		<tr>
+			<td align="right" valign="top">2013-11-12<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">12</td>
+
+			<td valign="center">
+				<center><b>Content Syndication (Atom &amp; RSS)<br />&amp;<br />Third-party Content</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">For many information sources on the Web, it is useful to have some standardized way of subscribing to information updates. Syndication formats such as RSS and Atom can be used by these information sources to publish a feed of updated information items. Feeds can be read directly in a browser, but in most cases they are read by specialized software; either a <em xmlns="http://www.w3.org/1999/xhtml">feed reader</em> that allows users to subscribe to more than one feed and manage the information received through all these feeds, or some software module that reads feeds and embeds them for example in a Web page. This latter example is the classical usage of feeds; news feeds published by news agencies, and then embedded as news tickers into Web pages as a constantly updated source of information.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">HTML pages served by one web server can "host" content from a 3rd-party web server. That functionality is basic to the Web, but it has only really been exploited in recent years. In this lecture we'll look at methods for including 3rd-party content in web page, and some common patterns of application that use these methods.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="syndication/index.html" title="Lecture Slides">Syndication</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="third-party/index.html" title="Lecture Slides">Third-Party</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/History_of_web_syndication_technology" title="Wikipedia: History of Web Syndication Technology">History</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/History_of_web_syndication_technology]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://en.wikipedia.org/wiki/Atom_%28standard%29" title="Wikipedia: Atom">Atom</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://en.wikipedia.org/wiki/Atom_%28standard%29]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://en.wikipedia.org/wiki/RSS" title="Wikipedia: RSS">Rich Site Summary (RSS)</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://en.wikipedia.org/wiki/RSS]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://blogs.zdnet.com/Hinchcliffe/?p=80" title="http://blogs.zdnet.com/Hinchcliffe/?p=80">Widgets, badges, and gadgets</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://blogs.zdnet.com/Hinchcliffe/?p=80]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Web_syndication" title="Wikipedia: Web Syndication">Wikipedia (Syndication)</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Web_syndication]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Web_feed" title="Wikipedia: Web Feeds">Wikipedia (Feeds)</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Web_feed]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.apple.com/itunes/whatson/podcasts/specs.html" title="Apple's Podcast Specification">Podcast Spec</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.apple.com/itunes/whatson/podcasts/specs.html]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Transclusion" title="http://en.wikipedia.org/wiki/Transclusion">Transclusion</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Transclusion]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/TR/widgets-land/" title="http://www.w3.org/TR/widgets-land/">Widget landscape</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/TR/widgets-land/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.searchdecoder.com/widget-marketing-tips/" title="http://www.searchdecoder.com/widget-marketing-tips/">Widget Marketing</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.searchdecoder.com/widget-marketing-tips/]</span>
+			</td>
+		</tr>
+		<!-- END ROW #23 -->
+
+
+		<!-- BEGIN ROW #24 -->
+		<tr>
+			<td align="right" valign="top">2013-11-14<br />Online - Thu</td>
+			<td align="right" valign="top">12</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Assignment 6 Due<br />by 11:00 pm</u></font><br />Body (Revision 1)</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #24 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+
+		<!-- BEGIN ROW #25 -->
+		<tr>
+			<td align="right" valign="top">2013-11-19<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">13</td>
+
+			<td valign="center">
+				<center><b>Semantic Web, Linked Data &amp; Microformats</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="toggle"><span class="abstract">HTML pages are for human users and describe a resource in structural terms (headings, lists, tables, &#8230;). For machine-based interaction, it is often useful to have more information about the meanings of application concepts. The <em xmlns="http://www.w3.org/1999/xhtml">Semantic Web</em> is a research program and set of standards for trying to specify these meanings. One goal is to enable data published on the Web to be easily interlinked.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="semantics/index.html" title="Lecture Slides">Semantics</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Semantic_Web" title="Wikipedia: Semantic Web">Wikipedia</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Semantic_Web]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.xfront.com/microformats/" title="http://www.xfront.com/microformats/">Microformat Tutorials</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.xfront.com/microformats/]</span>
+			</td>
+
+			<td align="center"><a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/2001/sw/SW-FAQ" title="W3C Semantic Web FAQ">FAQ</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/2001/sw/SW-FAQ]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://semanticweb.org/wiki/Main_Page" title="http://semanticweb.org/wiki/Main_Page">Semanticweb.org</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://semanticweb.org/wiki/Main_Page]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://microformats.org/about" title="http://microformats.org/about">Microformats</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://microformats.org/about]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://linkeddata.org/" title="http://linkeddata.org/">Linked Data</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://linkeddata.org/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.ted.com/talks/tim_berners_lee_on_the_next_web.html" title="http://www.ted.com/talks/tim_berners_lee_on_the_next_web.html">The Next Web?</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.ted.com/talks/tim_berners_lee_on_the_next_web.html]</span>
+			</td>
+		</tr>
+		<!-- END ROW #25 -->
+
+
+		<!-- BEGIN ROW #26 -->
+		<tr>
+			<td align="right" valign="top">2013-11-21<br />Online - Thu</td>
+			<td align="right" valign="top">13</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Assignment 7 Due<br />by 11:00 pm</u></font><br />Conclusion</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #26 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+		<!-- BEGIN ROW #27 -->
+		<tr>
+			<td align="right" valign="top">2013-11-26<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">14</td>
+
+			<td valign="center">
+				<center>
+				<span class="guest">Guest Lecture by <a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.uh.edu/af/news/November2012/" title="http://www.uh.edu/af/news/November2012/">Robert Birkline</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.uh.edu/af/news/November2012/]</span> : </span>
+				</center>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<center><b>Mobile Web<br />&amp;<br />Real-time Web</b></center>
+				<span class="toggle">::</span>
+				<span class="toggle">
+				<span class="abstract">Robert was a master Ford technician, but soon realized that was not the type of work he wanted to pursue as a career, so he ended up going back to school at Sam Houston State University, graduating in 2004 with a bachelor’s degree in computer science. He spent four years working at the Houston Chronicle and was part of the core team that supported the newspaper’s website.
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.uh.edu/af/news/November2012/]</span> Today, Robert will presenting how to develop business applications and program for the web.<br /><a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.uh.edu/af/news/November2012/" title="http://www.uh.edu/af/news/November2012/">Robert Birkline</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.uh.edu/af/news/November2012/]</span> (Click to find out more)</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">A mobile device is a computer you carry around with you. Today, any mobile device has some capability to access the Web, and a quickly growing percentage of all Web usage is done on mobile devices. Clearly, web content needs to be adadpted for the wide variety of sizes, shapes, and functionality of mobile devices. More importantly, however, mobile devices open new possibilities for adapting content based on a user's <em xmlns="http://www.w3.org/1999/xhtml">context</em>.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">Real Time Web is a collection of technlogies that allow immediate and direct web publishing. Real time is perhaps the newest evolution in web technology but in manys ways is more hype than reality. Real time Web has attracted the attention of marketers and those interested in finding new ways to target ads and more actionable user behavior.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="mobile/index.html" title="Lecture Slides">Mobile</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="realtime/index.html" title="Lecture Slides">Real-time</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Mobile_Web" title="http://en.wikipedia.org/wiki/Mobile_Web">Mobile Web</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Mobile_Web]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://en.wikipedia.org/wiki/Context_awareness" title="https://en.wikipedia.org/wiki/Context_awareness">Context Awareness</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://en.wikipedia.org/wiki/Context_awarenessJSON]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://globalmoxie.com/jhc/prez/mobile-context-myth-fowd.pdf" title="http://globalmoxie.com/jhc/prez/mobile-context-myth-fowd.pdf">Myths of Mobile Context</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://globalmoxie.com/jhc/prez/mobile-context-myth-fowd.pdf]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://yiibu.com/articles/rethinking-the-mobile-web/" title="http://yiibu.com/articles/rethinking-the-mobile-web/">Rethinking the Mobile Web</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://yiibu.com/articles/rethinking-the-mobile-web/]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Real-time_web" title="http://en.wikipedia.org/wiki/Real-time_web">Real-time Web</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Real-time_web]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.w3.org/Mobile/" title="http://www.w3.org/Mobile/">W3C The Web and Mobile Devices</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.w3.org/Mobile/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.openroad.ca/2010/01/12/ux-wishlist-for-2010/" title="http://www.openroad.ca/2010/01/12/ux-wishlist-for-2010/">UX Wishlist</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.openroad.ca/2010/01/12/ux-wishlist-for-2010/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://en.wikipedia.org/wiki/User_experience_design" title="https://en.wikipedia.org/wiki/User_experience_design">User Experience (UX) Design</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://en.wikipedia.org/wiki/User_experience_design]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.readwriteweb.com/archives/introduction_to_the_real_time_web.php" title="http://www.readwriteweb.com/archives/introduction_to_the_real_time_web.php">Intro to the Real-Time Web</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.readwriteweb.com/archives/introduction_to_the_real_time_web.php]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.businessweek.com/magazine/content/09_33/b4143046834887.htm" title="http://www.businessweek.com/magazine/content/09_33/b4143046834887.htm">Betting on the Real-Time Web</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.businessweek.com/magazine/content/09_33/b4143046834887.htm]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.roughtype.com/archives/2009/02/the_free_arts_a.php" title="http://www.roughtype.com/archives/2009/02/the_free_arts_a.php">The Realtime Chronicles</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.roughtype.com/archives/2009/02/the_free_arts_a.php]</span>
+			</td>
+		</tr>
+		<!-- END ROW #27 -->
+
+
+		<!-- BEGIN ROW #28 -->
+		<tr>
+			<td align="right" valign="top">2013-11-28<br />Online - Thu</td>
+			<td align="right" valign="top">14</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Thanksgiving Holiday</u></b></font>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #28 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+		<!-- BEGIN ROW #29 -->
+		<tr>
+			<td align="right" valign="top">2013-12-03<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">15</td>
+
+			<td valign="left">
+				<Center><span class="guest">Guest Lecture by <a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.uh.edu/honors/about/faculty-staff/karen-weber.php" title="http://www.uh.edu/honors/about/faculty-staff/karen-weber.php">Karen Weber</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.uh.edu/honors/about/faculty-staff/karen-weber.php]</span> : </span></center>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<center><b>Security and Privacy<br />&amp;</br />Open Access and the Open Web</b></center>
+
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">A published ePortfolio provides an illustrative forum for faculty letter writers, selection committees for graduate and professional school, and potential employers to learn about the highlights of a student’s educational career. Today we will learn more about the ePortfolio from guest speaker <a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.uh.edu/honors/about/faculty-staff/karen-weber.php" title="http://www.uh.edu/honors/about/faculty-staff/karen-weber.php">Karen Weber</a>.
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.uh.edu/honors/honors-minors-programs/e-portfolio/index.php" title="ePortfolio">:: ePortfolios</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.uh.edu/honors/honors-minors-programs/e-portfolio/index.php] </span>(Click to find out more)</span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">TCP and thus HTTP are clear-text protocols, which make no attempt to hide the data being transmitted. For secure data transfers, it thus is necessary to use additional technologies for providing secure data transfers. For the Web, the most interesting security feature are secure HTTP interactions, which are provided by <em xmlns="http://www.w3.org/1999/xhtml">HTTP over SSL (HTTPS)</em>, a protocol that layers an encryption layer (SSL or TLS) between TCP and HTTP. For any task involving personalization and/or trust, it is not only necessary to have a concept for providing privacy, but also to have concepts for identity and how to prove identity, which needs authentication.</span></span>
+				<span class="toggle"><br />::</span>
+				<span class="toggle">
+				<span class="abstract">Wikipedia says that "<em>The Open Web movement</em> asserts a special role for public, cooperative, and standard World Wide Web communications; it opposes private, exclusive, proprietary Web solutions. Tantek Celik gives three aspects of the Open Web: 1) publish content and applications on the web in open standards, 2) code and implement the web standards that content/apps depend on 3) access and use content / code / web-apps / implementations.</span></span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="security/index.html" title="Lecture Slides">Security</a>
+				<br />
+				<u>and</u>
+				<br />
+				<a xmlns="http://www.w3.org/1999/xhtml" href="openness/index.html" title="Lecture Slides">Openness</a>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Internet_security" title="Wikipedia: Internet Security">Security</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Internet_security]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Internet_privacy" title="Wikipedia: Internet Privacy">Privacy</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Internet_privacy]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://cacm.acm.org/magazines/2009/8/34494-browser-security/fulltext" title="Browser Security: Lessons from Google Chrome, Charles Reis, Adam Barth, Carlos Pizano, Communications of the ACM, Vol. 52 No. 8, Pages 45-49, August 2009">Browser Security</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://cacm.acm.org/magazines/2009/8/34494-browser-security/fulltext]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.rollingstone.com/culture/news/meet-the-american-hacker-behind-wikileaks-20101201" title="http://www.rollingstone.com/culture/news/meet-the-american-hacker-behind-wikileaks-20101201">The American Wikileaks Hacker</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.rollingstone.com/culture/news/meet-the-american-hacker-behind-wikileaks-20101201]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://www.youtube.com/watch?v=5yB3n9fu-rM" title="https://www.youtube.com/watch?v=5yB3n9fu-rM">NSA whistleblower Edward Snowden</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://www.youtube.com/watch?v=5yB3n9fu-rM]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://en.wikipedia.org/wiki/We_Steal_Secrets:_The_Story_of_WikiLeaks" title="https://en.wikipedia.org/wiki/We_Steal_Secrets:_The_Story_of_WikiLeaks">We Steal Secrets: The Story of WikiLeaks</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://en.wikipedia.org/wiki/We_Steal_Secrets:_The_Story_of_WikiLeaks]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/1367/1286" title="http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/1367/1286">Openness in Communication</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://firstmonday.org/htbin/cgiwrap/bin/ojs/index.php/fm/article/view/1367/1286]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://googleblog.blogspot.com/2009/12/meaning-of-open.html" title="http://googleblog.blogspot.com/2009/12/meaning-of-open.html">Meaning of Open</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://googleblog.blogspot.com/2009/12/meaning-of-open.html]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.tnr.com/article/books-and-arts/against-transparency" title="http://www.tnr.com/article/books-and-arts/against-transparency">Against Transparency</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.tnr.com/article/books-and-arts/against-transparency]</span>
+			</td>
+
+			<td align="center">
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://support.mozilla.com/en-US/kb/Options+window" title="Firefox Options for Security and Privacy">Browser Options</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://support.mozilla.com/en-US/kb/Options+window]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://en.wikipedia.org/wiki/Https" title="Wikipedia: HTTPS">HTTPS</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://en.wikipedia.org/wiki/Https]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://tools.ietf.org/html/rfc2818" title="IETF RFC 2818: HTTP over TLS (HTTPS)">HTTPS Spec</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://tools.ietf.org/html/rfc2818]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://www.torproject.org" title="https://www.torproject.org">TOR Project</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://www.torproject.org]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.spokeo.com" title="http://www.spokeo.com">Spokeo</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.spokeo.com]</span>
+
+			<!-- <hr> DIVIDING LINE -->
+
+			<hr>
+
+			<!-- <hr> DIVIDING LINE -->
+
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="https://sites.google.com/site/openwebfoundation/" title="https://sites.google.com/site/openwebfoundation/">Open Web Foundation</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [https://sites.google.com/site/openwebfoundation/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://creativecommons.org/" title="http://creativecommons.org/">Creative Commons</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://creativecommons.org/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.earlham.edu/~peters/fos/overview.htm" title="http://www.earlham.edu/~peters/fos/overview.htm">Open Access</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.earlham.edu/~peters/fos/overview.htm]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.sunlightfoundation.com/" title="http://www.sunlightfoundation.com/">Sunlight Foundation</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.sunlightfoundation.com/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.data.gov/" title="http://www.data.gov/">Data.gov</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.data.gov/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.publicknowledge.org/" title="http://www.publicknowledge.org/">Public Knowledge</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.publicknowledge.org/]</span>
+				&#160;&#183;
+				<a xmlns="http://www.w3.org/1999/xhtml" class="extra " href="http://www.okfn.org/" title="http://www.okfn.org/">Open Knowledge</a>
+				<span xmlns="http://www.w3.org/1999/xhtml" class="print-href"> [http://www.okfn.org/]</span>
+			</td>
+		</tr>
+		<!-- END ROW #29 -->
+
+
+		<!-- BEGIN ROW #30 -->
+		<tr>
+			<td align="right" valign="top">2013-12-05<br />Online - Thu</td>
+			<td align="right" valign="top">15</td>
+			<td valign="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #30 -->
+
+<tr><td colspan="6"><br /><br /></td></tr>
+
+		<!-- BEGIN ROW #31 -->
+		<tr>
+			<td align="right" valign="top">2013-12-10<br /><font color="red"><b>F2F - Tue</b></font></td>
+			<td align="right" valign="top">16</td>
+
+			<td valign="left">
+				<b>&quot;Reading Day&quot; - <font color="red">No Class</font></b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #31 -->
+
+
+		<!-- BEGIN ROW #32 -->
+		<tr>
+			<td align="right" valign="top">2013-12-12<br />Online - Thu</td>
+			<td align="right" valign="top">16</td>
+
+			<td valign="left">
+				<font color="red"><b><u>Assignment 8 Due<br />by 11:00 pm</u></font><br />10 Page Paper<br />(2,500 Words)</b>
+			</td>
+
+			<td align="center"></td>
+			<td align="center"></td>
+			<td align="center"></td>
+		</tr>
+		<!-- END ROW #32 -->
+
+<tr><td colspan="5"></td></tr>
+
+		</tbody>
+	</table>
+
+		</div>
+		<span class="togglebox" style="position : fixed ; top : 4px ; right : 4px ; background : #8AA148 ; opacity : .85 ; padding : 3px ; border-style : dotted ; border-width : 1px ; border-color : white ; font-size : x-small ; text-align : right ; "><a href="" onclick='displayAll("toggle","");return false;' style="border-bottom : 0px ; color : #FFFFFF ; ">Show&#160;Abstracts</a><br /><a href="" onclick='displayAll("toggle","none");return false;' style="border-bottom : 0px ; color : #FFFFFF ; ">Hide&#160;Abstracts</a></span>
+
+<div style="margin : 5mm">
+
+		<table border="0" width="100%">
+			<tr>
+				<td align="left" style="padding-right : 5px">
+    				<a xmlns:cc="http://creativecommons.org/licenses/" rel="cc:license" href="http://creativecommons.org/licenses/by/3.0/" class="img"><img alt="Creative Commons License" title="This work is licensed under a Creative Commons Attribution 3.0 Unported License" border="0" src="img/somerights20.png" height="31" width="88"/></a>
+				</td>
+
+				<td align="left" width="26%">
+					<span class="footnote">Please send comments to <a href="mailto:greg@uh.edu">greg@uh.edu</a><br /></span>
+				</td>
+
+				<td align="center" width="40%">
+					<span class="footnote"><a href="copyright/index.html">Copyright information</a><br /></span>
+				</td>
+
+				<td align="right">
+					<a href="http://jigsaw.w3.org/css-validator" class="img"><img src="img/vcss.gif" height="31" width="88" border="0" alt="valid CSS!" title="valid CSS!" /></a>
+				</td>
+
+				<td align="right">
+					<a href="http://validator.w3.org/check/referer" class="img"><img src="img/vxhtml10.gif" height="31" width="88" border="0" alt="valid XHTML 1.0!" title="valid XHTML 1.0!" /></a>
+				</td>
+			</tr>
+		</table>
+
+</div>
+
+<div style="margin : 5mm">
+
+<table border="0">
+	<tr>
+		<td>
+			<font color="red"><b><u>NOTICE</u>: This syllabus is subject to change.</b></font>
+		</td>
+	</tr>
+</table>
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43635205-1', 'gregjonason.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
