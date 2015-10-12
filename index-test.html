@@ -13,11 +13,11 @@
 			 What are you trying to locate? This page was created using twitter bootstrap and sublime text 3
 			 Do you want to hire me? Click on the resume link for my contact information
 			 */
-			var sections = ["bio", "exp", "pub", "hon"];
+			var sections = ["home", "exp", "pub", "hon"];
 
 			//map of section state to the links
 			var secLinks = {
-				"bio" : "bioNav",
+				"home" : "homeNav",
 				"exp" : "expNav",
 				"pub" : "pubNav",
 				"hon" : "honNav"
@@ -52,11 +52,11 @@
 			$(document).ready(function() {
 
 				//we show bio section first
-				switchStateTo("bio");
+				switchStateTo("home");
 
 				//bind click events for links
-				$("#bioNav").click(function() {
-					switchStateTo("bio");
+				$("#homeNav").click(function() {
+					switchStateTo("home");
 				});
 
 				$("#expNav").click(function() {
@@ -1102,8 +1102,8 @@
 					<div class="navbar">
 						<div class="navbar-inner">
 							<ul class="nav">
-								<li id="bioNav">
-									<a href="../pages-vita/bio.html">Bio</a>
+								<li id="homeNav">
+									<a href="http://gregjonason.com">Home</a>
 								</li>
 								<li id="expNav">
 									<a href="../pages-vita/exp.html">Experience</a>
@@ -1112,7 +1112,7 @@
 									<a href="../pages-vita/pub.html">Publications</a>
 								</li>
 								<li id="honNav">
-									<a href="../pages-vita/act.html">Honors & Activities</a>
+									<a href="../pages-vita/hon.html">Honors & Activities</a>
 								</li>
 							</ul>
 						</div>
