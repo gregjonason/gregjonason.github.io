@@ -1,0 +1,486 @@
+﻿/*
+ Stylesheet: C:\sofodev\Mediasite\7_0_9\Server\Player\Player\Javascript\Players\PipPlayer\PipPanels.less
+ Theme: [default]
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  /* Make inputs at least the height of their button counterpart */
+
+  /* Makes inputs behave like true block-level elements */
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.popupPanel {
+  background: black;
+  color: white;
+  font-family: Arial, Verdana, Sans-Serif;
+  font-size: 12px;
+}
+.popupPanel a,
+.popupPanel a:hover,
+.popupPanel a:visited,
+.popupPanel a:active {
+  color: white;
+}
+.popupPanel .panel-header {
+  margin-left: 10px;
+  font-weight: 700;
+  color: #e6e6e6;
+  font-size: 1.3em;
+}
+.overlayPanel {
+  color: white;
+  background-color: #0c0c0c;
+  background-color: rgba(9, 9, 9, 0.92);
+  background-image: -moz-linear-gradient(top, black, rgba(30, 30, 30, 0.8));
+  background-image: -ms-linear-gradient(top, black, rgba(30, 30, 30, 0.8));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(30, 30, 30, 0.8)));
+  background-image: -webkit-linear-gradient(top, black, rgba(30, 30, 30, 0.8));
+  background-image: -o-linear-gradient(top, black, rgba(30, 30, 30, 0.8));
+  background-image: linear-gradient(top, black, rgba(30, 30, 30, 0.8));
+  background-repeat: repeat-x;
+}
+.overlayPanel a,
+.overlayPanel a:hover,
+.overlayPanel a:visited,
+.overlayPanel a:active {
+  color: white;
+}
+.overlayPanel .panel-header {
+  font-weight: 700;
+  color: #e6e6e6;
+  font-size: 1.3em;
+}
+.overlayPanel input[type=button],
+.overlayPanel input[type=submit],
+.overlayPanel button {
+  border: 1px solid white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: white;
+  background: black;
+}
+.overlayPanel input[type=submit] {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+.overlayPanel .panel-modal-mask,
+.popupPanel .panel-modal-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  *background-color: black;
+}
+.overlayPanel .panelMessage.ui-widget,
+.popupPanel .panelMessage.ui-widget {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-family: Arial, Verdana, Sans-Serif;
+  z-index: 3;
+  background: white;
+  border: 2px solid #919191;
+  text-align: center;
+  color: #333333;
+}
+.overlayPanel .panelMessage .ui-widget-header,
+.popupPanel .panelMessage .ui-widget-header {
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  border-bottom-right-radius: 0px;
+  background: #484848;
+  color: #b4b4b4;
+  font-weight: bold;
+  padding: 5px;
+  text-align: left;
+  font-size: 1.1em;
+}
+.overlayPanel .panelMessage .ui-widget-content,
+.popupPanel .panelMessage .ui-widget-content {
+  font-size: 1em;
+  margin: 10px;
+  text-align: left;
+  background: white;
+  color: #333333;
+  border: none;
+}
+.overlayPanel .panelMessage .ui-dialog-buttonset,
+.popupPanel .panelMessage .ui-dialog-buttonset {
+  text-align: center;
+}
+.overlayPanel .panelMessage .ui-dialog-buttonset .ui-button,
+.popupPanel .panelMessage .ui-dialog-buttonset .ui-button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #3d3d3d;
+  border: 1px solid white;
+  font-size: 14px;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+.overlayPanel .panelMessage .ui-dialog-buttonset .ui-button:hover,
+.popupPanel .panelMessage .ui-dialog-buttonset .ui-button:hover {
+  background-color: #555555;
+  color: white;
+}
+.overlayPanel form {
+  margin: 0 10px;
+}
+.overlayPanel form p {
+  padding-left: 75px;
+  position: relative;
+}
+.overlayPanel form p + p {
+  margin-top: .5em;
+}
+.overlayPanel form p label {
+  font-weight: bold;
+  position: absolute;
+  top: .3em;
+  left: 0;
+  text-align: right;
+  width: 65px;
+}
+.overlayPanel form textarea {
+  resize: none;
+}
+.popupPanel form {
+  margin: 0px;
+  margin-left: 10px;
+}
+.popupPanel form p {
+  padding: 0px;
+  margin: 0px;
+}
+.popupPanel form p label {
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+.popupPanel form input[type=text],
+.popupPanel form textarea {
+  font-size: 11px;
+  width: 100%;
+}
+.popupPanel form .toseparator {
+  font-size: 10px;
+}
+.popupPanel form textarea {
+  resize: none;
+}
+.popupPanel form input[type=button],
+.popupPanel form input[type=submit],
+.popupPanel form button {
+  border: 1px solid white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: white;
+  background: black;
+}
+.popupPanel form input[type=submit] {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+/* jquery.ui.playeraskpanel.js widget styles */
+
+.ui-playeraskpanel label[for="ui-playeraskpanel-email"] {
+  font-weight: normal;
+}
+/* Email is optional */
+
+.ui-playeraskpanel textarea {
+  resize: none;
+}
+.ui-playeraskpanel textarea,
+.ui-playeraskpanel input {
+  font-size: 12px;
+  font-family: Arial, Verdana, Sans-Serif;
+}
+#ui-playeraskpanel-submit {
+  position: relative;
+  height: 24px;
+}
+#ui-playeraskpanel-time {
+  width: 60px;
+  margin-left: 5px;
+}
+#ui-playeraskpanel-time-format {
+  margin-left: 5px;
+  color: #cccccc;
+}
+#ui-playeraskpanel-scroll-wrapper {
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+/* jquery.ui.playerinvitepanel.js widget styles */
+
+#ui-playerinvitepanel-submit {
+  position: relative;
+  height: 24px;
+}
+#ui-playerinvitepanel-time {
+  width: 60px;
+  margin-left: 5px;
+}
+#ui-playerinvitepanel-time-format {
+  margin-left: 5px;
+  color: #cccccc;
+}
+#ui-playerinvitepanel-toSeparator {
+  color: #cccccc;
+  font-size: 0.9em;
+}
+#ui-playerinvitepanel-scroll-wrapper {
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.ui-playerinvitepanel a,
+.ui-playerinvitepanel a:link,
+.ui-playerinvitepanel a:visited {
+  color: #cccccc;
+}
+/* jquery.ui.playerlinkspanel.js widget styles */
+
+#ui-playerlinkspanel-scroll-wrapper {
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.ui-playerlinkspanel li {
+  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.2);
+  *background-color: #222222;
+  color: white;
+  margin: 5px;
+  padding: 8px;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.ui-playerlinkspanel li:hover {
+  background-color: #666666;
+  background-color: rgba(51, 51, 51, 0.3);
+  *background-color: #666666;
+  cursor: pointer;
+}
+.ui-playerlinkspanel a {
+  display: block;
+}
+/* jquery.ui.playerinfopanel.js widget styles */
+
+.ui-playerinfopanel {
+  position: absolute;
+}
+#ui-playerinfopanel-header {
+  visibility: hidden;
+  overflow: hidden;
+  height: 5px;
+}
+#ui-playerinfopanel-scroll-wrapper {
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+#ui-playerinfopanel-presenters {
+  padding: 0 10px;
+}
+#ui-playerinfopanel-presenters ul {
+  margin-left: 80px;
+}
+#ui-playerinfopanel-presenters li {
+  padding: 2px 0 5px 25px;
+  margin: 5px 0;
+  position: relative;
+}
+#ui-playerinfopanel-presenters li .bullet {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 0px;
+  left: 4px;
+  background: url('images/sprites.png') -8px -712px no-repeat;
+}
+#ui-playerinfopanel-presenters img {
+  float: left;
+  width: 60px;
+  height: 80px;
+  border: 6px solid #444444;
+  font-size: .75em;
+}
+#ui-playerinfopanel-description {
+  clear: both;
+  padding: 10px;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+#ui-playerinfopanel-date {
+  margin: 0 5px 0 0px;
+}
+#ui-playerinfopanel-time {
+  margin: 0 10px;
+}
+#ui-playerinfopanel-dateinfo {
+  position: absolute;
+  bottom: 0;
+  padding: 5px 10px 0;
+  font-size: 0.9em;
+}
+/* jquery.ui.playersearchpanel.js widget styles */
+
+.ui-playersearchpanel-search-highlight {
+  color: green;
+}
+#ui-playersearchpanel-search-wrapper {
+  margin: 10px;
+  font-size: 12px;
+  position: relative;
+}
+#ui-playersearchpanel-search-button {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  right: 0;
+}
+#ui-playersearchpanel-search-total-results {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+#ui-playersearchpanel-search-results-wrapper {
+  margin-top: 10px;
+  margin-bottom: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+#ui-playersearchpanel-search-results-wrapper li {
+  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.2);
+  *background-color: #222222;
+  color: white;
+  margin: 5px;
+  padding: 8px;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#ui-playersearchpanel-search-results-wrapper li:hover {
+  background-color: #666666;
+  background-color: rgba(51, 51, 51, 0.3);
+  *background-color: #666666;
+  cursor: pointer;
+}
+.ui-playersearchpanel-search-list-item-text {
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-top: 2px;
+  font-size: 1.1em;
+}
+.ui-playersearchpanel-search-list-item-type {
+  float: right;
+}
+.ui-playersearchpanel-search-list-item-type,
+.ui-playersearchpanel-search-list-item-time {
+  font-size: .85em;
+}
+.ui-playersearchpanel-search-highlight {
+  color: green;
+}
+/* jquery.ui.playerchapterspanel.js widget styles */
+
+#ui-playerchapterspanel-scroll-wrapper {
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.ui-playerchapterspanel li {
+  font-weight: 600;
+  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.2);
+  *background-color: #222222;
+  color: white;
+  margin: 5px;
+  padding: 8px;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.ui-playerchapterspanel li:hover {
+  background-color: #666666;
+  background-color: rgba(51, 51, 51, 0.3);
+  *background-color: #666666;
+  cursor: pointer;
+}
+.ui-playerchapterspanel-chapteritem {
+  overflow: hidden;
+}
+.ui-playerchapterspanel-chaptertime {
+  float: left;
+  padding: 4px 4px 4px 8px;
+}
+.ui-playerchapterspanel-chaptertext {
+  margin-left: 70px;
+  padding: 4px 8px 4px 4px;
+  /* jquery.ui.playeraskpanel.js widget styles */
+
+}

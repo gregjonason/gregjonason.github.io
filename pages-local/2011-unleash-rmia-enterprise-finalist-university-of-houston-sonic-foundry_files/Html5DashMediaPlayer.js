@@ -1,0 +1,1 @@
+Mediasite.namespace("MediaPlayer"),Mediasite.namespace("MediaPlayer.Views"),Mediasite.MediaPlayer.ModelHtml5Dash=function(n){var t=new Mediasite.MediaPlayer.ModelHtml5(n);return t.setVideoElementSourceFunction=function(n,t){var u=n.get(0),f=new Dash.di.DashContext,r=new MediaPlayer(f);r.startup(),r.attachView(u),r.setAutoPlay(!0),r.attachSource(t)},t}

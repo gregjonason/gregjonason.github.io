@@ -1,0 +1,189 @@
+﻿/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* end CSS reset */
+
+body {
+    background-color: #000;
+}
+html, body { 
+    width: 100%;
+    height: 100%;
+}
+
+@media (orientation: landscape) {
+    .fixedViewport body 
+    {
+        /*  
+            In Mobile Safari on iOS7 in landscape mode, window.outerHeight - window.innerHeight = 20px
+            Instead of filling the viewport, the top or bottom of the player gets cut off.
+            This mitigates that issue at the expense of making overscrolling a little odd.
+        */
+        
+        position: fixed;
+        bottom: 0;
+        top: 0;
+    }
+}
+#PlayerContent { position: relative; width: 100%; height: 100%; z-index:1; }
+#PlayerContent { display: none; } /* loader reveals this when CSS is ready to avoid FOUC */
+
+.noJS {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* jQuery UI styles */
+/* Component containers
+----------------------------------*/
+.MessageDisplay.ui-widget { font-family: Arial, Verdana, Sans-Serif; background: #333333; border-radius: 6px; padding: 6px; font-size: 1.1em;  z-index: 1001;}
+.MessageDisplay.ui-widget .ui-widget { font-size: 1em; }
+.MessageDisplay.ui-widget input, .MessageDisplay.ui-widget select, .MessageDisplay.ui-widget textarea, .MessageDisplay.ui-widget button { font-family: Arial, Verdana, Sans-Serif; }
+.MessageDisplay .ui-widget-content { background-color: #333333; color: #ffffff; padding: 6px; font-size: 14px; border: none;}
+.MessageDisplay .ui-widget-content a { color: #ffffff; }
+.MessageDisplay .ui-widget-header { font-size: 18px;; border: 1px solid #dddddd; background-color: #dddddd; color: #333333; font-weight: bold; padding: 3px; border-radius: 6px;}
+.MessageDisplay .ui-widget-header a { color: #333333; }
+.MessageDisplay .ui-dialog-buttonpane {
+    text-align: center;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.ui-widget-overlay {
+	background-image: url('images/clear.gif');
+    z-index: 1000;
+	opacity: .8;
+	filter: Alpha(Opacity=80);
+}
+
+#clientDetectMessage {
+    font-family: Arial, Verdana, Sans-Serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#clientDetectMessage .boldText {
+    font-weight: bold;
+}
+
+#clientDetectMessage .enableFlash 
+{  
+    margin:2em 0 0;
+    padding: 0.7em;
+    color:#cc0000;
+    background-color: white;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+
+
+.LoadingOverlay 
+{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    z-index: 100;
+    background-color: #000;
+}
+
+.LoadingOverlay .LoadingMessage
+{
+    font-size: 14px;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    position: relative;
+    top: 0%;
+    margin-left:auto;
+    margin-right:auto;
+    height: 35px;
+    width:280px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: 5px solid #999;
+    border-top: none;
+    background-color: #666;
+    color: #eee;
+    padding: 10px;
+    text-align: center;
+    line-height: 30px;
+                    
+}
+
+
+.IosAppDetection-Overlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 10000;
+    position: fixed;
+}
+
+
+.IosAppDetection-PromptContainer
+{
+    width: 90%;
+    height: auto;
+    top: 20%;
+    left: 5%;
+    background-color: #dddddd;
+    z-index: 10000;
+    position: fixed;
+    text-align: center;
+    line-height: 14px;
+    font-family: Arial, Verdana, Sans-Serif;
+    border-radius: 6px;
+}
+
+.IosAppDetection-PromptContainer p
+{
+    color: #333333;
+    font-size: 15px;;
+    margin: 15px 20px;
+}
+
+.IosAppDetection-PromptContainer button
+{
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ccc;
+    border-radius: 3px;
+    border: solid 1px #666666;
+    color: #3333333;
+    font-size: 14px;
+}
+
+.IosAppDetection-GetAppInfo {
+    display: none;
+}

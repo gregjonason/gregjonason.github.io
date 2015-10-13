@@ -1,0 +1,983 @@
+﻿/*
+ Stylesheet: C:\sofodev\Mediasite\7_0_9\Server\Player\Player\Javascript\Players\PipPlayer\PipPlayer.less
+ Theme: [default]
+*/
+@-moz-document url-prefix() {
+    :focus {
+        /* Really don't want to change the default browser focus outline, but Firefox has a stupid default. */
+        outline-width: 3px;
+        outline-style: solid;
+        outline-color: #2964a2;
+    }
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  /* Make inputs at least the height of their button counterpart */
+
+  /* Makes inputs behave like true block-level elements */
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: Arial, Verdana, Sans-Serif;
+  font-size: 11px;
+  overflow: hidden;
+  color: white;
+  -ms-touch-action: none;
+}
+body {
+  scrollbar-face-color: #a3a3a3;
+  scrollbar-highlight-color: #a3a3a3;
+  scrollbar-3dlight-color: #a3a3a3;
+  scrollbar-shadow-color: #8a8a8a;
+  scrollbar-darkshadow-color: #707070;
+  scrollbar-arrow-color: white;
+  scrollbar-track-color: #1a1a1a;
+}
+body.styledScrollbars ::-webkit-scrollbar {
+  width: 14px;
+  height: 10px;
+  background: #1a1a1a;
+  border: 1px solid #a3a3a3;
+}
+body.styledScrollbars ::-webkit-scrollbar:horizontal {
+  height: 14px;
+}
+body.styledScrollbars ::-webkit-scrollbar:vertical {
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+body.styledScrollbars ::-webkit-scrollbar:horizontal {
+  border-left-width: 0;
+  border-right-width: 0;
+}
+body.styledScrollbars ::-webkit-scrollbar-track-piece:vertical,
+body.styledScrollbars ::-webkit-scrollbar-track-piece:horizontal {
+  -webkit-box-shadow: inset 0 0 6px #8a8a8a;
+}
+body.styledScrollbars ::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px #8a8a8a;
+  border-radius: 10px;
+  background: #a3a3a3;
+}
+body.styledScrollbars ::-webkit-scrollbar-corner {
+  background: #1a1a1a;
+}
+body.styledScrollbars ::-webkit-resizer {
+  background: #1a1a1a;
+}
+body.styledScrollbars ::-webkit-scrollbar-button:vertical:start:decrement {
+  height: 10px;
+  width: 14px;
+  display: block;
+  background: url('images/sprites.png') -1px -872px;
+}
+body.styledScrollbars ::-webkit-scrollbar-button:vertical:end:increment {
+  height: 10px;
+  width: 14px;
+  display: block;
+  background: url('images/sprites.png') -1px -882px;
+}
+body.styledScrollbars ::-webkit-scrollbar-button:horizontal:start:decrement {
+  height: 14px;
+  width: 10px;
+  display: block;
+  background: url('images/sprites.png') 0 -844px;
+}
+body.styledScrollbars ::-webkit-scrollbar-button:horizontal:end:increment {
+  height: 14px;
+  width: 10px;
+  display: block;
+  background: url('images/sprites.png') -1px -858px;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+textarea {
+  font-family: Arial, Verdana, Sans-Serif;
+}
+#content {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #414141;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), color-stop(50%, #444444), to(#333333));
+  background-image: -webkit-linear-gradient(#333333, #444444 50%, #333333);
+  background-image: -moz-linear-gradient(top, #333333, #444444 50%, #333333);
+  background-image: -ms-linear-gradient(#333333, #444444 50%, #333333);
+  background-image: -o-linear-gradient(#333333, #444444 50%, #333333);
+  background-image: linear-gradient(#333333, #444444 50%, #333333);
+  background-repeat: no-repeat;
+}
+#errorMessage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 13%;
+  left: 10%;
+  right: 10%;
+  border: 2px solid #919191;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  *background-color: white;
+  padding: 1em 2em;
+  line-height: 1.3;
+  color: #333333;
+  font-size: 1.2em;
+}
+#errorMessage p + p {
+  margin-top: .5em;
+}
+.primaryArea {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.pipArea {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  border: 2px solid #dddddd;
+  overflow: hidden;
+}
+.PipPosition-TopLeft .pipArea {
+  left: 6px;
+  top: 6px;
+}
+.PipPosition-BottomLeft .pipArea {
+  left: 6px;
+  bottom: 6px;
+}
+.PipPosition-TopRight .pipArea {
+  right: 6px;
+  top: 6px;
+}
+.PipPosition-BottomRight .pipArea {
+  right: 6px;
+  bottom: 6px;
+}
+.PipPosition-Hidden .pipArea {
+  width: 0 !important;
+  height: 0 !important;
+  border-width: 0 !important;
+  left: 6px;
+  top: 6px;
+}
+.PipPosition-Hidden .pipArea #mediaState {
+  display: none;
+}
+.mediaNotReady.PipPosition-Hidden .pipArea#videoArea {
+  width: 20px !important;
+  height: 20px !important;
+  left: -18px;
+  top: -18px;
+  opacity: 0.01;
+  filter: alpha(opacity=1);
+  background: transparent;
+}
+.mediaNotReady.PipPosition-Hidden .pipArea#videoArea #videoThumbContainer,
+.mediaNotReady.PipPosition-Hidden .pipArea#videoArea #mediaState {
+  visibility: hidden;
+}
+#MediaElement, .MediaElement {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#mediaElementArea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#MediaWrapper {
+  width: 100%;
+  height: 100%;
+}
+.iosPlayCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.iosPlayCover button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -28px;
+  margin-left: -28px;
+  width: 56px;
+  height: 56px;
+  background: url('images/sprites.png') 0 -780px;
+  color: white;
+  border-width: 0;
+  text-indent: -5000px;
+  /* make default "Play" text invisible. */
+
+}
+#videoThumbContainer,
+#videoThumbContainer img {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+#videoArea {
+  background: black;
+  position: absolute;
+  /* there is a mobile safari bug that causes <video> element to glitch if these are applied in JS without CSS for the first time */
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+#videoArea video {
+  display: block;
+  line-height: 0;
+}
+#slideArea {
+  position: absolute;
+}
+#slideArea img {
+  display: block;
+}
+#slideArea a {
+  display: block;
+  line-height: 0;
+}
+#slideViewer {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.zoomhud {
+  position: relative;
+  z-index: 10;
+  right: 10px;
+  top: 70px;
+}
+.PipPosition-TopRight .zoomhud {
+  right: auto;
+  left: 10px;
+}
+.pipArea .zoomhud,
+.PipPosition-TopRight .pipArea .zoomhud {
+  top: 10px;
+  right: 10px;
+  left: auto;
+}
+.noTitleArea .zoomhud {
+  top: 10px;
+}
+.zoomhud-expanded,
+.zoomhud-collapsed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 26px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.65);
+  *background-color: black;
+}
+.PipPosition-TopRight .primaryArea .zoomhud-expanded,
+.PipPosition-TopRight .primaryArea .zoomhud-collapsed {
+  right: auto;
+  left: 0;
+}
+.zoomhud-collapsed {
+  width: 32px;
+}
+.zoomhud-expanded {
+  width: 100px;
+}
+.zoomhud-percentage,
+.zoomhud-zoomInButton,
+.zoomhud-zoomOutButton {
+  position: absolute;
+}
+.zoomhud-percentage {
+  font-size: 14px;
+  font-weight: 900;
+  background-color: transparent;
+  color: white;
+  width: 38px;
+  height: 22px;
+  top: 2px;
+  right: 59px;
+  text-align: right;
+  line-height: 22px;
+}
+.zoomhud-zoomInButton,
+.zoomhud-zoomOutButton {
+  width: 22px;
+  height: 22px;
+  top: 2px;
+}
+.zoomhud-zoomInButton {
+  right: 5px;
+  background: url('images/sprites.png') 0 -736px;
+}
+.zoomhud-zoomOutButton {
+  right: 32px;
+  background: url('images/sprites.png') 0 -758px;
+}
+.jqt-slide {
+  position: absolute;
+}
+.mediaState {
+  display: table;
+  width: 80px;
+  height: 20px;
+  font-size: 1.1em;
+}
+.mediaState.overlayTransparency {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.65);
+  *background-color: black;
+  color: white;
+}
+#mediaState,
+#mediaStateStandalone {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -10px 0 0 -40px;
+  z-index: 3;
+}
+.mediaState p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.overlayTransparency {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  *background-color: black;
+}
+#titleArea {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  background-color: #0f0f0f;
+  background-color: rgba(12, 12, 12, 0.8);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.8)), to(rgba(30, 30, 30, 0.8)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8));
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8));
+  background-repeat: repeat-x;
+  border-bottom: 1px rgba(30, 30, 30, 0.8) solid;
+}
+.panelShowing #titleArea {
+  border-width: 0;
+}
+.noTitleArea #titleArea {
+  display: none;
+  visibility: hidden;
+}
+#titleArea div {
+  display: table;
+  height: 100%;
+}
+#titleArea h1 {
+  font-size: 1.3em;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3px 10px;
+  font-weight: normal;
+}
+#titleArea h1.ellipsis:after {
+  content: '\2026';
+}
+#titleLogo {
+  display: block;
+  float: left;
+  margin: 4px;
+  max-width: 69px;
+  height: 52px;
+}
+#ccArea,
+#ccAreaTemp {
+  padding: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 64px;
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: middle;
+  display: none;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  *background-color: black;
+}
+.noControlBar #ccArea,
+.noControlBar #ccAreaTemp {
+  bottom: 0;
+}
+#ccPanel {
+  z-index: 3;
+  line-height: 15px;
+}
+#controlsArea {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  background-color: #0f0f0f;
+  background-color: rgba(18, 18, 18, 0.8);
+  background-image: -moz-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: -ms-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background-image: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: -o-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-image: linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(0, 0, 0, 0.8));
+  background-repeat: repeat-x;
+  border-top: 1px rgba(30, 30, 30, 0.8) solid;
+}
+.panelShowing #controlsArea {
+  border-width: 0;
+}
+.noControlBar #controlsArea {
+  display: none;
+  visibility: hidden;
+}
+#controlsArea button {
+  color: #333333;
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  *display: inline;
+}
+#topButtons {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  top: 0;
+  z-index: 7;
+}
+#bottomButtons {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  bottom: 0;
+}
+#sliderArea {
+  position: absolute;
+  margin: 0 10px;
+  font-size: 1.1em;
+  top: 0;
+}
+#leftButtons {
+  position: absolute;
+  left: 0;
+  z-index: 8;
+}
+#rightButtons {
+  position: absolute;
+  right: 0;
+}
+#centerButtons {
+  text-align: center;
+}
+#nextSlideArea {
+  display: none;
+  position: absolute;
+  right: 5px;
+  padding-top: 3px;
+}
+.showSlideNavigation #nextSlideArea {
+  display: block;
+}
+.isLively #nextSlideArea {
+  display: none;
+}
+#nextSlideArea button {
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 24px;
+}
+#previousSlideArea {
+  display: none;
+  position: absolute;
+  left: 5px;
+  padding-top: 4px;
+  z-index: 9;
+}
+.showSlideNavigation #previousSlideArea {
+  display: block;
+}
+.isLively #previousSlideArea {
+  display: none;
+}
+#previousSlideArea button {
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 24px;
+}
+/* image button styles */
+
+#ask {
+  background: url('images/sprites.png') 0 0;
+}
+#cc {
+  background: url('images/sprites.png') 0 -32px;
+}
+#search {
+  background: url('images/sprites.png') 0 -512px;
+}
+#chapters {
+  background: url('images/sprites.png') 0 -64px;
+}
+#email {
+  background: url('images/sprites.png') 0 -128px;
+}
+#firstSlide {
+  background: url('images/sprites.png') 0 -160px;
+}
+#help {
+  background: url('images/sprites.png') 0 -216px;
+}
+#info {
+  background: url('images/sprites.png') 0 -248px;
+}
+#lastSlide {
+  background: url('images/sprites.png') 0 -280px;
+}
+#links {
+  background: url('images/sprites.png') 0 -304px;
+}
+#nextSlide {
+  background: url('images/sprites.png') 0 -336px;
+}
+#pause {
+  background: url('images/sprites.png') 0 -360px;
+}
+#play {
+  background: url('images/sprites.png') 0 -392px;
+}
+#polls {
+  background: url('images/sprites.png') 0 -424px;
+}
+#fidelityIndicator {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin-top: 8px;
+  margin-right: 5px;
+  height: 16px;
+  width: 25px;
+}
+.ui-playerfidelity .ui-playerfidelity-bar {
+  display: block;
+  float: left;
+  margin-left: 2px;
+  background-color: #666666;
+  overflow: hidden;
+  width: 2px;
+  height: 100%;
+}
+.ui-playerfidelity .ui-playerfidelity-bar-highlighted {
+  background-color: #eeeeee;
+}
+#previousSlide {
+  background: url('images/sprites.png') 0 -488px;
+}
+#skipBack {
+  background: url('images/sprites.png') 0 -544px;
+}
+#stop {
+  background: url('images/sprites.png') 0 -576px;
+}
+#titleButtons {
+  float: right;
+  padding-top: 14px;
+  padding-right: 5px;
+}
+#titleButtons button {
+  border: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+}
+#flip {
+  background: url('images/sprites.png') 0 -184px;
+}
+#popout {
+  background: url('images/sprites.png') 0 -456px;
+}
+/* jquery.ui.playervolume.js widget styles */
+
+.ui-playervolume {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+#ui-playervolume-mute {
+  background: url('images/sprites.png') 0 -608px;
+}
+#ui-playervolume-unmute {
+  background: url('images/sprites.png') 0 -640px;
+}
+#ui-playervolume-mute-wrapper {
+  width: 32px;
+  height: 32px;
+}
+#ui-playervolume-unmute-wrapper {
+  width: 32px;
+  height: 32px;
+}
+#ui-playervolume-slider {
+  font-size: 8px;
+  margin: 10px auto 0 auto;
+  height: 85px;
+}
+#ui-playervolume-volume {
+  position: absolute;
+  width: 20px;
+  height: 104px;
+  bottom: 32px;
+  z-index: 100;
+  border: 1px solid #cccccc;
+  border-bottom: 0;
+  margin-left: 6px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  *background-color: black;
+}
+/* jquery.ui.playerspeed.js widget styles */
+
+button#playSpeedButton {
+  background: transparent url('images/sprites.png') 0 -665px;
+  padding: 11px 14px;
+  /* box-sizing: border-sizing, not regular box model */
+  width: 44px;
+  height: 32px;
+  font-size: 10px;
+}
+#positionSlider {
+  font-size: 9px;
+  margin: 8px 0 3px 0;
+}
+.isLively #positionSlider {
+  display: none;
+}
+#position {
+  position: absolute;
+  left: 0;
+  font-size: .8em;
+}
+.isLively #position {
+  top: 12px;
+  left: 50%;
+  width: 8ex;
+  margin-left: -4ex;
+  text-align: center;
+  font-size: 1.0em;
+}
+#duration {
+  position: absolute;
+  right: 0;
+  font-size: .8em;
+}
+.isLively #duration {
+  display: none;
+}
+.overlayPanel {
+  position: absolute;
+  top: 60px;
+  bottom: 64px;
+  padding-top: 5px;
+  width: 100%;
+  z-index: 3;
+}
+.noTitleArea .overlayPanel {
+  top: 0;
+}
+.noControlBar .overlayPanel {
+  bottom: 0;
+}
+.overlayPanel .panel-header {
+  margin: 10px 0 5px 10px;
+}
+#closePanel {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  border: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  background: url('images/sprites.png') 0 -96px;
+  z-index: 5;
+  display: none;
+}
+.noTitleArea #closePanel {
+  top: 5px;
+}
+/* jQuery UI styles */
+
+/* Component containers
+----------------------------------*/
+
+.ui-widget {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+  font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+.ui-widget-content {
+  border: 1px solid #404040;
+  background: #121212 50% top repeat-x;
+  color: #eeeeee;
+}
+.ui-widget-content a {
+  color: #eeeeee;
+}
+.ui-widget-header {
+  border: 1px solid #404040;
+  background: #888888 50% 50% repeat-x;
+  color: #eeeeee;
+  font-weight: bold;
+}
+.ui-widget-header a {
+  color: #eeeeee;
+}
+/* Interaction states
+----------------------------------*/
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 1px solid #dddddd;
+  background: #adadad 50% 50% repeat-x;
+  font-weight: normal;
+  color: white;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border: 1px solid #e0dada;
+  background: #b5a5a5 50% 50% repeat-x;
+  font-weight: normal;
+  color: white;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover {
+  color: white;
+  text-decoration: none;
+}
+/*.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #000; background: #121212 50% 50% repeat-x; font-weight: normal; color: #ffffff; }*/
+
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+  color: white;
+  text-decoration: none;
+}
+.ui-widget :active {
+  outline: none;
+}
+/* Corner radius */
+
+.ui-corner-tl {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.ui-corner-tr {
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.ui-corner-bl {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.ui-corner-br {
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.ui-corner-top {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.ui-corner-bottom {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.ui-corner-right {
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.ui-corner-left {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.ui-corner-all {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/*
+ * jQuery UI Slider 1.8.9
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 2.0em;
+  height: 0.6em;
+  cursor: default;
+  -ms-touch-action: none;
+}
+#volume .ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 9px;
+  height: 9px;
+  cursor: default;
+}
+.ui-slider-handle-toucharea {
+  width: 100%;
+  height: 2.3em;
+  position: absolute;
+  top: -1em;
+}
+.not-ios .ui-slider-handle-toucharea {
+  display: none;
+}
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+.ui-slider-horizontal {
+  height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: 0em;
+  margin-left: -0.9em;
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+.ui-slider-vertical {
+  width: .8em;
+  height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+  left: -0.3em;
+  margin-bottom: -0.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0;
+}
