@@ -22,6 +22,7 @@ Disallow: /modules/
 Disallow: /profiles/
 Disallow: /scripts/
 Disallow: /themes/
+Disallow: /docs/
 Disallow: /images/
 Disallow: /pages-archive/
 Disallow: /pages-local/
