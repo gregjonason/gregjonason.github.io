@@ -4,7 +4,7 @@
 <!-- *** BEGIN HEAD *** -->
 
   <head>
-		<title>Gregory Jonason - Publications</title>
+		<title>Gregory Jonason - Portfolio</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -13,13 +13,13 @@
 			 What are you trying to locate? This page was created using twitter bootstrap and sublime text 3
 			 Do you want to hire me? Click on the resume link for my contact information
 			 */
-			var sections = ["bio", "exp", "pub", "etc"];
+			var sections = ["bio", "exp", "port", "etc"];
 
 			//map of section state to the links
 			var secLinks = {
 				"bio" : "bioNav",
 				"exp" : "expNav",
-				"pub" : "pubNav",
+				"port" : "portNav",
 				"etc" : "etcNav"
 			};
 
@@ -63,8 +63,8 @@
 					switchStateTo("exp");
 				});
 
-				$("#pubNav").click(function() {
-					switchStateTo("pub");
+				$("#portNav").click(function() {
+					switchStateTo("port");
 				});
 
 				$("#etcNav").click(function() {
@@ -1108,8 +1108,8 @@
 								<li id="expNav">
 									<a href="exp.html">Experience</a>
 								</li>
-								<li id="pubNav">
-									<a href="pub.html">Publications</a>
+								<li id="portNav">
+									<a href="port.html">Portfolio</a>
 								</li>
 								<li id="etcNav">
 									<a href="etc.html">Etc</a>
@@ -1123,13 +1123,76 @@
 <!-- *** END NAVBAR SECTION *** -->
 
 
-<!-- *** BEGIN PUBLICATIONS SECTION *** -->
+<!-- *** BEGIN PORTFOLIO SECTION *** -->
 
-			<div class="container" id="pub">
+			<div class="container" id="port">
 				<div class="row-fluid">
 					<font color="red">
-					<h4>Publications</h4>
+					<h4>Portfolio</h4>
 					</font>
+				</div>
+<!--				<div class="row-fluid">
+					<font color="red">
+					<h5><u>Dashboards</u></h5>
+					</font>
+					<ul>
+						<li>
+							<span class="pub-name">Some Website</span>
+							<br>
+							<span class="pub-title">Some Description
+						</li>
+					</ul>
+				</div> -->
+				<div class="row-fluid">
+					<font color="red">
+					<h5><u>Platforms</u></h5>
+					</font>
+					<img src="./images/portfolio/mediasite.png" alt="Mediasite" width="200" height="200">
+					<ul>
+						<li>
+							<span class="pub-name"><a href="https://uh.mediasite.com/mediasite" target=_blank" title="Mediasite - University of Houston">Mediasite - University of Houston</a></span>
+							<br>
+							<span class="pub-title">Mediaiste is a three-tier or hosted lecture capture technology created by <a href="http://www.sonicfoundry.com/mediasite/" target=_blank" title="Mediasite - Sonic Foundry">Sonic Foundry</a>. During my service as a Digital Media Developer at the University of Houston, I recommended and implemented this technology at the Main Campus. It is used to provide media-rich presentations and lecture content to faculty, staff and students.
+						</li>
+					</ul>
+				</div>
+				<div class="row-fluid">
+					<font color="red">
+					<h5><u>Project Management</u></h5>
+					</font>
+					<img src="./images/portfolio/cli-engage.png" alt="CLI Engage" width="200" height="200">
+					<ul>
+						<li>
+							<span class="pub-name"><a href="https://cliengage.org" target=_blank" title="CLI Engage">CLI Engage</a></span>
+							<br>
+							<span class="pub-title">This is a platform that I was project manager on for Children's Learning Institute. CLI Engage is a comprehensive professional development and progress monitoring platform for pre-k teachers in Texas public schools, charter schools, Head Start programs, and eligible childcare programs. CLI Engage offers free access to professional development and child progress monitoring tools and resources originally developed for use with preschool teachers participating in the Texas School Ready Project (TSR).
+						</li>
+					</ul>
+				</div>
+<!--				<div class="row-fluid">
+					<font color="red">
+					<h5><u>Websites</u></h5>
+					</font>
+					<ul>
+						<li>
+							<span class="pub-name">Some Website</span>
+							<br>
+							<span class="pub-title">Some Description
+						</li>
+					</ul>
+				</div> -->
+				<div class="row-fluid">
+					<font color="red">
+					<h5><u>Online Courses</u></h5>
+					</font>
+					<img src="./images/portfolio/comm3353.png" alt="COMM 3353" width="200" height="200">
+					<ul>
+						<li>
+							<span class="pub-name"><a href="./pages-local/comm3353/index.html" target=_blank" title="COMM 3353 - Web Technologies I - Fall 2013">COMM 3353 - Web Technologies I - Fall 2013</a></span>
+							<br>
+							<span class="pub-title">This is a course that I taught in the Fall of 2013 at the Jack J. Valenti School of Communication. As a hybrid (online and face-to-face) course, "COMM 3353 - Web Technologies I" focused on understanding the Web as an information system, and how to use it for information management for personal and shared information.</span>
+						</li>
+					</ul>
 				</div>
 				<div class="row-fluid">
 					<font color="red">
@@ -1190,7 +1253,7 @@
 				</div>
 			</div>
 
-<!-- *** END PUBLICATIONS SECTION *** -->
+<!-- *** END PORTFOLIO SECTION *** -->
 
 
 			<div id="push" >
