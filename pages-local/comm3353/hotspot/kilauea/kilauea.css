@@ -1,0 +1,328 @@
+/* $Id: kilauea.css 117 2009-01-22 12:52:30Z felix $ */
+
+/**
+ * Copyright � 2007-2008 Felix Michel
+ * 
+ * 
+ * This file is part of Kilauea.
+ * 
+ * Kilauea is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Kilauea is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. You can find it as a file called 'COPYING.txt'
+ * in the topmost directory of Kilauea.
+ * If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+/* STRUCTURAL FORMATTING WHICH IS FUNCTIONALLY ESSENTIAL */
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* HEADER, FOOTER, TOOLBAR, AND PART INFO BAR */
+
+.kilaueaToolbar, .kilaueaHeader, .kilaueaFooter {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	z-index: 30;
+	line-height: 1.4em;
+	font-size: 60%;
+}
+
+.kilaueaToolbar.inactive, .kilaueaHeader.inactive, .kilaueaFooter.inactive {
+	visibility: hidden;
+	display: none;
+}
+
+.kilaueaToolbar.active, .kilaueaHeader.active, .kilaueaFooter.active {
+	visibility: visible;
+	display: block;
+}
+
+.kilaueaToolbar {
+	position: fixed;
+//	right: 0 <-- Removed this setting to allow ../copyright/index.html appear;
+	right: 1;
+	left: 0;
+	bottom: 1.4em;
+	visibility: hidden;
+}
+
+.kilaueaFooter {
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.kilaueaHeader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.kilaueaToolbar div {
+	float: right;
+}
+
+.kilaueaFooter div {
+	float: right;
+}
+
+.kilaueaFooter .kilaueaTitle {
+	display: inline;
+	float: none;
+}
+
+/* inline lists */
+.kilaueaToolbar ul, .kilaueaHelp ul, .kilaueaPartInfo ul {
+	display: inline;
+	margin: 0;
+	padding-left: 0;
+	list-style: none outside;
+}
+
+.kilaueaToolbar ul li, .kilaueaHelp ul li, .kilaueaPartInfo ul li {
+	display: inline;
+	margin: 0 0.4ex;
+}
+
+/* DRAGGABLES */
+
+.draggable, .handle {
+	cursor: move;
+}
+
+/* TABLE OF CONTENTS AND HELP PANEL*/
+
+.kilaueaToc, .kilaueaHelp {
+	overflow: auto;
+	position: absolute;
+	z-index: 300;
+	font-size: 60%;
+	visibility: hidden;
+	display: none;
+	background-color: #fff;
+}
+
+.kilaueaToc {
+	max-width: 30em;
+	left: 10%;
+	top: 23%;
+	width: 40%;
+	height: 60%;
+}
+
+.kilaueaHelp {
+	left: 20%;
+	top: 5%;
+	width: 60%;
+	height: 85%;
+}
+
+/* SLIDES, BACKGROUNDS, AND PRESENTATION NOTES */
+
+.slide, .background, .note {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+}
+
+.slide.inactive, .panel.inactive, .note.inactive {
+	display: none;
+	visibility: hidden;
+}
+
+.slide.active, .panel.active {
+	display: block;
+	visibility: visible;
+}
+
+.note.active {
+	display: inherit;
+	visibility: inherit;
+}
+
+.background {
+	z-index: 1;
+	display: none;
+	visibility: hidden;
+}
+
+.slide {
+	z-index: 20;
+	background-color: transparent;
+}
+
+/* INCREMENTALS */
+
+.covered {
+	visibility: hidden;
+}
+
+/* BASIC FORMATTING (it is debatable whether these lines should be part of kilauea.css) */
+
+a img {
+	border: 0;
+}
+
+.slide > * {
+	/* use a % value. otherwise (using font-relative units like em), different headings are indented differently. */
+/*	margin: 0%; */
+}
+
+/* this is apparently necessary for IE, as it applies the above rule to .slide itself (?) */
+.slide {
+	margin: 0;
+}
+
+.kilaueaFooter, .kilaueaToolbar {
+	background-color: #fff;
+}
+
+/* PRESENTATION NOTES */
+
+.note {
+	position: absolute;
+	top: auto;
+	right: 2em;
+	bottom: 3em;
+	left: auto;
+	width: 40%;
+	height: 30%;
+	visibility: hidden;
+	display: none;
+	background-color: #fff;
+}
+
+/* CANVAS FOR EMBEDDED PRESENTATIONS */
+
+.kilaueaCanvas {
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	visibility: visible;
+	display: block;
+}
+
+.kilaueaCanvas .slide {
+	overflow: auto;
+}
+
+
+/* FULLSCREEN (EMBEDDED MODE) */
+.kilaueaCanvas.fullscreen {
+	background-color: #fff;
+}
+
+body.fullscreen {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/* OUTLINES */
+
+.foldable, .foldable * {
+	cursor: pointer;
+}
+
+.nofold {
+	cursor: default;
+}
+
+@media screen, projection {
+	
+	/* PART TITLES */
+	
+	.partTitle {
+		display: none;
+	}
+	
+	/* HANDOUTS */
+	
+	.handout, .only-media-print {
+		display: none;
+	}
+	.bottom-align {
+		position: absolute;
+		bottom: 0;
+	}
+	
+	/* PRINTED URIs */
+	
+	.print-href {
+		display: none;
+	}
+}
+
+/* BASIC PRINT FORMATTING */
+
+@media print {
+	.background, .panel, .kilaueaFooter, .kilaueaHeader, .kilaueaPartInfo, .kilaueaToolbar {
+		visibility: hidden !important;
+		display: none !important;
+	}
+	.slide {
+		display: block;
+		/* it is a question of design whether to display all slides when printing, or whether to let the user decide what to print */
+/*		visibility: visible !important;
+		display: block !important;
+*/		position: relative;
+		page-break-inside: avoid;
+	}
+	
+/*	.slide + .slide {
+		page-break-before: always;
+		border-bottom: thin solid #000;
+	}
+*/
+/*	.handout, .only-media-print {
+		display: inherit;
+	}
+*/	.note, .only-media-screen {
+		display: none;
+	}
+	.note.print {
+		display: block;
+	}
+	
+	.print-href {
+		display: inline;
+	}
+	
+/*	body {
+		font-size: 15pt !important;
+		background-color: #fff;
+	}
+	h1 {
+		page-break-after: avoid;
+	}
+	.partTitle {
+		padding: 0.4ex 1em;
+		border: thin solid #000;
+		page-break-before: always;
+	}
+*/
+}
