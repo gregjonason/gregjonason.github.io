@@ -13,14 +13,14 @@
 			 What are you trying to locate? This page was created using twitter bootstrap and sublime text 3
 			 Do you want to hire me? Click on the resume link for my contact information
 			 */
-			var sections = ["bio", "exp", "pub", "hon"];
+			var sections = ["bio", "exp", "pub", "etc"];
 
 			//map of section state to the links
 			var secLinks = {
 				"bio" : "bioNav",
 				"exp" : "expNav",
 				"pub" : "pubNav",
-				"hon" : "honNav"
+				"etc" : "etcNav"
 			};
 
 			//which section the page is on
@@ -67,8 +67,8 @@
 					switchStateTo("pub");
 				});
 
-				$("#honNav").click(function() {
-					switchStateTo("hon");
+				$("#etcNav").click(function() {
+					switchStateTo("etc");
 				});
 			});
 		</script> -->
@@ -1111,8 +1111,8 @@
 								<li id="pubNav">
 									<a href="pub.html">Publications</a>
 								</li>
-								<li id="honNav">
-									<a href="hon.html">Honors and Activities</a>
+								<li id="etcNav">
+									<a href="etc.html">Et cetera</a>
 								</li>
 							</ul>
 						</div>
