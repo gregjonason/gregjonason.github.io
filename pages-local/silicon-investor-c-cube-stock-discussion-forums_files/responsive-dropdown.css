@@ -1,0 +1,131 @@
+﻿@charset "UTF-8";
+/* The wrapper div should be wrapped around the page content and be at least 100% page height for the iPad, iPhone and iPod Touch */
+article ul.lists li {margin:0; padding:0; font:normal 16px/21px TeXGyreAdventorRegular, arial, sans-serif; color:#666; }
+article ul.lists li b {margin:0; padding:0; font:normal 17px/21px TeXGyreAdventorBold, arial, sans-serif; color:#333; }
+article ul.lists li a {margin:0; padding:0; font:normal 16px/21px TeXGyreAdventorBold, arial, sans-serif; color:#069; }
+article ul.lists li input {margin:0; padding:0; font:normal 16px/21px TeXGyreAdventorBold, arial, sans-serif; color:#069; }
+
+.menu ul {margin:0; padding:0; list-style:none; white-space:nowrap; text-align:left; border-radius:8px} /* add ul to exclude top level */
+.menu ul {display:inline-block; vertical-align:bottom; display:inline !ie; }
+.menu > ul {width:100%}
+
+.menu li {display:block; position:relative; z-index:20000; text-shadow: 0 0 0.2em #000, 0 0 0.2em #000, 0 0 0.2em #000; }
+#sbjmnu li { z-index:19999; }
+
+
+/* , .mnusrch : messes / fixes */
+html.ie9 .menu li a, html.ie9 .mnusrch {filter: Shadow(Color=black, Direction=130, Strength=3); } 
+
+html.ie7 .menu li a, html.ie8 .menu li a {
+   font-weight:600;
+	zoom: 1;
+	background-color:#f4f7f9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Chroma(Color=#f4f7f9) progid:DXImageTransform.Microsoft.DropShadow(Color=#ff2, OffX=2, OffY=2)";
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#f4f7f9) 
+	        progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+} 
+
+.menu ul ul {position:absolute; left:-9999px; top:70px; padding:10px 0; z-index:20000;
+-webkit-transition: opacity 0.5s;
+-o-transition:0.5s;
+-moz-transition:0.5s;
+transition: opacity 0.5s;
+}
+.menu ul ul ul {left:100%; top:auto; margin-top:-40px;}
+.menu ul li.left > ul {left:auto; right:0; top:70px;}
+.menu ul li.left ul li > ul {left:auto; right:100%; top:auto; margin-top:-40px;}
+
+.menu > ul > li {float:left;}
+
+.menu ul ul {background:#5c87b2;}
+
+.menu ul ul ul {background:#E0E0C2;}
+.menu ul ul ul ul {background:#EEEEEE;} /* Unused, we don't go this deep */
+
+/* .menu ul, */  /* Rounded border and gradient of top level menu */
+#sbjmnu ul,
+.menu ul ul,
+.menu ul ul ul,
+.menu ul ul ul ul {
+background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+background-image: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+box-shadow:0px 5px 5px rgba(0,0,0,0.4);
+}
+.menu a {display:block; font:normal 19px/43px "Ubuntu Condensed", arial, sans-serif; color:#fff; text-decoration:none; border-radius:8px; padding:0px 20px; position:relative; z-index:20000; } /* was padding:0 20px;  */
+#sbjmnu > ul > li > a {line-height:65px; margin: -10px 0 }  /* Negative margin gets rid of hover flickering! */
+.menu > ul > li > a {line-height:40px} 
+.menu > ul > li > b {display:block; position:relative; width:100%; margin-top:-70px; height:70px; background: url(trans.gif); z-index:20000;
+-webkit-transition:0.75s;
+-o-transition:0.75s;
+-moz-transition:0.75s;
+transition:0.75s;
+}
+.menu ul ul > li > b {display:block; position:relative; margin-top:-40px; width:100%; height:40px; background: url(trans.gif); z-index:20000;
+-webkit-transition:0.75s;
+-o-transition:0.75s;
+-moz-transition:0.75s;
+transition:0.75s;
+}
+.menu li:hover {z-index:20000; }
+.menu li:hover > b {width:0;}
+.menu li.left ul a {text-align:right;}
+
+.menu li:hover > a,
+.menu ul li:hover > a {color:#ff0; text-decoration:underline; }
+
+.menu ul li a.hassub {background:url(down.png) no-repeat right center;}
+.ie7 .menu ul li a.hassub,
+.ie8 .menu ul li a.hassub,
+.ie9 .menu ul li a.hassub
+ {background:url(down.gif) no-repeat right center;}
+
+.menu li.left ul li a.hassub {background:url(down.png) no-repeat left center;}
+.ie7 .menu li.left ul li a.hassub, 
+.ie8 .menu li.left ul li a.hassub, 
+.ie9 .menu li.left ul li a.hassub
+{background:url(down.gif) no-repeat left center;} 
+
+#sbjmnu ul li:hover > ul {left:100%; top:auto; }
+
+.menu ul ul,
+.menu ul ul ul,
+.menu ul li.left > ul,
+.menu ul li.left ul li > ul {left:-9999px; right:auto; opacity:0;}
+
+.menu ul li:hover > ul {left:0; opacity:1;}
+.menu ul ul li:hover > ul {left:100%; opacity:1;}
+.menu ul li.left:hover > ul {left:auto; right:0; opacity:1;}
+.menu ul li.left ul li:hover > ul {left:auto; right:100%; opacity:1;}
+
+.menu ul li:hover > a.hassub {background:url(right.png) no-repeat right center;}
+.ie7 .menu ul li:hover > a.hassub, 
+.ie8 .menu ul li:hover > a.hassub, 
+.ie9 .menu ul li:hover > a.hassub 
+{background:url(right.gif) no-repeat right center;} 
+
+.menu li.left ul li:hover > a.hassub {background:url(left.gif) no-repeat left center;} 
+/*  Nothing else to do... left menus only appear on colored, non-graphical backgrounds for now */
+
+/* Due to font rendering differences */
+.mainmenu
+{width:620px;}
+.ie9 .mainmenu, .ie8 .mainmenu, .ie7 .mainmenu
+{width:720px;}
+.mainmenugr
+{width:720px;}
+.ie9 .mainmenugr, .ie8 .mainmenugr, .ie7 .mainmenugr
+{width:740px;}
+
+.mnusrch {display:block; font:normal 20px/44px "Ubuntu Condensed", arial, sans-serif; color:#fff; text-decoration:none; border-radius:8px; padding:0px 35px 0px 20px; position:relative; z-index:20000; text-align:right; } 
+html.ie7 .mnusrch, html.ie8 .mnusrch {
+   font-weight:600;
+	zoom: 1;
+	background-color:#f4f7f9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Chroma(Color=#f4f7f9) progid:DXImageTransform.Microsoft.DropShadow(Color=#ff2, OffX=2, OffY=2)";
+	filter: progid:DXImageTransform.Microsoft.Chroma(Color=#f4f7f9) 
+	        progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+

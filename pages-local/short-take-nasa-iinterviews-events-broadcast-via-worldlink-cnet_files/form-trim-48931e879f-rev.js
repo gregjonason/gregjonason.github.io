@@ -1,0 +1,1 @@
+define(["jquery","version!fly/managers/debug","version!fly/components/base"],function(e,t){t=t.init("formTrim"),e.widget("cnet.formTrim",e.fly.base,{options:{},_create:function(){var t=this;t._setup(),t.$element.on("submit",e.proxy(function(n){e("input[type=text]",t.$element).each(function(){e(this).val(e(this).val().replace(/\s+/g," ").trim())})},this))}})});

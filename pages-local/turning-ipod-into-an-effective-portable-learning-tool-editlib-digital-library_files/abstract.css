@@ -1,0 +1,203 @@
+.options {
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
+}
+.options > li {
+  white-space: nowrap !important;
+  display: inline-block !important;
+  margin: 4px 8px 0 0;
+}
+/* PAPER INFO */
+.paper-title {
+  color: #410041;
+}
+.paper-authors {
+  list-style: none;
+  font-size: larger;
+  line-height: normal;
+}
+.paper-authors .author-name {
+  display: inline;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+.paper-authors .author-name:after {
+  content: ",";
+}
+.paper-authors img {
+  max-height: 64px;
+  max-width: 64px;
+  height: auto;
+  width: auto;
+  margin: 8px;
+}
+.paper-type {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  color: rgba(130, 0, 130, 0.5);
+}
+.paper-type.keep,
+.paper-type .keep {
+  text-transform: none !important;
+}
+.source-info img {
+  max-height: 144px;
+  max-width: 96px;
+  height: auto;
+  width: auto;
+  margin: 0 8px 8px 0;
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+  float: left;
+}
+.source-info .isbn {
+  font-family: monospace;
+}
+.paper-info .source-image {
+  max-width: 256px;
+  max-height: 256px;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0 20px 20px 10px;
+  box-sizing: content-box;
+}
+.paper-topics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.paper-topics li {
+  display: inline;
+}
+.paper-topics li:after {
+  content: "; ";
+}
+.paper-topics li:last-child:after {
+  content: "";
+}
+/* TOOLBOX */
+.toolbox .toolbox-header {
+  position: relative;
+}
+.toolbox .tool-buttons {
+  margin: 0;
+  padding: 4px 0;
+  border-width: 8px 0;
+  border-color: #820082;
+  border-style: solid;
+  font-size: 18px !important;
+  list-style: none;
+}
+.toolbox .tool-buttons .tool-button {
+  margin: 0;
+  line-height: 32px;
+  padding: 6px 6px 6px  0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.toolbox .tool-buttons .tool-button i {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .toolbox .tool-buttons .tool-button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 8px;
+  }
+}
+@media (min-width: 992px) {
+  .toolbox .tool-buttons .tool-button {
+    min-width: 100px;
+    width: 50%;
+    display: block;
+    float: left;
+    padding: 6px 8px 6px 0;
+  }
+  .toolbox .tool-buttons .tool-button .rest {
+    font-size: small;
+    display: block;
+    margin-left: 24px;
+  }
+}
+.toolbox .tool-buttons .tool-button > i {
+  width: 1em;
+  text-align: right;
+  margin-right: 4px;
+}
+.toolbox .tool-buttons .tool-button .minimized {
+  height: auto;
+  border: 0;
+}
+.toolbox .tool-buttons .tool-button .minimized > * {
+  display: none;
+}
+.toolbox .related-papers {
+  margin: 0;
+  padding: 0;
+}
+.toolbox .related-papers li {
+  width: 100%;
+  line-height: 16px;
+  max-height: 32px;
+  overflow: hidden;
+  margin: 0 0 4px 0;
+  list-style: square inside;
+  padding-left: 1em;
+  text-indent: -1em;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .paper-title {
+    font-size: x-large;
+    line-height: 1em;
+  }
+}
+/* TOC LAYOUT */
+.toc-layout h4 {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+.toc-layout > dl {
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+}
+.toc-layout > dl > dt {
+  position: relative;
+}
+.toc-layout > dl > dt:before {
+  position: absolute;
+  bottom: 0;
+  font-weight: normal;
+  overflow: visible;
+  z-index: -1;
+  white-space: nowrap;
+  content: ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." ".................." "..................";
+}
+.toc-layout > dl > dt > .title {
+  font-weight: bold;
+  padding-right: .33em;
+  background: white;
+  margin-right: 6em;
+}
+.toc-layout > dl > dt > .page {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-left: 0.33em;
+  background: #ffffff;
+}
+.toc-layout > dl > dd {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}

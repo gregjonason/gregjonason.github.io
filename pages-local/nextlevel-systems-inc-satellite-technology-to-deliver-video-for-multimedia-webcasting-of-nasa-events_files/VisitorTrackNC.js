@@ -1,0 +1,1 @@
+﻿var vtsrc = location.protocol + "//code.visitor-track.com/vtnc.aspx?v=5&id=" + vtid.toString() + "&r=" + escape(document.referrer) + "&u=" + escape(document.URL); document.write('<img style="position:absolute; margin:0px; border:0px;" alt="" src="' + vtsrc + '"/>')
