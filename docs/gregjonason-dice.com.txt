@@ -1,0 +1,231 @@
+Dice.com Resume
+
+Gregory Jonason
+Email gregjonason@gmail.com
+LinkedIn https://linkedin.com/in/gregjonason
+
+Research
+
+I am an Ed.D. student in the Department of Curriculum & Instruction
+(http://www.coe.uh.edu/academic-departments/cuin/index.php) at the University of Houston
+(http://www.uh.edu/). My dissertation research involves how the knowledge discovery process
+(KDP) relates to student retention and data extracted from the university's PeopleSoft data
+warehouse. My academic advisor is Dr. Sara McNeil (http://faculty.coe.uh.edu/smcneil/). My
+research interests include data preparation, KDP, student retention, data visualization and
+platform architecture.
+
+Work
+
+My role was Educational Technology Manager for Texas School Ready (TSR) at The Children's
+Learning Institute (http://www.childrenslearninginstitute.org) (CLI). CLI is a part of The
+University of Texas Health Science Center at Houston (UTHealth) (http://www.uth.edu) located in
+the Texas Medical Center in Houston, Texas. My work specializations and interests include
+platform architecture and design, system integration, and data analytics. I served as project
+manager for the design and implementation of a state-wide child progress monitoring and
+professional development learning platform by the name of CLI Engage (https://cliengage.org).
+
+Education
+
+Ed.D., Curriculum and Instruction (Instructional Technology), University of Houston, Houston,
+TX, Spring 2016 (expected)
+M.Ed., Curriculum and Instruction (Instructional Technology), University of Houston,
+Houston, TX, 2004
+B.S., Communications (Radio-Television-Film), University of Texas, Austin, TX, 1996
+
+Skills
+
+Administration: cPanel; phpMyAdmin; HP SiteScope
+Analytics: Google; Piwick; Webtrends; AWStats
+Applications: Microsoft Office Suite; Microsoft Project; Open Office; Microsoft OneNote; Microsoft Visio; Adobe Creative Suite; Adobe Premiere; Apple Final Cut Pro; Windows Media Encoder; MPEG Streamclip; Apple Compressor; FFmpeg; Sorenson Squeeze; Lectora; Storyline 2; OmniGraffle
+CMS: Drupal; WordPress; Umbraco; JW Player Video Platform
+Databases: MySQL; MS SQL
+Data Mining: Weka; MS Excel; learning R and Tableau
+Languages: learning Python; VBA/VBScript; HTML; Javascript; PHP
+Operating Systems: Mac; Windows; Unix; iOS; Android
+Platforms: JW Player Video Platform; Windows Media Server; Mediasite Lecture Capture System (LCS); QuickTime Streaming Server (QTSS); Real Media Server; Moodle; Blackboard; JW Player Video Platform; Lecture Capture System (LCS); Microsoft SharePoint
+Scripting: awk; bash; regex; batch; PowerShell
+Servers: Apache; IIS
+Statistics: SPSS; familiarity with SAS
+
+Apache HTTP Server 2 yrs
+IIS HTTP Server 10 yrs
+AWK 2 yrs
+Bash 2 yrs
+Scripting 2 yrs
+Mediasite 7 yrs
+Moodle 2 yrs
+JW Platform 2 yrs
+LMS administration 2 yrs
+iTunes U 3 yrs
+Drupal 1 yr
+Umbraco 1 yr
+WordPress 1 yr
+HTML 10 yrs
+Python 1 yr
+Project management 2 yrs
+Systems architecture 4 yrs
+
+Experience
+
+Educational Technology Manager
+Texas School Ready (TSR), The Children's Learning Institute, University of Texas
+Health Science Center (UTHealth)
+2014 ­ Date
+Develop, design, and implement the CLI Engage (https://cliengage.org) child progress
+monitoring and professional development learning platform.
+Project Manager for CLI Engage, a state-wide child progress monitoring and professional
+development learning platform implementation.
+Manage development and implementation team.
+Plan technology strategies for the future of the CLI Engage (https://cliengage.org) child
+progress monitoring and professional development learning platform.
+
+Digital Media Developer
+Web and Communication Technology Services (WCTS), University of Houston
+2013 ­ 2014
+Maintain, design, and implement campus streaming media infrastructure.
+Administrator of campus Mediasite Lecture Capture System (LCS).
+Administrator of campus iTunes U Learning Management System (LMS).
+Administrator of campus QuickTime Streaming Server (QTSS).
+Provide tier-3 support to streaming media infrastructure users.
+
+Lecturer
+Jack J. Valenti School of Communication, University of Houston
+2012 ­ 2013
+Course(s) Taught:
+COMM 3353, Web Communication Technologies I
+
+Digital Media Developer
+Technology Support Services (TSS), University of Houston
+1999 ­ 2013
+Design, implement and maintain a university campus streaming media infrastructure.
+Administrator of campus Real Media Streaming Server.
+Administrator of campus Mediasite Lecture Capture System (LCS).
+Administrator of campus iTunes U Learning Management System (LMS).
+Administrator of campus QuickTime Streaming Server (QTSS).
+Provide tier-3 support to streaming media infrastructure users.
+
+Digital Media Developer
+Communication and Telecommunication Services (CTS), University of Houston
+1998 ­ 1999
+Design and develop a university campus streaming media infrastructure.
+Administrator of Streaming Media Project Web Server.
+Administrator of Streaming Media Project Chat Server.
+Administrator of Streaming Media Project Real Media Streaming Server.
+
+Projects and Deployment
+
+Project Manager
+Texas School Ready (TSR), The Children's Learning Institute, University of Texas
+Health Science Center
+2014
+Design & Deployment, State-wide Learning Platform
+
+Project Manager
+Web and Communication Technology Services (WCTS), University of Houston
+2013
+Upgrade & Deployment, Sonic Foundry Mediasite Multisite High Availability 6.1/7.0 Server
+
+Project Manager
+Technology Support Services (TSS), University of Houston
+2011
+Development & Migration, Apple iTunes U
+
+Project Manager
+Technology Support Services (TSS), University of Houston
+2011
+Development & Deployment, Apple QuickTime Streaming Server (QTSS)
+
+Project Manager
+Technology Support Services (TSS), University of Houston
+2010
+Server Installation, Sonic Foundry Mediasite Multisite 5.3 Server
+
+Developer
+Technology Support Services (TSS), University of Houston
+2007
+Development & Deployment Team, Apple iTunes U
+
+Project Manager
+Technology Support Services (TSS), University of Houston
+2006 ­ 2011
+Server Administration, College of Architecture Imageweb Server Deployment
+
+Project Manager
+Technology Support Services (TSS), University of Houston
+2004
+Development & Deployment, Sonic Foundry Mediasite 5.0 Server
+
+Project Manager
+Technology Support Services (TSS), University of Houston
+2004
+Development & Deployment, Apple QuickTime Streaming Server (QTSS)
+
+Architect
+Technology Support Services (TSS), University of Houston
+2004 ­ 2007
+Streaming Content Acquisition & Workflow Design
+
+Developer
+Technology Support Services (TSS), University of Houston
+2003
+Campus Handheld Advisory Board & Deployment Team
+
+Developer
+Technology Support Services (TSS), University of Houston
+2001
+WebCT Server Deployment Team
+
+Developer
+Technology Support Services (TSS), University of Houston
+2000 ­ 2004
+Academic Technology Support Center (ATSC)
+
+Producer (Remote)
+Technology Support Services (TSS), University of Houston
+2000
+Produced streaming session for the Space Vacuum Epitaxy Center (S.V.E.C.) at the 51st International Astronautical Congress (IAC), Rio de Janeiro, Brazil (Oct 2–6)
+
+Producer & Director
+Communication and Telecommunication Services (CTS), University of Houston
+1999
+Developed, produced, and directed streaming session for the Space Vacuum Epitaxy Center (S.V.E.C.) at the 50th International Astronautical Congress (IAC), Amsterdam, Netherlands (Oct 4-5)
+
+Publications
+
+Conference Presentations
+Jonason, G. A Beginner's Guide to Data Acquisition and Preparation. Poster session to be presented at: NSSR 2015. 2015 National Symposium on Student Retention; 2015 Nov 2-4; Orlando, FL.
+Jonason, G. and Pierson, M. Forecasting Successful Teachers Using Student Models Created via Data Mining. Poster session presented at: NSSR 2013. 2013 National Symposium on Student Retention; 2013 Nov 4-6; San Diego, CA.
+Jonason, G. Mediasite Multisite Implementation: Lessons Learned Server­Side and Client­ Side. UNLEASH 2011 Sonic Foundry Mediasite User Conference; 2011 May 16-18; Madison, WI.
+McCombs, S., Houk, K., Higginbotham, D., Johnson, G. & Liu, Y. Turning iPod into an Effective Portable Learning Tool. SITE 2006, the Society for Information Technology & Teacher Education (SITE) International Conference; 2006 Mar 20-24; Orlando, FL.
+
+Conference Publications
+Jonason, G. and Pierson, M. (2013). Forecasting Successful Teachers Using Student Models
+Created via Data Mining. In NSSR 2013, the 2013 National Symposium on Student Retention,
+San Diego, CA. Nov 2013 (Peer Review)
+McCombs, S., Houk, K., Higginbotham, D., Johnson, G. & Liu, Y. (2006). Turning iPod into
+an Effective Portable Learning Tool (http://www.editlib.org/p/22076/). In C. Crawford et al.
+(Eds.), Proceedings of Society for Information Technology & Teacher Education (SITE)
+International Conference 2006 (pp. 438-443). Chesapeake, VA: AACE.
+
+Dissertation (In Progress)
+Jonason, G. (Spring 2016, expected). Data Mining a PeopleSoft Database to Assist in
+Developing Student Retention Interventions (Working Title), Ed.D. Dissertation. University of
+Houston.
+
+Honors & Awards
+RMIA 2013 - Honorable Mention - UNLEASH 2013 Mediasite Users Conference
+Graduate Scholarship Award, University of Houston Commission on Women (2013)
+RMIA 2011 - Finalist - UNLEASH 2011 Mediasite Users Conference
+
+Professional Activities
+Reviewer, 2014. Guerrilla Analytics: A Practical Approach to Working with Data
+(http://www.amazon.com/Guerrilla­Analytics­Practical­Approach­Working/dp/0128002182).
+Elsevier (http://www.elsevier.com/), Reviewed trade publication on data preparation
+techniques.
+Reviewer, 2013. EFL Teachers’ Conceptions of Speaking Competence in English
+(http://www.tandfonline.com/doi/abs/10.1080/13540602.2014.885702#.VX1z3hNViko).
+Teachers and Teaching: Theory and Practice (http://www.tandfonline.com/toc/ctat20/current),
+Reviewed article on English as a Foreign Language (EFL), University of Houston.
+
+Copyright © 2013-2015 Gregory Jonason
+
