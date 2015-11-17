@@ -1,0 +1,106 @@
+#about {
+    background: url(/images/content/bg-about.jpg) no-repeat #554a39;
+    background-size: cover;
+    min-height: 900px;
+}
+#about p {
+    font-family: "nobel", Lato,sans-serif;
+    margin-top: 27px;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 42px;
+}
+#about h3 {
+    color: #fff;
+}
+.about-content {
+    margin-top: 55px;
+}
+
+.about-content {
+    
+}
+
+
+/*ABOUT OUR MISSION */
+
+.page-section.section-1158,
+.page-section.section-1228 {
+    background: url("/images/bg-noise-dark.png") repeat scroll 0 0 #605544
+}
+
+.section-1158 .col-md-8 {
+    padding-top: 30px;
+}
+
+.page-1104 {
+    display: none;
+}
+
+
+.page-section.section-1158 h1,
+.page-section.section-1158 h3,
+.page-section.section-1158 p,
+.page-section.section-1158 blockquote {
+    color: #fff;
+}
+
+
+.page-section.section-1180,
+.page-section.Dark {
+    background: url(/images/bg-noise-dark.png) repeat #605544;
+}
+
+.section-1180 .page-title {
+    margin-top: 40px;
+}
+.page-section.Dark h1,
+.page-section.Dark h3,
+.page-section.Dark p,
+.page-section.Dark blockquote,
+.page-section.section-1180 h1,
+.page-section.section-1180 h3,
+.page-section.section-1180 p,
+.page-section.section-1180 blockquote {
+    color: #fff;
+}
+
+.about-1090 .col-sm-5 {
+    margin-top: 100px;
+}
+
+.section-1185 {
+    min-height: 500px;
+}
+
+
+.row-clinics-title .section-title {
+    color: #e32526;
+    margin: 50px 0;
+}
+
+.row.row-clinics {
+    margin: 0 45px;
+}
+
+.row-clinics .col-md-4 {
+    min-height: 800px;
+    position: relative;    
+}
+
+.row-clinics h3 {
+    color: #e32526;
+    margin-bottom: 20px;
+}
+
+.clinc-content {
+   
+}
+
+.clinc-content .btn.btn-primary {
+    bottom: 60px;
+    position: absolute;
+}
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

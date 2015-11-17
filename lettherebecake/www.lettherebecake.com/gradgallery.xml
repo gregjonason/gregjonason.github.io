@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewergallery 
+maxImageWidth="380" 
+maxImageHeight="380" 
+textColor="0xffffff" 
+frameColor="0xcccccc" 
+frameWidth="5"
+stagePadding="20" 
+navPadding="45" 
+thumbnailColumns="5" 
+thumbnailRows="2" 
+navPosition="bottom" 
+vAlign="top" 
+hAlign="center"
+title="&lt;font face=&quot;Tahoma&quot;size=&quot;18&quot;&gt;Graduation Cakes&lt;/font&gt;" 
+enableRightClickOpen="false" 
+backgroundImagePath="" 
+imagePath="images/grad/" 
+thumbPath="images/grad/"
+>
+<image>
+	<filename>gr005.jpg</filename>
+	<caption><![CDATA[<font face="Tahoma" size="12" color="#ffffff"></font>]]></caption>	
+</image>
+<image>
+	<filename>gr004.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>gr002.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>gr003.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>gr001.jpg</filename>
+	<caption></caption>	
+</image>
+</simpleviewergallery>

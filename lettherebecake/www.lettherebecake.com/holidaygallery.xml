@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewergallery 
+maxImageWidth="380" 
+maxImageHeight="380" 
+textColor="0xffffff" 
+frameColor="0xcccccc" 
+frameWidth="5"
+stagePadding="20" 
+navPadding="45" 
+thumbnailColumns="5" 
+thumbnailRows="2" 
+navPosition="bottom" 
+vAlign="top" 
+hAlign="center"
+title="&lt;font face=&quot;Tahoma&quot;size=&quot;18&quot;&gt;Holiday Cakes&lt;/font&gt;" 
+enableRightClickOpen="false" 
+backgroundImagePath="" 
+imagePath="images/holiday/" 
+thumbPath="images/holiday/"
+>
+<image>
+	<filename>h001.jpg</filename>
+	<caption><![CDATA[<font face="Tahoma" size="12" color="#ffffff"></font>]]></caption>	
+</image>
+<image>
+	<filename>h002.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>h003.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>h004.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>h005.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>h006.jpg</filename>
+	<caption></caption>	
+</image>
+<image>
+	<filename>h007.jpg</filename>
+	<caption></caption>	
+</image>
+</simpleviewergallery>
