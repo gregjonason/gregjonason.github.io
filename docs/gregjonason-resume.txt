@@ -22,7 +22,7 @@ Scripting: awk; regex, bash; batch; PowerShell
 Statistics: SPSS; familiarity with SAS
 
 Professional Experience
-University of Texas Health Science Center (UTHealth), Houston, TX	02/2014 – 10/2015
+University of Texas Health Science Center (UTHealth), Houston, TX	02/2014 – 11/2015
 Educational Technology Manager		Children's Learning Institute
 
 Managed multiple vendors in a distributed team environment during the rapid development of CLI Engage, a large child progress monitoring and professional development learning platform made available to the entire state of Texas. Project budget: $1.75 million.
