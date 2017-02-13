@@ -1,0 +1,13 @@
+.slick_container {
+    width:360px;
+    margin:0 auto;
+    position:relative;
+}
+/*上書き修正*/
+ .slick-prev, .slick-next {
+    width:60px;
+    height:34px
+}
+.slick-prev:before, .slick-next:before {
+    content:"";
+}
