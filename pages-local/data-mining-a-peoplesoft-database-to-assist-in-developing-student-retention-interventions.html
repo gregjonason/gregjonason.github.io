@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://uh-ir.tdl.org/uh-ir/handle/10657/1737 -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link rel="shortcut icon" href="https://uh-ir.tdl.org/uh-ir/themes/Mirage2/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://uh-ir.tdl.org/uh-ir/themes/Mirage2/images/apple-touch-icon.png">
+<meta name="Generator" content="DSpace 5.5-SNAPSHOT">
+<link href="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/main.css" rel="stylesheet">
+<link href="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/custom.css" rel="stylesheet">
+<link type="application/opensearchdescription+xml" rel="search" href="https://uh-ir.tdl.org/uh-ir/open-search/description.xml" title="DSpace">
+<script async="" src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/analytics.js"></script><script>
+                //Clear default text of emty text areas on focus
+                function tFocus(element)
+                {
+                if (element.value == ' '){element.value='';}
+                }
+                //Clear default text of emty text areas on submit
+                function tSubmit(form)
+                {
+                var defaultedElements = document.getElementsByTagName("textarea");
+                for (var i=0; i != defaultedElements.length; i++){
+                if (defaultedElements[i].value == ' '){
+                defaultedElements[i].value='';}}
+                }
+                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+                function disableEnterKey(e)
+                {
+                var key;
+
+                if(window.event)
+                key = window.event.keyCode;     //Internet Explorer
+                else
+                key = e.which;     //Firefox and Netscape
+
+                if(key == 13)  //if "Enter" pressed, then disable!
+                return false;
+                else
+                return true;
+                }
+            </script><!--[if lt IE 9]>
+                <script src="/uh-ir/themes/Mirage2/vendor/html5shiv/dist/html5shiv.js"> </script>
+                <script src="/uh-ir/themes/Mirage2/vendor/respond/dest/respond.min.js"> </script>
+                <![endif]--><script src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/modernizr.js"> </script>
+<title>Data Mining A PeopleSoft Database To Assist In Developing Student Retention Interventions</title>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.contributor" content="McNeil, Sara">
+<meta name="DC.creator" content="Jonason, Greg Alan Đào">
+<meta name="DCTERMS.dateAccepted" content="2017-04-17T19:18:23Z" scheme="DCTERMS.W3CDTF">
+<meta name="DCTERMS.available" content="2017-04-17T19:18:23Z" scheme="DCTERMS.W3CDTF">
+<meta name="DCTERMS.created" content="2016-12" scheme="DCTERMS.W3CDTF">
+<meta name="DCTERMS.issued" content="2016-12-20" scheme="DCTERMS.W3CDTF">
+<meta name="DC.date" content="December 2016" scheme="DCTERMS.W3CDTF">
+<meta name="DC.identifier" content="http://hdl.handle.net/10657/1737" scheme="DCTERMS.URI">
+<meta name="DCTERMS.abstract" content="Per a Bellwether Education Partners study (Aldeman, 2015, p. 8), &quot;As of 2013, there were 29.1 million college dropouts versus 24.5 million Americans who dropped out with less than a high school diploma. In pure, raw numbers, college dropouts are a bigger problem than high school dropouts.&quot; Conceptually this study is framed within theories of student persistence/attainment and the Knowledge Discovery Process (KDP). This research study developed first time in college (FTIC) and transfer (TRAN) student graduation prediction models by using decision trees and support vector machine (SVM) classification algorithms and identified attributes of students who graduate and do not graduate. Data was collected from the University of Houston’s data warehouse to provide detailed student academic records as the basis for quantitative analysis. The data set included male and female undergraduate students enrolled in the College of Education’s Teaching &amp; Learning Program from 2000-2012 at the University of Houston. These findings may contribute to improving student success and subsequent graduation rates in the College of Education and other colleges across the campus.">
+<meta name="DC.format" content="application/pdf">
+<meta name="DC.subject" content="knowledge discovery process (KDP)">
+<meta name="DC.subject" content="data mining">
+<meta name="DC.subject" content="PeopleSoft">
+<meta name="DC.subject" content="student retention">
+<meta name="DC.subject" content="database">
+<meta name="DC.subject" content="student intervention">
+<meta name="DC.subject" content="persistence">
+<meta name="DC.subject" content="attainment">
+<meta name="DC.title" content="Data Mining A PeopleSoft Database To Assist In Developing Student Retention Interventions">
+<meta name="DC.type" content="Thesis">
+<meta name="DC.date" content="2017-04-17T19:18:24Z" scheme="DCTERMS.W3CDTF">
+<meta name="DC.type" content="text">
+<meta name="DC.contributor" content="Eick, Christoph F">
+<meta name="DC.contributor" content="Pierson, Melissa E">
+<meta name="DC.contributor" content="Watson, Margaret">
+<meta name="DC.creator" content="0000-0003-3212-5345">
+<meta content="knowledge discovery process (KDP); data mining; PeopleSoft; student retention; database; student intervention; persistence; attainment; Thesis" name="citation_keywords">
+<meta content="Data Mining A PeopleSoft Database To Assist In Developing Student Retention Interventions" name="citation_title">
+<meta content="Data Mining A PeopleSoft Database To Assist In Developing Student Retention Interventions" name="citation_dissertation_name">
+<meta content="Jonason, Greg Alan Đào" name="citation_author">
+<meta content="https://uh-ir.tdl.org/uh-ir/bitstream/10657/1737/1/JONASON-DISSERTATION-2016.pdf" name="citation_pdf_url">
+<meta content="2016-12-20" name="citation_date">
+<meta content="https://uh-ir.tdl.org/uh-ir/handle/10657/1737" name="citation_abstract_html_url">
+<script type="text/x-mathjax-config;executed=true">
+                    MathJax.Hub.Config({
+                      tex2jax: {
+                        inlineMath: [['$','$'], ['\\(','\\)']],
+                        ignoreClass: "detail-field-data|detailtable|exception"
+                      },
+                      TeX: {
+                        Macros: {
+                          AA: '{\\mathring A}'
+                        }
+                      }
+                    });
+                </script><script src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/MathJax.js" type="text/javascript"> </script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body><div id="MathJax_Message" style="display: none;"></div>
+<header>
+<div role="navigation" class="navbar navbar-default navbar-static-top">
+<div class="container">
+<div class="navbar-header">
+<button data-toggle="offcanvas" class="navbar-toggle" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="https://uh-ir.tdl.org/uh-ir/"><img src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/UHL-logo.png"></a>
+<div class="navbar-header pull-right visible-xs hidden-sm hidden-md hidden-lg">
+<ul class="nav nav-pills pull-left ">
+<li>
+<form method="get" action="https://uh-ir.tdl.org/uh-ir/login" style="display: inline">
+<button class="navbar-toggle navbar-link"><b aria-hidden="true" class="visible-xs glyphicon glyphicon-user"></b></button>
+</form>
+</li>
+</ul>
+</div>
+</div>
+<div class="navbar-header pull-right hidden-xs">
+<ul class="nav navbar-nav pull-left"></ul>
+<ul class="nav navbar-nav pull-left">
+<li>
+<a href="https://uh-ir.tdl.org/uh-ir/login"><span class="hidden-xs">Login</span></a>
+</li>
+</ul>
+<button type="button" class="navbar-toggle visible-sm" data-toggle="offcanvas"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+</div>
+</div>
+</div>
+</header>
+<div class="trail-wrapper hidden-print">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="breadcrumb dropdown visible-xs">
+<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="https://uh-ir.tdl.org/uh-ir/handle/10657/1737#" id="trail-dropdown-toggle">View Item&nbsp;<b class="caret"></b></a>
+<ul aria-labelledby="trail-dropdown-toggle" role="menu" class="dropdown-menu">
+<li role="presentation">
+<a role="menuitem" href="https://uh-ir.tdl.org/uh-ir/"><i aria-hidden="true" class="glyphicon glyphicon-home"></i>&nbsp;
+                        Repository Home</a>
+</li>
+<li role="presentation">
+<a role="menuitem" href="https://uh-ir.tdl.org/uh-ir/handle/10657/1">Electronic Theses and Dissertations</a>
+</li>
+<li role="presentation">
+<a role="menuitem" href="https://uh-ir.tdl.org/uh-ir/handle/10657/2">Published ETD Collection</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="https://uh-ir.tdl.org/uh-ir/handle/10657/1737#" role="menuitem">View Item</a>
+</li>
+</ul>
+</div>
+<ul class="breadcrumb hidden-xs">
+<li>
+<i aria-hidden="true" class="glyphicon glyphicon-home"></i>&nbsp;
+            <a href="https://uh-ir.tdl.org/uh-ir/">Repository Home</a>
+</li>
+<li>
+<a href="https://uh-ir.tdl.org/uh-ir/handle/10657/1">Electronic Theses and Dissertations</a>
+</li>
+<li>
+<a href="https://uh-ir.tdl.org/uh-ir/handle/10657/2">Published ETD Collection</a>
+</li>
+<li class="active">View Item</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden" id="no-js-warning-wrapper">
+<div id="no-js-warning">
+<div class="notice failure">JavaScript is disabled for your browser. Some features of this site may not work without it.</div>
+</div>
+</div>
+<div class="container" id="main-container">
+<div class="row row-offcanvas row-offcanvas-right">
+<div class="horizontal-slider clearfix">
+<div class="col-xs-12 col-sm-12 col-md-9 main-content">
+<div>
+<div id="aspect_artifactbrowser_ItemViewer_div_item-view" class="ds-static-div primary">
+<!-- External Metadata URL: cocoon://metadata/handle/10657/1737/mets.xml?rightsMDTypes=METSRIGHTS-->
+<div class="item-summary-view-metadata">
+<h2 class="page-header first-page-header">Data Mining A PeopleSoft Database To Assist In Developing Student Retention Interventions</h2>
+<div class="row">
+<div class="col-sm-4">
+<div class="thumbnail">
+<img alt="No Thumbnail [100%x256]" data-src="holder.js/100%x256/text:No Thumbnail" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUzIiBoZWlnaHQ9IjI1NCIgdmlld0JveD0iMCAwIDI1MyAyNTQiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjUzIiBoZWlnaHQ9IjI1NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjczLjE3MTg3NSIgeT0iMTI3IiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEycHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Tm8gVGh1bWJuYWlsPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="height: 256px; width: 100%; display: block;"></div>
+<div class="item-page-field-wrapper table word-break">
+<h5>View/<wbr>Open</h5>
+<div>
+<a href="https://uh-ir.tdl.org/uh-ir/bitstream/handle/10657/1737/JONASON-DISSERTATION-2016.pdf?sequence=1&amp;isAllowed=y"><i aria-hidden="true" class="glyphicon  glyphicon-file"></i> JONASON-DISSERTATION-2016.pdf (17.22Mb)</a>
+</div>
+<div>
+<a href="https://uh-ir.tdl.org/uh-ir/bitstream/handle/10657/1737/dissertation-ch01-05-20161219-gj-unsigned.docx?sequence=2&amp;isAllowed=y"><i aria-hidden="true" class="glyphicon  glyphicon-file"></i> dissertation-ch01-05-20161219-gj-unsigned.docx (31.72Mb)</a>
+</div>
+</div>
+<div class="simple-item-view-date word-break item-page-field-wrapper table">
+<h5>Date</h5>2016-12-20</div>
+<div class="simple-item-view-authors item-page-field-wrapper table">
+<h5>Author</h5>
+<div>Jonason, Greg Alan Đào</div>
+<div>0000-0003-3212-5345</div>
+</div>
+<div class="simple-item-view-show-full item-page-field-wrapper table">
+<h5>Metadata</h5>
+<a href="https://uh-ir.tdl.org/uh-ir/handle/10657/1737?show=full">Show full item record</a>
+</div>
+</div>
+<div class="col-sm-8">
+<div class="simple-item-view-description item-page-field-wrapper table">
+<h5 class="visible-xs">Abstract</h5>
+<div>Per a Bellwether Education Partners study (Aldeman, 2015, p. 8), "As of 2013, there were 29.1 million college dropouts versus 24.5 million Americans who dropped out with less than a high school diploma. In pure, raw numbers, college dropouts are a bigger problem than high school dropouts." Conceptually this study is framed within theories of student persistence/attainment and the Knowledge Discovery Process (KDP). This research study developed first time in college (FTIC) and transfer (TRAN) student graduation prediction models by using decision trees and support vector machine (SVM) classification algorithms and identified attributes of students who graduate and do not graduate. Data was collected from the University of Houston’s data warehouse to provide detailed student academic records as the basis for quantitative analysis. The data set included male and female undergraduate students enrolled in the College of Education’s Teaching &amp; Learning Program from 2000-2012 at the University of Houston. These findings may contribute to improving student success and subsequent graduation rates in the College of Education and other colleges across the campus.</div>
+</div>
+<div class="simple-item-view-uri item-page-field-wrapper table">
+<h5>URI</h5>
+<span><a href="http://hdl.handle.net/10657/1737">http://hdl.handle.net/10657/1737</a></span>
+</div>
+<div class="simple-item-view-collections item-page-field-wrapper table">
+<h5>Collections</h5>
+<ul class="ds-referenceSet-list">
+<!-- External Metadata URL: cocoon://metadata/handle/10657/2/mets.xml-->
+<li>
+<a href="https://uh-ir.tdl.org/uh-ir/handle/10657/2">Published ETD Collection</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="visible-xs visible-sm">
+<footer>
+<div class="row">
+<hr>
+<div class="col-xs-7 col-sm-8">
+<div>
+<a target="_blank" href="http://www.dspace.org/">DSpace software</a> copyright&nbsp;©&nbsp;2002-2015&nbsp; <a target="_blank" href="http://www.duraspace.org/">DuraSpace</a>
+</div>
+<div class="hidden-print">
+<a href="http://info.lib.uh.edu/help/contact-us">Contact Us</a> | <a href="https://tdl.org/support">Send Feedback</a>
+</div>
+</div>
+<div class="col-xs-5 col-sm-4 hidden-print">
+<div class="pull-right">
+<div>
+<a href="https://www.tdl.org/" target="_blank" title="TDL"><img height="41" src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/tdl-horizontal-transparent-360.png" alt="TDL"></a>
+</div>
+<div class="pull-right">
+<span class="theme-by">Theme by&nbsp;</span><a href="http://atmire.com/" target="_blank" title="@mire NV"><img src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/@mirelogo-small.png" alt="@mire NV"></a>
+</div>
+</div>
+</div>
+</div>
+<a class="hidden" href="https://uh-ir.tdl.org/uh-ir/htmlmap">&nbsp;</a>
+<p>&nbsp;</p>
+</footer>
+</div>
+</div>
+<div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+<div class="word-break hidden-print" id="ds-options">
+<div class="ds-option-set" id="ds-search-option">
+<form method="post" class="" id="ds-search-form" action="https://uh-ir.tdl.org/uh-ir/discover">
+<fieldset>
+<div class="input-group">
+<input placeholder="Search" type="text" class="ds-text-field form-control" name="query"><span class="input-group-btn"><button title="Go" class="ds-button-field btn btn-primary"><span aria-hidden="true" class="glyphicon glyphicon-search"></span></button></span>
+</div>
+<div class="radio">
+<label><input checked="" value="" name="scope" type="radio" id="ds-search-form-scope-all">Search DSpace</label>
+</div>
+<div class="radio">
+<label><input name="scope" type="radio" id="ds-search-form-scope-container" value="10657/2">This Collection</label>
+</div>
+</fieldset>
+</form>
+</div>
+<h2 class="ds-option-set-head  h6">Browse</h2>
+<div id="aspect_viewArtifacts_Navigation_list_browse" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading  h5">All of DSpace</span></a><a href="https://uh-ir.tdl.org/uh-ir/community-list" class="list-group-item ds-option">Communities &amp; Collections</a><a href="https://uh-ir.tdl.org/uh-ir/browse?type=dateissued" class="list-group-item ds-option">By Issue Date</a><a href="https://uh-ir.tdl.org/uh-ir/browse?type=author" class="list-group-item ds-option">Authors</a><a href="https://uh-ir.tdl.org/uh-ir/browse?type=department" class="list-group-item ds-option">Departments</a><a href="https://uh-ir.tdl.org/uh-ir/browse?type=title" class="list-group-item ds-option">Titles</a><a href="https://uh-ir.tdl.org/uh-ir/browse?type=subject" class="list-group-item ds-option">Subjects</a><a class="list-group-item active"><span class="h5 list-group-item-heading  h5">This Collection</span></a><a href="https://uh-ir.tdl.org/uh-ir/handle/10657/2/browse?type=dateissued" class="list-group-item ds-option">By Issue Date</a><a href="https://uh-ir.tdl.org/uh-ir/handle/10657/2/browse?type=author" class="list-group-item ds-option">Authors</a><a href="https://uh-ir.tdl.org/uh-ir/handle/10657/2/browse?type=department" class="list-group-item ds-option">Departments</a><a href="https://uh-ir.tdl.org/uh-ir/handle/10657/2/browse?type=title" class="list-group-item ds-option">Titles</a><a href="https://uh-ir.tdl.org/uh-ir/handle/10657/2/browse?type=subject" class="list-group-item ds-option">Subjects</a>
+</div>
+<h2 class="ds-option-set-head  h6">My Account</h2>
+<div id="aspect_viewArtifacts_Navigation_list_account" class="list-group">
+<a href="https://uh-ir.tdl.org/uh-ir/login" class="list-group-item ds-option">Login</a>
+</div>
+<div id="aspect_viewArtifacts_Navigation_list_context" class="list-group"></div>
+<div id="aspect_viewArtifacts_Navigation_list_administrative" class="list-group"></div>
+<div id="aspect_discovery_Navigation_list_discovery" class="list-group"></div>
+<div id="aspect_statisticsGoogleAnalytics_Navigation_list_statistics" class="list-group"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden-xs hidden-sm">
+<footer>
+<div class="row">
+<hr>
+<div class="col-xs-7 col-sm-8">
+<div>
+<a target="_blank" href="http://www.dspace.org/">DSpace software</a> copyright&nbsp;©&nbsp;2002-2015&nbsp; <a target="_blank" href="http://www.duraspace.org/">DuraSpace</a>
+</div>
+<div class="hidden-print">
+<a href="http://info.lib.uh.edu/help/contact-us">Contact Us</a> | <a href="https://tdl.org/support">Send Feedback</a>
+</div>
+</div>
+<div class="col-xs-5 col-sm-4 hidden-print">
+<div class="pull-right">
+<div>
+<a href="https://www.tdl.org/" target="_blank" title="TDL"><img height="41" src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/tdl-horizontal-transparent-360.png" alt="TDL"></a>
+</div>
+<div class="pull-right">
+<span class="theme-by">Theme by&nbsp;</span><a href="http://atmire.com/" target="_blank" title="@mire NV"><img src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/@mirelogo-small.png" alt="@mire NV"></a>
+</div>
+</div>
+</div>
+</div>
+<a class="hidden" href="https://uh-ir.tdl.org/uh-ir/htmlmap">&nbsp;</a>
+<p>&nbsp;</p>
+</footer>
+</div>
+</div>
+<script>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='/uh-ir';window.DSpace.theme_path='/uh-ir/themes/Mirage2/';</script><script src="./data-mining-a-peoplesoft-database-to-assist-in-developing-student-retention-interventions_files/theme.js"> </script><script>
+                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                  ga('create', 'UA-68617741-10', 'uh-ir.tdl.org');
+                  ga('send', 'pageview');
+           </script>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="253" height="254" viewBox="0 0 253 254" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs></defs><text x="0" y="12" style="font-weight:bold;font-size:12pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">NoThumbnail</text></svg></body></html>
