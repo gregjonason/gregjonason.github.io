@@ -1,0 +1,477 @@
+/* For the Home icon in the breadcrumb under the DSpace logo */
+.glyphicon-home:before {
+    color: #000
+}
+
+.glyphicon {
+    color: #fff
+}
+
+/* Special one-off case for the glyphicon-file */
+.glyphicon-file, .glyphicon-ok {
+    color: #960C22
+}
+
+/* For clickable links */
+a {
+    color: #960C22;
+}
+
+/* For h2 headings */
+h2,.h2 {
+    color: #C8102E
+}
+
+/* For h3 headings */
+h3,.h3 {
+    color: #C8102E
+}
+
+/* For h5 headings and the hidden Abstract h5 title in item view */
+h5, h5.visible-xs {
+    display: block !important;
+    color: #000000
+}
+
+/* For buttons */
+.btn-primary, .btn-default {
+    color: #FFF;
+    background-color: #C8102E;
+    border-color: #960C22
+}
+
+/* For buttons mouse hover */
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle,.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle {
+    color: #FFF;
+    background-color: #960C22;
+    border-color: #C8102E
+}
+
+/* For the padding for the DSpace logo */
+.navbar-brand {
+    padding: 0px 15px
+}
+
+/* For breadcrumb text color */
+.breadcrumb>li {
+    color: #000
+}
+
+/* For breadcrumb text color when breadcrumb is a clickable link */
+.breadcrumb>li>a {
+    color: #f00;
+    font-weight: bold
+}
+
+/* For Discovery Simple Filter labels  */
+.label-primary {
+    background-color: #960C22
+}
+
+/* For Discovery Simple Filter label mouse hover */
+.label-primary[href]:hover,.label-primary[href]:focus {
+    background-color: #C8102E
+}
+
+/* For right-hand menu clickable item */
+a.list-group-item {
+    color: #960C22
+}
+
+/* For right-hand menu clickable item mouse hover */
+a.list-group-item:hover,a.list-group-item:focus {
+    color: #C8102E
+}
+
+/* For titles above sections inside of right-hand menu */
+.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus {
+    background-color: #C8102E;
+    border-color: #960C22
+}
+
+/* For titles above sections outside of right-hand menu  */
+#ds-options .ds-option-set-head {
+    color: #000000;
+}
+
+/* For top bar behind DSpace logo  */
+header .navbar-default {
+    background-color: #cc0000
+}
+
+/* For buttons that show up when window size is small */
+header .navbar-default .navbar-toggle,header .navbar-default .navbar-nav {
+    background-color: #C8102E
+}
+
+/* For buttons that show up when window size is small mouse over */
+header .navbar-default .navbar-toggle:hover,header .navbar-default .navbar-toggle:focus,header .navbar-default .navbar-nav:hover,header .navbar-default .navbar-nav:focus {
+    background-color: #960C22
+}
+
+/* For buttons that are there when window size is larger */
+header .navbar-default .navbar-toggle>li>a,header .navbar-default .navbar-nav>li>a {
+    background-color: #C8102E
+}
+
+/* For buttons that are there when window size is larger mouse over */
+header .navbar-default .navbar-toggle>li>a:hover,header .navbar-default .navbar-toggle>li>a:focus,header .navbar-default .navbar-nav>li>a:hover,header .navbar-default .navbar-nav>li>a:focus {
+    background-color: #960C22
+}
+
+/* For top bar under the DSpace logo where breadcrumb resides */
+.trail-wrapper {
+    background-color: #e8e8e8;
+}
+
+/* For breadcrumb slash between crumbs */
+.trail-wrapper .breadcrumb>li+li:before {
+    color: #000
+}
+
+/* For breadcrumb crumb that is currently active */
+.trail-wrapper .breadcrumb>.active {
+    color: #000
+}
+
+/* For resizing the DSpace logo */
+header .navbar-brand img {
+    height: 30px;
+}
+
+/* For resizing the DSpace logo */
+.navbar {
+    min-height: 60px
+}
+
+/* For sandwiched breadcrumb when window size is small */
+#trail-dropdown-toggle {
+    color: #FFF
+}
+
+.page-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+  font-size: 24px;
+}
+
+.community-browser-row {
+  font-weight: bold;
+}
+
+.trail-wrapper {
+  border-bottom: 1px solid #e8e8e8
+}
+
+#main-container #sidebar {
+  background-color: #e8e8e8
+}
+
+
+/*** added by jcf 1.2015 ***/
+
+@font-face {
+    font-family: 'Milo';
+    src: url('webfonts/milo-regular-webfont.eot');
+    src: url('webfonts/milo-regular-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/milo-regular-webfont.woff') format('woff'),
+         url('webfonts/milo-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Milo';
+    src: url('webfonts/milo-italic-webfont.eot');
+    src: url('webfonts/milo-italic-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/milo-italic-webfont.woff') format('woff'),
+         url('webfonts/milo-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Milo';
+    src: url('webfonts/milo-bold-webfont.eot');
+    src: url('webfonts/milo-bold-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/milo-bold-webfont.woff') format('woff'),
+         url('webfonts/milo-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Milo';
+    src: url('webfonts/milo-bolditalic-webfont.eot');
+    src: url('webfonts/milo-bolditalic-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/milo-bolditalic-webfont.woff') format('woff'),
+         url('webfonts/milo-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Milo';
+    src: url('webfonts/milo-exlig-webfont.eot');
+    src: url('webfonts/milo-exlig-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/milo-exlig-webfont.woff') format('woff'),
+         url('webfonts/milo-exlig-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Crimson';
+    src: url('webfonts/crimson-roman-webfont.eot');
+    src: url('webfonts/crimson-roman-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/crimson-roman-webfont.woff') format('woff'),
+         url('webfonts/crimson-roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Crimson';
+    src: url('webfonts/crimson-italic-webfont.eot');
+    src: url('webfonts/crimson-italic-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/crimson-italic-webfont.woff') format('woff'),
+         url('webfonts/crimson-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Crimson';
+    src: url('webfonts/crimson-semibold-webfont.eot');
+    src: url('webfonts/crimson-semibold-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/crimson-semibold-webfont.woff') format('woff'),
+         url('webfonts/crimson-semibold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Crimson';
+    src: url('webfonts/crimson-semibolditalic-webfont.eot');
+    src: url('webfonts/crimson-semibolditalic-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/crimson-semibolditalic-webfont.woff') format('woff'),
+         url('webfonts/crimson-semibolditalic-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Crimson';
+    src: url('webfonts/crimson-bold-webfont.eot');
+    src: url('webfonts/crimson-bold-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/crimson-bold-webfont.woff') format('woff'),
+         url('webfonts/crimson-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Crimson';
+    src: url('webfonts/crimson-bolditalic-webfont.eot');
+    src: url('webfonts/crimson-bolditalic-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/crimson-bolditalic-webfont.woff') format('woff'),
+         url('webfonts/crimson-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'League Gothic';
+    src: url('webfonts/leaguegothic-regular-webfont.eot');
+    src: url('webfonts/leaguegothic-regular-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('webfonts/leaguegothic-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'League Gothic';
+    src: url('webfonts/leaguegothic-regular-webfont.eot');
+    src: url('webfonts/leaguegothic-regular-webfont-.eot#iefix') format('embedded-opentype'),
+         url('webfonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('webfonts/leaguegothic-regular-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+font-family: "Milo",Helvetica,Arial,sans-serif;
+font-size: 16px;
+line-height: 1.5;
+}
+
+#main-container {
+background: #fff;
+}
+
+a {
+color: black;
+}
+
+h2.page-header {
+text-transform: uppercase;
+font-weight: bold;
+color: #555;
+font-size: 40px;
+font-family: 'League Gothic';
+}
+
+h4.artifact-title a{
+color: black;
+font-weight: 600;
+padding-top: 20px;
+display: inline-block;
+}
+
+.artifact-title {
+font-size: 18px;
+}
+
+span.h5.list-group-item-heading{
+text-transform: uppercase;
+font-weight: 800;
+}
+
+.community-browser-row a[name='community-browser-link'] {
+font-size: 20px;
+color: black;
+font-weight: 400;
+font-style: italic;
+}
+
+ul.breadcrumb>li>a {
+font-weight: normal;
+color: black;
+}
+
+header .navbar-brand img {
+    height: 30px;
+    margin-top: 10px;  
+}
+
+
+.breadcrumb {
+padding: 8px 15px 8px 5px;
+}
+
+
+.navbar {
+min-height: 50px;
+}
+
+.navbar-brand {
+padding: 0px 0px 0px 20px;
+}
+
+.navbar-toggle {
+margin-right: 0;
+}
+
+.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus {
+    background-color: #C8102E;
+    border-color: #C8102E;
+}
+
+header .navbar-default {
+    background-color: #C8102E;
+}
+
+.btn-primary, .btn-default {
+    color: #FFF;
+    background-color: #C8102E;
+    border-color: #C8102E;
+}
+
+
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle,.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle {
+    color: #FFF;
+    background-color: #C8102E;
+    border-color: #C8102E;
+}
+
+.container {
+/*width: auto;*/
+padding: 0 15px 0 30px;
+}
+
+div.pull-right {
+padding-right: 5px;
+}
+
+#trail-dropdown-toggle {
+color: #000;
+}
+
+::-moz-selection {
+color:white;
+background:#cc0000;
+}
+
+::selection { 
+color:white;
+background:#cc0000;
+}
+
+#news-image {
+width :100%;
+height: auto;
+margin-bottom: 15px;
+height: 200px;
+overflow: hidden;
+position: relative;
+}
+
+#news-image img {
+max-width: 100%;
+height: auto;
+position: absolute;
+top: -50px;
+}
+
+
+.ds-paragraph {
+max-width: 850px;
+}
+
+
+@media screen and (max-width: 500px) { 
+header .navbar-brand img {
+	height: 22px;
+	margin-top: 15px; 
+}
+.container {
+	width: auto;
+	padding: 0 15px;
+}
+
+#news-image {
+width :100%;
+height: auto;
+}
+
+#news-image img {
+max-width: 100%;
+height: auto;
+position: relative;
+top: 0px;
+}
+}
+
+@media screen and (max-width: 320px) {
+header .navbar-brand img {
+	height: 16px;
+	margin-top: 18px;
+}
+.container {
+	width: auto;
+	padding: 0 15px;
+}
+
+#news-image {
+width :100%;
+height: auto;
+}
+
+#news-image img {
+max-width: 100%;
+height: auto;
+position: relative;
+top: 0px;
+}
+}
+
