@@ -20,7 +20,7 @@ font: 100% Geneva, Tahoma, Verdana,
 .nav {
 	min-height: 1.3em;
  	overflow: auto;
-	padding: 10px 10px 10px 16px;
+	padding: 8px 8px 8px 8px;
 
 	/* 
 		Tools like css3please.com, which I used for the code that follows, 
