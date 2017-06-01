@@ -4,7 +4,7 @@
 <!-- *** BEGIN HEAD *** -->
 
   <head>
-		<title>Gregory Jonason - Experience</title>
+		<title>Gregory Jonason</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -13,14 +13,14 @@
 			 What are you trying to locate? This page was created using twitter bootstrap and sublime text 3
 			 Do you want to hire me? Click on the resume link for my contact information
 			 */
-			var sections = ["bio", "exp", "port", "etc"];
+			var sections = ["home", "exp", "pub", "hon"];
 
 			//map of section state to the links
 			var secLinks = {
-				"bio" : "bioNav",
+				"home" : "homeNav",
 				"exp" : "expNav",
-				"port" : "portNav",
-				"etc" : "etcNav"
+				"pub" : "pubNav",
+				"hon" : "honNav"
 			};
 
 			//which section the page is on
@@ -52,23 +52,23 @@
 			$(document).ready(function() {
 
 				//we show bio section first
-				switchStateTo("bio");
+				switchStateTo("home");
 
 				//bind click events for links
-				$("#bioNav").click(function() {
-					switchStateTo("bio");
+				$("#homeNav").click(function() {
+					switchStateTo("home");
 				});
 
 				$("#expNav").click(function() {
 					switchStateTo("exp");
 				});
 
-				$("#portNav").click(function() {
-					switchStateTo("port");
+				$("#pubNav").click(function() {
+					switchStateTo("pub");
 				});
 
-				$("#etcNav").click(function() {
-					switchStateTo("etc");
+				$("#honNav").click(function() {
+					switchStateTo("hon");
 				});
 			});
 		</script> -->
@@ -468,8 +468,8 @@
 			.btn-link{border-color:transparent;cursor:pointer;color:#0088cc;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 			.btn-link:hover,.btn-link:focus{color:#005580;text-decoration:underline;background-color:transparent;}
 			.btn-link[disabled]:hover,.btn-link[disabled]:focus{color:#333333;text-decoration:none;}
-			[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url("./images/glyphicons-halflings.png");background-position:14px 14px;background-repeat:no-repeat;margin-top:1px;}
-			.icon-white,.nav-pills>.active>a>[class^="icon-"],.nav-pills>.active>a>[class*=" icon-"],.nav-list>.active>a>[class^="icon-"],.nav-list>.active>a>[class*=" icon-"],.navbar-inverse .nav>.active>a>[class^="icon-"],.navbar-inverse .nav>.active>a>[class*=" icon-"],.dropdown-menu>li>a:hover>[class^="icon-"],.dropdown-menu>li>a:focus>[class^="icon-"],.dropdown-menu>li>a:hover>[class*=" icon-"],.dropdown-menu>li>a:focus>[class*=" icon-"],.dropdown-menu>.active>a>[class^="icon-"],.dropdown-menu>.active>a>[class*=" icon-"],.dropdown-submenu:hover>a>[class^="icon-"],.dropdown-submenu:focus>a>[class^="icon-"],.dropdown-submenu:hover>a>[class*=" icon-"],.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url("./images/glyphicons-halflings-white.png");}
+			[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url("../img/glyphicons-halflings.png");background-position:14px 14px;background-repeat:no-repeat;margin-top:1px;}
+			.icon-white,.nav-pills>.active>a>[class^="icon-"],.nav-pills>.active>a>[class*=" icon-"],.nav-list>.active>a>[class^="icon-"],.nav-list>.active>a>[class*=" icon-"],.navbar-inverse .nav>.active>a>[class^="icon-"],.navbar-inverse .nav>.active>a>[class*=" icon-"],.dropdown-menu>li>a:hover>[class^="icon-"],.dropdown-menu>li>a:focus>[class^="icon-"],.dropdown-menu>li>a:hover>[class*=" icon-"],.dropdown-menu>li>a:focus>[class*=" icon-"],.dropdown-menu>.active>a>[class^="icon-"],.dropdown-menu>.active>a>[class*=" icon-"],.dropdown-submenu:hover>a>[class^="icon-"],.dropdown-submenu:focus>a>[class^="icon-"],.dropdown-submenu:hover>a>[class*=" icon-"],.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url("../img/glyphicons-halflings-white.png");}
 			.icon-glass{background-position:0 0;}
 			.icon-music{background-position:-24px 0;}
 			.icon-search{background-position:-48px 0;}
@@ -1084,12 +1084,13 @@
 
 		<div id="wrap">
 			<div class="container">
-				<font color="green">
-				<img src="./images/about-greg-8-bit-200x200.png" alt="Gregory Jonason 8-bit Image">
-				<h2>Dr. Gregory Jonason</h2>
+				<font color="red">
+				<img src="../images/about-greg-8-bit-200x200.png" alt="Gregory Jonason 8-bit Image">
+				<h2>Gregory Jonason</h2>
 				<u>Email</u> gregjonason at gmail dot com</a><br />
-				<u>Resume</u> &nbsp;&nbsp;<a href="docs/gregjonason-resume.docx" target=_new" title="Resume - Gregory Jonason (MS Word Version)">&#40; word &#41;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="docs/gregjonason-resume.pdf" target=_new" title="Resume - Gregory Jonason (PDF Version)">&#40; pdf &#41;</a><br />
-				<u>LinkedIn</u> <a href="https://linkedin.com/in/gregjonason" target=_new" title="LinkedIn Profile - Gregory Jonason">linkedin.com/in/gregjonason</a><br />
+				<u>Resume</u> &nbsp;&nbsp;<a href="docs/gregjonason-resume.docx" target=_new" title="Resume - Gregory Jonason (MS Word Version)">&#40; word &#41;</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="docs/gregjonason-resume.docx" target=_new" title="Resume - Gregory Jonason (PDF Version)">&#40; pdf &#41;</a><br />
+				<u>Twitter</u> <a href="https://twitter.com/gregjonason" target=_new>&#64;gregjonason</a><br />
+				<u>LinkedIn</u> <a href="https://linkedin.com/in/gregjonason" target=_new">linkedin.com/in/gregjonason</a><br />
 				<br />
 				</font>
 
@@ -1103,16 +1104,16 @@
 						<div class="navbar-inner">
 							<ul class="nav">
 								<li id="homeNav">
-									<a href="index.html">Home</a>
+									<a href="http://gregjonason.com">Home</a>
 								</li>
 								<li id="expNav">
-									<a href="exp.html">Experience</a>
+									<a href="../pages-vita/exp.html">Experience</a>
 								</li>
-								<li id="portNav">
-									<a href="port.html">Portfolio</a>
+								<li id="pubNav">
+									<a href="../pages-vita/pub.html">Publications</a>
 								</li>
-								<li id="etcNav">
-									<a href="etc.html">Etc</a>
+								<li id="honNav">
+									<a href="../pages-vita/hon.html">Honors & Activities</a>
 								</li>
 							</ul>
 						</div>
@@ -1123,305 +1124,161 @@
 <!-- *** END NAVBAR SECTION *** -->
 
 
-<!-- *** BEGIN EXPERIENCE SECTION *** -->
+<!-- *** BEGIN HOME SECTION *** -->
 
-			<div class="container" id="exp">
-				<div class="row-fluid">
-					<font color="green">
-					<h4>Experience</h4>
-					</font>
-				</div>
-
-<!-- BEGIN JOB ENTRY 01 -->
-				<div class="row-fluid exp-item">
-					<div class="span3">
-						<font color="green">
-						<u>Enterprise Systems Application Developer</u>
-						</font>
-					</div>
-					<div class="span7">
-						University of Houston, Enterprise Systems<br />
-					</div>
-					<div class="span2">
-						2016 - present<br />
-					</div>
-				</div>
-				<div class="row-fluid">
-					<ul>
-						<li>
-							Program and implement enterprise system applications for dashboards accessible via the AccessUH portal. Faculty, staff, and students access this critical online services system on a daily basis. User base: 40,000+.
-						</li>
-						<li>
-							Support and troubleshoot service tickets involving the campus Oracle MICROS POS system &#40;9700 and Simphony&#41;. These Hospitality Management Systems &#40;HMS&#41; handle vendor revenue intake, report generation, receipt printing, and food order displays. Vendors using this system include Taco Bell, Taco Cabana, Chick-Fil-A, etc. Annual Revenue: $12 million USD &#40;MICROS 9700, 2015&#41;; $207,000 USD &#40;MICROS Simphony, 2015&#41;
-						</li>
-						<li>
-							Support and troubleshoot service tickets involving the campus Cougar Card system. This system enables students to pay for campus services via their student Flex account. Vendors using this system include Shasta’s Cones & More, McDonald's, Moore’s School of Music, on-campus food trucks, etc.
-						</li>
-					</ul>
-				</div>
-<!-- END JOB ENTRY 01 -->
-
-
-<!-- BEGIN JOB ENTRY 02 -->
-				<div class="row-fluid exp-item">
-					<div class="span3">
-						<font color="green">
-						<u>Educational Technology Manager</u>
-						</font>
-					</div>
-					<div class="span7">
-						University of Texas Health Science Center at Houston &#40;UTHealth&#41;, Children's Learning Institute &#40;CLI&#41;
-					</div>
-					<div class="span2">
-						2014 - 2015
-					</div>
-				</div>
-				<div class="row-fluid">
-					<ul>
-						<li>
-							Managed multiple vendors in a distributed team environment during the rapid development of <a href="https://cliengage.org" target="_blank" title="CLI Engage - A child progress monitoring and professional development learning platform">CLI Engage</a>, a child progress monitoring and professional development learning platform made available to the entire state of Texas. Project budget: $1.75 million.
-						</li>
-						<li>
-							Managed multiple vendors in a distributed team environment during the online course update and redesign of Beginning Education: Early Childcare At Home &#40;BEECH&#41;, a web-based professional development system specifically designed for home childcare providers. Available in English and Spanish, BEECH includes 20 learning modules and is free to family childcare providers across the state of Texas. Project budget: $60,000.
-						</li>
-						<li>
-							Provided consultation and acted as supporting facilitator to project management of <a href="https://cliengage.org" target="_blank" title="CLI Engage - A child progress monitoring and professional development learning platform">CLI Engage</a> platform development and implementation involving software, network, server, content, and web development team members.
-						</li>
-						<li>
-							Served as project platform architect during requirements identification, analysis, prioritization, planning, and monitor and control activities.
-						</li>
-						<li>
-							Responsible and accountable &#40;in collaboration with <a href="https://cliengage.org" target="_blank" title="CLI Engage - A child progress monitoring and professional development learning platform">CLI Engage</a> team members&#41; for developing schedule milestones and task/requirement estimates, and communicating project status to <a href="http://texasschoolready.org" target="_blank" title="Texas School Ready (TSR) Project">Texas School Ready &#40;TSR&#41;</a> management stakeholders.
-						</li>
-						<li>
-							Supported <a href="http://texasschoolready.org" target="_blank" title="Texas School Ready (TSR) Project">Texas School Ready &#40;TSR&#41;</a> management in identifying risks to the associated project&#40;s&#41;, and managed the project risk management process per directives given by the <a href="" target="_blank" title="http://tea.texas.gov">Texas Education Agency &#40;TEA&#41;</a> and <a href="http://www.twc.state.tx.us" target="_blank" title="Texas Workforce Commission (TWC)">Texas Workforce Commission &#40;TWC&#41;</a>.
-						</li>
-						<li>
-							Analyzed risks during platform development and established contingency plans by identifying trigger events and initiating appropriate mitigating action&#40;s&#41; as needed.
-						</li>
-						<li>
-							Supported various group team leaders in management of relationships with project stakeholders, including internal and external clients and vendors.  Responsibilities included providing reports of progress and issues in order to manage expectations on all project requirements and deliverables.
-						</li>
-<!--
-						<li>
-							Responsible for setting baselines, maintaining configuration control and traceability, and for defining and assuring compliance with design rules.
-						</li>
--->
-						<li>
-							Responsible for implementing quality assurance &#40;QA&#41; and process management according to project management and software industry standards.
-						</li>
-
-						<li>
-							Practiced standard project management change/configuration management processes when working with various project teams/vendors to assure appropriate nonconformance remediation was performed.
-						</li>
-<!--
-						<li>
-							Managed and monitored all technical aspects of the <a href="https://www.uth.edu/dotAsset/4e67472b-0888-4674-a4f6-eb9ccef59dfa.docx" target="_blank" title="RFP No. 744-R1511 - BEECH Professional Development eLearning Course Redesign">BEECH RFP</a> proposal process (pre-RFP release through submission, clarification, final proposal revision and awarding of project to contractor) for the redesign and updating of <a href="https://www.childrenslearninginstitute.org/programs/beginning-education-early-childcare-at-home/" target="_blank" title="Beginning Education: Early Childcare At Home (BEECH)">BEECH</a> professional development online course materials. Project budget: $60,000.
-						</li>
-						<li>
-							Guided technical portions of BEECH Course Redesign RFP kickoff briefing and lead kickoff meeting with proposal team, including prospective subcontractors.
-						</li>
-						<li>
-							Analyzed prospective contractor proposal content and provided answers to technical questions concerning the RFP scope of work.
-						</li>
-						<li>
-							Exhibited confidence and extensive knowledge of industry best practices to ensure prospective contractor proposals met the requires outlined in the scope of work document.
-						</li>
--->
-					</ul>
-				</div>
-<!-- END JOB ENTRY 02 -->
-
-
-<!-- BEGIN JOB ENTRY 03 -->
-				<div class="row-fluid exp-item">
-					<div class="span3">
-						<font color="green">
-						<u>Digital Media Developer</u>
-						</font>
-					</div>
-					<div class="span7">
-						University of Houston, Web and Communication Technology Services &#40;WCTS&#41;<br />
-						University of Houston, Technology Support Services &#40;TSS&#41;<br />
-						University of Houston, Communication and Telecommunication Services &#40;CTS&#41;
-					</div>
-					<div class="span2">
-						2013 - 2014<br />
-						1999 - 2013<br />
-						1998 - 1999
-					</div>
-				</div>
-				<div class="row-fluid">
-					<ul>
-						<li>
-							Designed, implemented mission critical campus streaming media infrastructure serving 40,000+ end users.
-						</li>
-						<li>
-							Provided accurate and timely monitoring, analysis and reporting of monthly KPIs for 13 colleges and over 20 internal and external organizations to upper management.
-						</li>
-						<li>
-							Produced and broadcast thirty-four successful live Fall and Spring graduation ceremonies for seventeen years available to campus and worldwide audiences of 40,000+ viewers.
-						</li>
-						<li>
-							Administrator of 6 mission critical media content servers providing 10,000+ streams per month to campus and external end users.
-						</li>
-						<li>
-							Provided tier-3 streaming support to 5,000 faculty & staff and 34,000 students.
-						</li>
-					</ul>
-				</div>
-<!-- END JOB ENTRY 03 -->
-
-
-<!-- BEGIN JOB ENTRY 04 -->
-				<div class="row-fluid exp-item">
+			<div id="bio">
+				<div class="container" >
 					<div class="row-fluid">
-						<div class="span3">
-							<font color="green">
-							<u>Lecturer</u>
-							</font>
-						</div>
-						<div class="span7">
-							Jack J. Valenti School of Communication, University of Houston
-						</div>
-						<div class="span2">
-							2012 - 2013
-						</div>
-					</div>
-				</div>
-				<div class="row-fluid">
-					<ul>
-						<li>
-							Successfully taught mass communication &#40;COMM 3353&#41; course comprised of basic HTML &#40;web&#41; programming elements and the mass communication model.
-						</li>
-						<li>
-							Lectured to a single section of COMM 3353 &#40;Web Communication Technologies I&#41; for 3 semesters to a class consisting of 15-20 undergraduate students.
-						</li>
-						<li>
-							Reflected on and committed to the mission, vision, values, integrity and learning focus of the J. Jack Valenti School of Communication &#40;the College&#41;.
-						</li>
-						<li>
-							Reported to the director of the College and perform instruction-related duties and responsibilities.
-						</li>
-						<li>
-							Provided quality learning-opportunities as a facilitator of learning by assisting them in meeting their educational goals.
-						</li>
-						<li>
-							Designed and published unique course syllabus and class lecture content during third semester of teaching.
-						</li>
-						<li>
-							Practiced active learning methods by using a variety of instructional strategies.
-						</li>
-						<li>
-							Maintained awareness of on-going developments and practices in professional content area&#40;s&#41;.
-						</li>
-						<li>
-							Arranged for the acquisition and preparation of appropriate materials and equipment.
-						</li>
-						<li>
-							Supplied prompt and accurate information in the recording and reporting of student data such as final grade reports.
-						</li>
-						<li>
-							Participated as proctor for class final examination hosted at central testing facility.
-						</li>
-					</ul>
-				</div>
-<!-- END JOB ENTRY 04 -->
-
-
-<!-- BEGIN JOB ENTRY 05 -->
-				<div class="row-fluid exp-item">
-					<div class="span3">
-						<font color="green">
-						<u>Consultant</u>
+						<font color="red">
+						<h4>Research</h4>
 						</font>
-					</div>
-					<div class="span7">
-						Envision Design, LLC
-					</div>
-					<div class="span2">
-						2006 - 2011
+						<p>
+							I am an Ed.D. student in the <a href="http://www.coe.uh.edu/academic-departments/cuin/index.php" target="_blank">Department of Curriculum & Instruction</a> at the <a href="http://www.uh.edu/" target="_blank">University of Houston</a>. My dissertation research involves how the knowledge discovery process (KDP) relates to student retention and data extracted from the university's PeopleSoft data warehouse. My academic advisor is <a href="http://faculty.coe.uh.edu/smcneil/" target="_blank">Dr. Sara McNeil</a>. My research interests include data preparation, KDP, student retention, data visualization and platform architecture.
+						</p>
 					</div>
 				</div>
-				<div class="row-fluid">
-					<ul>
-						<li>
-							Supported and resolved over 300 client help tickets.
-						</li>
-						<li>
-							Performed in-person and remote updates for 20+ client server&#40;s&#41; and over 100 workstation&#40;s&#41;.
-						</li>
-						<li>
-							Visited office locations of over 10 different clients to resolve trouble tickets.
-						</li>
-						<li>
-							Attended staff meetings to discuss client support issues and business strategies.
-						</li>
-					</ul>
-				</div>
-<!-- END JOB ENTRY 05 -->
 
-
-<!-- BEGIN JOB ENTRY 06 -->
-				<div class="row-fluid exp-item">
-					<div class="span3">
-						<font color="green">
-						<u>Manager of Operations</u>
+				<div class="container">
+					<div class="row-fluid">
+						<font color="red">
+						<h4>Work</h4>
 						</font>
-					</div>
-					<div class="span7">
-						WorldLink Data Communications
-					</div>
-					<div class="span2">
-						1996-1998
+						<p>
+							My most recent role was Educational Technology Manager for Texas School Ready (TSR) at <a href="http://www.childrenslearninginstitute.org" target="_blank" title="Children's Learning Institute">Children's Learning Institute</a> &#40;CLI&#41;. CLI is a part of <a href="http://www.uth.edu" target="_blank" title="The University of Texas Health Science Center at Houston">The University of Texas Health Science Center at Houston &#40;UTHealth&#41;</a> located in the Texas Medical Center in Houston, Texas. My work specializations and interests include platform architecture and design, system integration, and data analytics. I served as project manager for the design and implementation of a state-wide child progress monitoring and professional development learning platform by the name of <a href="https://cliengage.org" target="_blank" title="CLI Engage">CLI Engage</a>.
+						</p>
 					</div>
 				</div>
-				<div class="row-fluid">
-					<ul>
-						<li>
-							Managed team of 7 responsible for technical support, content development, and programming.
-						</li>
-						<li>
-							Managed mission critical company infrastructure servers &#40;Domain Name System &#40;DNS&#41;, Gateway and 28.8/56.6 kbps & ISDN Dial-Up&#41; providing internet access to over 300 individual and corporate customers.
-						</li>
-						<li>
-							Administrator of 5 streaming media and 5 web content servers providing high profile customer web, radio, and streaming media content to worldwide Internet audience &#40;<a href="http://www.har.com" target="_blank" title="Houston Area Realty">har.com</a>, <a href="http://www.104krbe.com" target="_blank" title="104.1 KRBE Radio Station">104krbe.com</a>, 101klol.com, etc.&#41;.
-						</li>
-						<li>
-							Travelled to Microsoft headquarters to assist in development of Microsoft Netshow and Windows Media streaming media technologies.
-						</li>
-						<li>
-							Successfully negotiated contract valued over $1 million for delivery of various server, video production, and satellite uplink equipment involving <a href="http://www.microsoft.com" target="_blank" title="Microsoft Corporation">Microsoft</a>, <a href="http://www.hp.com" target="_blank" title="Hewlett-Packard">Compaq Computer</a>, Next-Level Systems, and <a href="http://www.sony.com" target="_blank" title="Sony Corporation">Sony Corporation</a>. See press release&#40;s&#41; at <a href="http://www.prnewswire.com/news-releases/nextlevel-systems-inc-satellite-technology-to-deliver-video-for-multimedia-webcasting-of-nasa-events-75511202.html" target="_blank" title="PR Newswire - A UBM plc Company">PR Newswire</a> and <a href="https://www.questia.com/magazine/1G1-19952108/worldlink-teams-with-digital-leaders-to-webcast-nasa" target="_blank" title="questia - Trusted online research">questia.com</a>, <a href="http://www.thefreelibrary.com/WorldLink+Teams+with+Digital+Technology+Leaders+for+World+Wide...-a019786879" target="_blank" title="Free Online Library">Free Online Library</a>.
-						</li>
-						<li>
-							Successfully negotiated agreement to include a live Internet broadcast link on the front page of the Compaq website that generated over 100,000 unique views.
-						</li>
-						<li>
-							Successfully negotiated contract with 104 KRBE radio station valued over $250,000 to provide them with web design and hosting services along with live internet broadcasts of their "Private Sessions" concerts that included music recording artists such as Jewel, Sarah McLachlan, and Lisa Loeb.
-						</li>
-						<li>
-							Successfully negotiated contract with 101 KLOL radio station valued over $250,000 to provide them with web design and hosting services along with live internet broadcasts of various promotional events.
-						</li>
-						<li>
-							Produced 50+ live internet broadcasts in conjunction with various commercial stakeholders including:
-							<ul>
-								<li>
-									<a href="http://www.microsoft.com" target="_blank" title="Microsoft Corporation">Microsoft</a>, <a href="http://www.hp.com" target="_blank" title="Hewlett-Packard">Compaq Computer</a>, <a href="http://www.sony.com" target="_blank" title="Sony Corporation">Sony Corporation</a>, AudioNet.com/Broadcast.com &#40;formerly owned by Mark Cuban&#41;, <a href="http://www.nasa.gov" target="_blank" title="National Aeronautics and Space Administration">NASA</a>.
-								</li>
-								<li>
-									Beck, Eddie Vedder, Lyle Lovett, Dildar Hussain, Gypsy Kings, Tim Robbins, Sister Helen Prejean, Luke Perry, Sneaker Pimps, etc.
-								</li>
-								<li>
-									104 KRBE and 101 KLOL radio stations.
-								</li>
-							</ul>
-						</li>
-					</ul>
+
+				<div class="container">
+					<div class="row-fluid">
+						<font color="red">
+						<h4>Education</h4>
+						</font>
+						<ul>
+							<li>
+								Ed.D., Curriculum and Instruction (Instructional Technology), University of Houston, Houston, TX, Spring 2016 &#40;expected&#41;
+							</li>
+								<ul>
+									<li>
+										<strong>Areas of focus:</strong> <i>predictive modeling, data preparation, knowledge discovery process (KDP), data mining</i>
+									</li>
+								</ul>
+							<br />
+
+							<li>
+								M.Ed., Curriculum and Instruction (Instructional Technology), University of Houston, Houston, TX, 2004
+							</li>
+								<ul>
+									<li>
+										<strong>Areas of focus:</strong> <i>web development, three-tier system architecture (web, streaming, database), instructional design, elearning theory, digital media</i>
+									</li>
+								</ul>
+							<br />
+
+							<li>
+								B.S., Communications (Radio-Television-Film), University of Texas, Austin, TX, 1996
+							</li>
+								<ul>
+									<li>
+										<strong>Areas of focus:</strong> <i>production management, producing, entertainment law, creative writing (screenplays, plays, fiction, poetry)</i>
+									</li>
+								</ul>
+						</ul>
+					</div>
 				</div>
-<!-- END JOB ENTRY 06 -->
 
+				<div class="container">
+					<div class="row-fluid">
+						<font color="red">
+						<h4>Skill Summary</h4>
+						</font>
 
-<!-- *** END EXPERIENCE SECTION *** -->
+						<font color="red">
+						<h5><u>General</u></h5>
+						</font>
+						<ul>
+							<li>
+								<span class="sill-cat">Applications</span>: Microsoft Office Suite, Open Office, Microsoft OneNote
+							</li>
+							<li>
+								<span class="sill-cat">Operating Systems</span>: Mac, Windows, Unix, iOS, Android
+							</li>
+						</ul>
+
+						<font color="red">
+						<h5><u>Project Management</u></h5>
+						</font>
+						<ul>
+							<li>
+								<span class="sill-cat">Applications</span>: Microsoft Project, Open Office, Microsoft Visio, OmniGraffle
+							</li>
+							<li>
+								<span class="sill-cat">Platforms</span>: Microsoft SharePoint
+							</li>
+						</ul>
+
+						<font color="red">
+						<h5><u>Web Developer</u></h5>
+						</font>
+						<ul>
+							<li>
+								<span class="sill-cat">Languages</span>: HTML, Javascript
+							</li>
+							<li>
+								<span class="sill-cat">Databases</span>: MySQL, MS SQL
+							</li>
+							<li>
+								<span class="sill-cat">CMS</span>: Drupal, WordPress, Umbraco, JW Player Video Platform
+							</li>
+							<li>
+								<span class="sill-cat">Servers</span>: Apache, IIS
+							</li>
+						</ul>
+
+						<font color="red">
+						<h5><u>Instructional Designer</u></h5>
+						</font>
+						<ul>
+							<li>
+								<span class="sill-cat">Applications</span>: Lectora, Storyline 2
+							</li>
+							<li>
+								<span class="sill-cat">Platforms</span>: Moodle, Blackboard, JW Player Video Platform, Mediasite Lecture Capture System (LCS)
+							</li>
+						</ul>
+
+						<font color="red">
+						<h5><u>Business Intelligence Analyst</u></h5>
+						</font>
+						<ul>
+							<li>
+								<span class="sill-cat">Languages</span>: awk, bash scripting, learning Python, VBScript (MS Excel)
+							</li>
+							<li>
+								<span class="sill-cat">Databases</span>: MySQL, MS SQL
+							</li>
+							<li>
+								<span class="sill-cat">Data Mining</span>: Weka, MS Excel, learning R and Tableau
+							</li>
+							<li>
+								<span class="sill-cat">Statistics</span>: SPSS, familiarity with SAS
+							</li>
+						</ul>
+					</div>
+				</div>
+<!--
+				<div class="container">
+					<div class="row-fluid">
+						<h4>Resume</h4>
+						<p>
+							<a href="http://bit.ly/">PDF version</a>
+						</p>
+					</div>
+				</div>
+-->
+			</div>
+
+<!-- *** END HOME SECTION *** -->
 
 
 			<div id="push" >
@@ -1436,7 +1293,7 @@
 		<div class="container" id="footer">
 			<div class="row-fluid">
 				<p class="text-center">
-					Copyright &copy; 2017 Gregory Jonason
+					Copyright &copy; 2013-2015 Gregory Jonason
 				</p>
 			</div>
 		</div>
