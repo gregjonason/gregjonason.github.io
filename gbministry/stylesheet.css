@@ -39,7 +39,7 @@ font: 100% Geneva, Tahoma, Verdana,
 
 .nav li {
 	float: left; 				
-	width: 10em;
+	width: 8em;
 }
 
 .nav li a:hover,
